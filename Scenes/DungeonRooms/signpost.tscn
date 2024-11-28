@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdlh0aoaktwvg"]
+
+[ext_resource type="Script" path="res://signpost.gd" id="1_lnvcx"]
+[ext_resource type="Texture2D" uid="uid://i762nw8ot8vs" path="res://Resources/signposts & decoy/signpost-outsidestuff.png" id="2_lqwg0"]
+[ext_resource type="FontFile" uid="uid://b1s41qkbbcpow" path="res://Themes/Fonts/Unformital-Bold.otf" id="3_sijtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meytj"]
+size = Vector2(32, 26)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ifjrt"]
+
+[node name="Signpost" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_lnvcx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lqwg0")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_meytj")
+
+[node name="Control" type="Control" parent="."]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.35895, 1.15341)
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = -115.306
+offset_top = -83.2315
+offset_right = -75.3054
+offset_bottom = -43.2315
+scale = Vector2(5.8509, 4.33607)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.5
+offset_top = -10.0
+offset_right = 30.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="signpostText" type="Label" parent="Control/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_sijtb")
+theme_override_font_sizes/font_size = 16
+text = "Example"
+label_settings = SubResource("LabelSettings_ifjrt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

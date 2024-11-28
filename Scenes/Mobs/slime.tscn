@@ -1,0 +1,161 @@
+[gd_scene load_steps=13 format=3 uid="uid://cgpieopbs8r4a"]
+
+[ext_resource type="Script" path="res://Scenes/Mobs/slime.gd" id="1_mpw10"]
+[ext_resource type="Texture2D" uid="uid://b7pdxujhvf5pp" path="res://Resources/32Rogues_environment_tiles/Slime.png" id="1_ppb70"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws7fj"]
+bg_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni7eu"]
+bg_color = Color(0.462745, 0.0313726, 0.0588235, 0.545098)
+
+[sub_resource type="Animation" id="Animation_bofs7"]
+resource_name = "Die"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.433333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(9, 0), Vector2i(10, 0), Vector2i(11, 0), Vector2i(12, 0), Vector2i(13, 0), Vector2i(14, 0), Vector2i(14, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m4mgh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h371a"]
+resource_name = "TakeDmg"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(6, 0), Vector2i(7, 0), Vector2i(8, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m3s7o"]
+resource_name = "walkAnimation"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1bhq8"]
+_data = {
+"Die": SubResource("Animation_bofs7"),
+"RESET": SubResource("Animation_m4mgh"),
+"TakeDmg": SubResource("Animation_h371a"),
+"walkAnimation": SubResource("Animation_m3s7o")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8mua"]
+radius = 4.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o45yb"]
+radius = 7.07107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m4bl0"]
+radius = 6.95455
+
+[node name="slime" type="CharacterBody2D" groups=["Monsters"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 43
+script = ExtResource("1_mpw10")
+metadata/_edit_group_ = true
+
+[node name="MonsterHPBar" type="ProgressBar" parent="."]
+offset_left = -7.0
+offset_top = -12.0
+offset_right = 10.0
+offset_bottom = -10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ws7fj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ni7eu")
+value = 50.0
+rounded = true
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ppb70")
+hframes = 15
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_1bhq8")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_p8mua")
+
+[node name="HurtBox" type="Area2D" parent="."]
+scale = Vector2(1, 0.922989)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_o45yb")
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="DamagedTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="IdleMovementTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+scale = Vector2(0.879999, 0.68)
+collision_layer = 8
+collision_mask = 8
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_m4bl0")
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="DamagedTimer" to="." method="_on_damaged_timer_timeout"]
+[connection signal="timeout" from="IdleMovementTimer" to="." method="_on_idle_movement_timer_timeout"]

@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba1yjqsfyvf1t"]
+
+[ext_resource type="Script" path="res://Scenes/UI/main_menu.gd" id="1_ced1t"]
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_oxrt5"]
+[ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="1_sb2yf"]
+[ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="2_d7m6x"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oxrt5")
+script = ExtResource("1_ced1t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.305882, 0.521569, 1)
+
+[node name="ButtonsContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ButtonsContainer"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ButtonsContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HoursRemaining" type="Label" parent="ButtonsContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Hours Remaining:
+10"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="ButtonsContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "What to Do?"
+
+[node name="DaysUntilBoss" type="Label" parent="ButtonsContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Days till Boss:
+5
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonsContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="DungeonButton" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Structures")
+focus_neighbor_bottom = NodePath("../TrainingButton")
+focus_next = NodePath("../TrainingButton")
+focus_previous = NodePath("../Structures")
+text = "Enter Dungeon"
+
+[node name="TrainingButton" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../DungeonButton")
+focus_neighbor_bottom = NodePath("../Smith")
+focus_next = NodePath("../Smith")
+focus_previous = NodePath("../DungeonButton")
+text = "Train Stats"
+
+[node name="Smith" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Smith"
+
+[node name="Structures" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Structures"
+
+[node name="Boss" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Boss"
+
+[node name="GameUIResources" parent="." instance=ExtResource("1_sb2yf")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+offset_left = -88.0
+offset_top = -64.0
+offset_right = 3.0
+offset_bottom = 4.0
+grow_horizontal = 0
+grow_vertical = 0
+is_player_resources = true
+
+[node name="GoBackButton" parent="." instance=ExtResource("2_d7m6x")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -360.0
+offset_right = 99.0
+offset_bottom = -331.0
+grow_vertical = 0
+
+[connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/DungeonButton" to="." method="_on_dungeon_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/TrainingButton" to="." method="_on_training_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Smith" to="." method="_on_smith_pressed"]
+[connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Structures" to="." method="_on_structures_pressed"]
+[connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Boss" to="." method="_on_boss_pressed"]

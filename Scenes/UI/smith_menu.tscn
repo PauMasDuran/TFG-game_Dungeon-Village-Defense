@@ -1,0 +1,261 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpu5vs2cuff86"]
+
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_q5m8r"]
+[ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="1_wjb22"]
+[ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="2_p64fn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ad0qa"]
+load_path = "res://.godot/imported/tile117.png-18593ac4aaf57535133bc99b1c5dc65f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qyaji"]
+load_path = "res://.godot/imported/tile084.png-b2323d8c4906364ec595297582ec4136.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gqtvb"]
+load_path = "res://.godot/imported/tile131.png-13086de73d237690ac39c21e3553acf1.ctex"
+
+[node name="SmithMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_q5m8r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.305882, 0.521569, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HoursRemaining" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Hours Remaining:
+10"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 40
+text = "Smith 
+"
+
+[node name="DaysUntilBoss" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Days till Boss:
+5
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="UpgradeSmithOptions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelArmor" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArmorUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -22.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("CompressedTexture2D_ad0qa")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Armor Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUIResources" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade" instance=ExtResource("2_p64fn")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Time: 2h"
+
+[node name="ArmorUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelBoots/BootsUpgrade/BootsUpgradeButton")
+focus_neighbor_bottom = NodePath("../../../PanelSword/SwordUpgrade/SwordUpgradeButton")
+focus_next = NodePath("../../../PanelSword/SwordUpgrade/SwordUpgradeButton")
+focus_previous = NodePath("../../../PanelBoots/BootsUpgrade/BootsUpgradeButton")
+text = "Upgrade"
+
+[node name="PanelSword" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SwordUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("CompressedTexture2D_qyaji")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sword Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUIResources" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade" instance=ExtResource("2_p64fn")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Time: 2h"
+
+[node name="SwordUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelArmor/ArmorUpgrade/ArmorUpgradeButton")
+focus_neighbor_bottom = NodePath("../../../PanelBoots/BootsUpgrade/BootsUpgradeButton")
+focus_next = NodePath("../../../PanelBoots/BootsUpgrade/BootsUpgradeButton")
+focus_previous = NodePath("../../../PanelArmor/ArmorUpgrade/ArmorUpgradeButton")
+text = "Upgrade"
+
+[node name="PanelBoots" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BootsUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("CompressedTexture2D_gqtvb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Boots Upgrade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUIResources" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade" instance=ExtResource("2_p64fn")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Time: 2h"
+
+[node name="BootsUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelSword/SwordUpgrade/SwordUpgradeButton")
+focus_neighbor_bottom = NodePath("../../../PanelArmor/ArmorUpgrade/ArmorUpgradeButton")
+focus_next = NodePath("../../../PanelArmor/ArmorUpgrade/ArmorUpgradeButton")
+focus_previous = NodePath("../../../PanelSword/SwordUpgrade/SwordUpgradeButton")
+text = "Upgrade"
+
+[node name="GoBackButton" parent="." instance=ExtResource("1_wjb22")]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 98.0
+
+[node name="GameUIResources" parent="." instance=ExtResource("2_p64fn")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -83.0
+offset_right = -3.0
+offset_bottom = 68.0
+grow_horizontal = 0
+grow_vertical = 1
+is_player_resources = true

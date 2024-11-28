@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck2xryknrsunh"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_rfjgd"]
+[ext_resource type="PackedScene" uid="uid://cay5yudwr3udj" path="res://Scenes/UI/ui.tscn" id="1_wfen6"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rfjgd")
+
+[node name="Projectiles" type="Node" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("1_wfen6")]
+
+[node name="TimerBetweenDungeonScenes" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="TimerBetweenDungeonScenes" to="." method="_on_timer_between_dungeon_scenes_timeout"]

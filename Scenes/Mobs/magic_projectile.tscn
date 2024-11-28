@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://bi3yoonfullw0"]
+
+[ext_resource type="Script" path="res://Scenes/Mobs/magic_projectile.gd" id="1_tod7r"]
+[ext_resource type="Texture2D" uid="uid://bdcti1sfr61eb" path="res://Resources/Magic/Pixelart Spells/PNG Files/Fireball.png" id="2_ahfpy"]
+
+[sub_resource type="Animation" id="Animation_7up2d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7esyp"]
+resource_name = "fireball"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ta54q"]
+_data = {
+"RESET": SubResource("Animation_7up2d"),
+"fireball": SubResource("Animation_7esyp")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ag6dd"]
+size = Vector2(0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxv3f"]
+size = Vector2(8, 8)
+
+[node name="MagicProjectile" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_tod7r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 0)
+texture = ExtResource("2_ahfpy")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ta54q")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ag6dd")
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
+shape = SubResource("RectangleShape2D_qxv3f")
+
+[connection signal="area_entered" from="EnemyHitBox" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_body_entered"]

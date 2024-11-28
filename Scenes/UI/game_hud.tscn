@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5qeohdqqvnpc"]
+
+[ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="1_5v6do"]
+[ext_resource type="Script" path="res://Scenes/UI/game_hud.gd" id="1_xsjif"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24vyd"]
+bg_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46iox"]
+bg_color = Color(0.462745, 0.0313726, 0.0588235, 0.890196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_157ml"]
+bg_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ecax"]
+bg_color = Color(0.217448, 0.460999, 0.223323, 1)
+
+[node name="GameHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xsjif")
+
+[node name="HPBar" type="ProgressBar" parent="."]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 160.0
+offset_bottom = 32.0
+theme_override_styles/background = SubResource("StyleBoxFlat_24vyd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_46iox")
+value = 50.0
+show_percentage = false
+
+[node name="SPBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 56.0
+theme_override_styles/background = SubResource("StyleBoxFlat_157ml")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0ecax")
+value = 50.0
+show_percentage = false
+
+[node name="GameUIResources" parent="." instance=ExtResource("1_5v6do")]
+layout_mode = 1
+offset_left = 552.0
+offset_top = 8.0
+offset_right = -11.0
+offset_bottom = -302.0
+is_player_resources = true
+
+[node name="WallsHPBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 224.0
+offset_top = 328.0
+offset_right = 416.0
+offset_bottom = 336.0
+theme_override_styles/background = SubResource("StyleBoxFlat_24vyd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_46iox")
+show_percentage = false
+
+[node name="BossHPBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0

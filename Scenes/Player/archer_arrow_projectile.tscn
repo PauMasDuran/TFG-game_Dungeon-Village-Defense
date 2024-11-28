@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2bfuqu2nb6ft"]
+
+[ext_resource type="Script" path="res://Scenes/Player/archer_arrow_projectile.gd" id="1_35c8f"]
+[ext_resource type="Texture2D" uid="uid://ci8socj4o8cqv" path="res://Resources/Projectiles/ranged-thekingphoenix.png" id="1_n48iu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d0di"]
+size = Vector2(20, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1ybd"]
+size = Vector2(26, 4)
+
+[node name="ArcherArrowProjectile" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_35c8f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 2.35619
+texture = ExtResource("1_n48iu")
+hframes = 3
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1d0di")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_k1ybd")
+
+[node name="LifeTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

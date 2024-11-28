@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://de6h87ixfe8or"]
+
+[ext_resource type="Script" path="res://Scenes/Mobs/arrow_projectile.gd" id="1_5f8ac"]
+[ext_resource type="Texture2D" uid="uid://ci8socj4o8cqv" path="res://Resources/Projectiles/ranged-thekingphoenix.png" id="2_wntjt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ag6dd"]
+size = Vector2(20, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxv3f"]
+size = Vector2(26, 4)
+
+[node name="ArrowProjectile" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_5f8ac")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 2.35619
+texture = ExtResource("2_wntjt")
+hframes = 3
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ag6dd")
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_qxv3f")
+
+[connection signal="area_entered" from="EnemyHitBox" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_body_entered"]

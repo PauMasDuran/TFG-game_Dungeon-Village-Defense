@@ -1,0 +1,487 @@
+[gd_scene load_steps=10 format=3 uid="uid://cotycrlnfanri"]
+
+[ext_resource type="Texture2D" uid="uid://5jnyvp34t0cb" path="res://Resources/CutTileset/tile273.png" id="1_rffu4"]
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_weadn"]
+[ext_resource type="Texture2D" uid="uid://cch08s23vk5eo" path="res://Resources/CutTileset/tile152.png" id="2_k0s6k"]
+[ext_resource type="Texture2D" uid="uid://c2x7r6hpvl8nh" path="res://Resources/CutTileset/tile062.png" id="3_a1ojq"]
+[ext_resource type="Texture2D" uid="uid://dbp2nevsfbien" path="res://Resources/CutTileset/tile275.png" id="3_g5qm2"]
+[ext_resource type="Texture2D" uid="uid://b761dp6ds521a" path="res://Resources/CutTileset/tile206.png" id="4_fek24"]
+[ext_resource type="Texture2D" uid="uid://0jrocr7ko26x" path="res://Resources/CutTileset/tile052.png" id="4_vd20k"]
+[ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="5_ddqxa"]
+[ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="6_qc8iu"]
+
+[node name="StructuresMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_weadn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.305882, 0.521569, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 18
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HoursRemaining" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Hours Remaining:
+10"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_override_font_sizes/font_size = 40
+text = "Structures
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DaysUntilBoss" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Days till Boss:
+5
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="UpgradeStructuresOptions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelWall" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WallsUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = -22.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_rffu4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Wall Upgrade"
+
+[node name="GameUIResources" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_weadn")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -7
+
+[node name="GoldContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="GoldIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_g5qm2")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="CrystalContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CrystalIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_fek24")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CrystalLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 2.0
+text = "Time: 2h"
+
+[node name="WallUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../../../../../../GoBackButton")
+focus_neighbor_bottom = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPadUpgradeButton")
+focus_next = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPadUpgradeButton")
+focus_previous = NodePath("../../../../../../../../GoBackButton")
+text = "Upgrade"
+
+[node name="PanelHealing" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HealingPadUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 1.475
+offset_right = -22.0
+offset_bottom = -2.525
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_k0s6k")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 3.0
+text = "HealPad Upgrade"
+
+[node name="GameUIResources" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_weadn")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -7
+
+[node name="GoldContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="GoldIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_g5qm2")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="CrystalContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CrystalIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_fek24")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CrystalLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 2.0
+text = "Time: 2h"
+
+[node name="HealPadUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelWall/WallsUpgrade/WallUpgradeButton")
+focus_neighbor_bottom = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeButton")
+focus_next = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeButton")
+focus_previous = NodePath("../../../PanelWall/WallsUpgrade/WallUpgradeButton")
+text = "Upgrade"
+
+[node name="PanelDecoy" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DecoyUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.135
+offset_right = -22.0
+offset_bottom = -2.865
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_a1ojq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 3.0
+text = "Decoy Upgrade"
+
+[node name="GameUIResources" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_weadn")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -7
+
+[node name="GoldContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="GoldIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_g5qm2")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="CrystalContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CrystalIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_fek24")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CrystalLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 2.0
+text = "Time: 2h"
+
+[node name="DecoyUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPadUpgradeButton")
+focus_neighbor_bottom = NodePath("../../../PanelTurret/TurretUpgrade/TurretsUpgradeButton")
+focus_next = NodePath("../../../PanelTurret/TurretUpgrade/TurretsUpgradeButton")
+focus_previous = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPadUpgradeButton")
+text = "Upgrade"
+
+[node name="PanelTurret" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TurretUpgrade" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 1.79
+offset_right = -22.0
+offset_bottom = -5.21
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_vd20k")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_stretch_ratio = 3.0
+text = "Turret Upgrade"
+
+[node name="GameUIResources" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_weadn")
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -7
+
+[node name="GoldContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="GoldIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_g5qm2")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer/GoldContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="CrystalContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CrystalIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_fek24")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CrystalLabel" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer/CrystalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "= 100"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 2.0
+text = "Time: 2h"
+
+[node name="TurretsUpgradeButton" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeButton")
+focus_neighbor_bottom = NodePath("../../../../../../../../GoBackButton")
+focus_next = NodePath("../../../../../../../../GoBackButton")
+focus_previous = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeButton")
+text = "Upgrade"
+
+[node name="GoBackButton" parent="." instance=ExtResource("5_ddqxa")]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 98.0
+focus_neighbor_top = NodePath("../MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton")
+focus_neighbor_bottom = NodePath("../MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton")
+focus_next = NodePath("../MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton")
+focus_previous = NodePath("../MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton")
+
+[node name="GameUIResources" parent="." instance=ExtResource("6_qc8iu")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -88.0
+offset_right = -8.0
+offset_bottom = 68.0
+grow_horizontal = 0
+grow_vertical = 1
+is_player_resources = true

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb4w54r0hpvku"]
+
+[ext_resource type="Script" path="res://Scenes/UI/back_button.gd" id="1_ckjyk"]
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_sgiih"]
+
+[node name="GoBackButton" type="Button"]
+offset_right = 95.0
+offset_bottom = 31.0
+theme = ExtResource("1_sgiih")
+text = "Go Back"
+script = ExtResource("1_ckjyk")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

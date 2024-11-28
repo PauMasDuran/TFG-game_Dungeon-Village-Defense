@@ -1,0 +1,351 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6ei1em0yoxi3"]
+
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_2yd35"]
+[ext_resource type="Texture2D" uid="uid://co35i88mxrlal" path="res://Resources/CutTileset/tile053.png" id="1_cg23y"]
+[ext_resource type="Texture2D" uid="uid://ciyhb6gvrogdr" path="res://Resources/Player/Human-Soldier-Red-export.png" id="1_twsce"]
+[ext_resource type="Script" path="res://Scenes/UI/training_menu.gd" id="2_bp6mj"]
+[ext_resource type="Texture2D" uid="uid://tb8txgygr5wp" path="res://Resources/CutTileset/tile049.png" id="2_bwka3"]
+[ext_resource type="Texture2D" uid="uid://4v3mt41qj8pn" path="res://Resources/CutTileset/tile061.png" id="3_f8jdg"]
+[ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="4_qonwo"]
+[ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="5_7q2t6"]
+
+[node name="TrainingMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2yd35")
+script = ExtResource("2_bp6mj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.305882, 0.521569, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HoursRemaining" type="Label" parent="MarginContainer/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Hours Remaining:
+10"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/TopContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme_override_font_sizes/font_size = 40
+text = "Training
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DaysUntilBoss" type="Label" parent="MarginContainer/VBoxContainer/TopContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Days till Boss:
+5
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelPlayerStats" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerStats" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelPlayerStats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -20
+
+[node name="PlayerImage" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelPlayerStats/PlayerStats"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+texture = ExtResource("1_twsce")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HP" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelPlayerStats/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "HP: 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Atk" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelPlayerStats/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "Atk: 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovSpeed" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelPlayerStats/PlayerStats"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "Spd: 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelTrainingOptions" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TrainingOptions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelHP" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HPTraining" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_cg23y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Hp Training"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUIResources" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining" instance=ExtResource("5_7q2t6")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Time: 2h"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Train" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelSPD/SpeedTraining/Train")
+focus_neighbor_bottom = NodePath("../../../PanelATK/ATKTraining/Train")
+focus_next = NodePath("../../../PanelATK/ATKTraining/Train")
+focus_previous = NodePath("../../../PanelSPD/SpeedTraining/Train")
+theme_override_font_sizes/font_size = 20
+text = "Train"
+
+[node name="PanelATK" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ATKTraining" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_bwka3")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "ATK Training"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUIResources" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining" instance=ExtResource("5_7q2t6")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Time: 2h"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Train" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelHP/HPTraining/Train")
+focus_neighbor_bottom = NodePath("../../../PanelSPD/SpeedTraining/Train")
+focus_next = NodePath("../../../PanelSPD/SpeedTraining/Train")
+focus_previous = NodePath("../../../PanelHP/HPTraining/Train")
+theme_override_font_sizes/font_size = 20
+text = "Train"
+
+[node name="PanelSPD" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SpeedTraining" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_f8jdg")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Spd Training"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameUIResources" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining" instance=ExtResource("5_7q2t6")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Time: 2h"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Train" type="Button" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../../../PanelATK/ATKTraining/Train")
+focus_neighbor_bottom = NodePath("../../../PanelHP/HPTraining/Train")
+focus_next = NodePath("../../../PanelHP/HPTraining/Train")
+focus_previous = NodePath("../../../PanelATK/ATKTraining/Train")
+theme_override_font_sizes/font_size = 20
+text = "Train"
+
+[node name="GoBackButton" parent="." instance=ExtResource("4_qonwo")]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 98.0
+
+[node name="GameUIResources" parent="." instance=ExtResource("5_7q2t6")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -88.0
+offset_right = -8.0
+offset_bottom = 68.0
+grow_horizontal = 0
+grow_vertical = 1
+is_player_resources = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Train" to="." method="_on_train_hp_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Train" to="." method="_on_train_atk_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Train" to="." method="_on_train_spd_pressed"]

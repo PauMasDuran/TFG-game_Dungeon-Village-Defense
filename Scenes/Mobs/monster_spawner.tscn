@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://vbyqbgygxomg"]
+
+[ext_resource type="Script" path="res://Scenes/Mobs/monster_spawner.gd" id="1_3olqa"]
+[ext_resource type="Texture2D" uid="uid://d3rodwqif3jpm" path="res://Resources/Portal/Dimensional_Portal.png" id="2_fmfvv"]
+
+[sub_resource type="Animation" id="Animation_c1wg5"]
+resource_name = "Idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(0, 1), Vector2i(1, 1), Vector2i(2, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x0o2r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsdc7"]
+_data = {
+"Idle": SubResource("Animation_c1wg5"),
+"RESET": SubResource("Animation_x0o2r")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n85qw"]
+radius = 5.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgl23"]
+radius = 6.0
+height = 32.5031
+
+[node name="monster_spawner" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_3olqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fmfvv")
+hframes = 3
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gsdc7")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_n85qw")
+
+[node name="HurtBox" type="Area2D" parent="."]
+scale = Vector2(1, 0.922989)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_dgl23")
+
+[node name="monster_respawn" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="timeout" from="monster_respawn" to="." method="_on_monster_respawn_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
