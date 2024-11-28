@@ -1,5 +1,5 @@
 extends Node
-
+#main
 var playerStats = {
 	"MaxHp": 10,
 	"MaxSp": 10,
