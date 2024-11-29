@@ -1,15 +1,19 @@
 extends Node
-#main
+
 var playerStats = {
 	"MaxHp": 10,
 	"MaxSp": 10,
 	"Atk": 1,
-	"Spd": 250
+	"Spd": 250,
+	"SpDrain": 5,
+	"SprintSpd": 300
 }
 
 var playerResources = {
-	"Gold": 100,
-	"Crystals": 100
+	"Gold": 1000,
+	"Crystals": 1000,
+	"HoursRemaining": 9,
+	"DaysRemaining": 6
 }
 
 var trainStats = {
@@ -19,6 +23,15 @@ var trainStats = {
 	"ATKTraining": [5, 15, 30, 60, 90, 120],
 	"SPDLevel": 0,
 	"SPDTraining": [80, 100, 150, 200, 250, 300]
+}
+
+var smith = {
+	"SPLevel": 0,
+	"SPCapacity": [25, 50, 100, 175, 300, 500],
+	"SPDrainLevel": 0,
+	"SPDrain": [5, 10, 20, 35, 60, 90],
+	"SprintLevel": 0,
+	"SprintBoots": [300, 350, 400, 450, 500, 600]
 }
 
 var upgradeCostGold = [100,200,400,700,1000,1500]
@@ -41,7 +54,7 @@ var actual_dungeon_floor: int
 @onready var tutorialDungeon = load("res://Scenes/DungeonRooms/tutorial_dungeon.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	resetDay()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -123,4 +136,12 @@ func addCrystals(Quantity):
 
 func loseCrystals(Quantity):
 	playerResources.Crystals -= Quantity
+	actualizeResourcesSignal.emit()
+
+func loseHours(Quantity):
+	playerResources.HoursRemaining -= Quantity
+	actualizeResourcesSignal.emit()
+
+func resetDay():
+	playerResources.HoursRemaining = 12
 	actualizeResourcesSignal.emit()

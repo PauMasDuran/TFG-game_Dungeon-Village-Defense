@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdlh0aoaktwvg"]
 
-[ext_resource type="Script" path="res://signpost.gd" id="1_lnvcx"]
+[ext_resource type="Script" path="res://Scenes/DungeonRooms/signpost.gd" id="1_lnvcx"]
 [ext_resource type="Texture2D" uid="uid://i762nw8ot8vs" path="res://Resources/signposts & decoy/signpost-outsidestuff.png" id="2_lqwg0"]
 [ext_resource type="FontFile" uid="uid://b1s41qkbbcpow" path="res://Themes/Fonts/Unformital-Bold.otf" id="3_sijtb"]
 

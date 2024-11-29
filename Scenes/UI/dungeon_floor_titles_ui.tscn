@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bni3a634p7bby"]
 
-[ext_resource type="Script" path="res://dungeon_floor_titles_ui.gd" id="1_0texa"]
+[ext_resource type="Script" path="res://Scenes/DungeonRooms/dungeon_floor_titles_ui.gd" id="1_0texa"]
 
 [node name="DungeonFloorTitlesUI" type="Control"]
 layout_mode = 3

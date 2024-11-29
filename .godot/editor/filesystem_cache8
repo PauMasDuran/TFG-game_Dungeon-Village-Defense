@@ -1,16 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732816694
-dungeon_floor_titles_ui.gd::GDScript::-1::1732442588::0::1::::<>Control<>::
+::res://::1732875676
 dungeon_generator.gd::GDScript::-1::1731876791::0::1::::<>Node2D<>::
 export_presets.cfg::TextFile::-1::1732720836::0::1::::<><>::
 icon.svg::CompressedTexture2D::8684235404640419836::1728548413::1732816695::1::::<><>::
-signpost.gd::GDScript::-1::1732528335::0::1::::<>Area2D<>::
 ::res://addons/::1729850393
 ::res://addons/gaea/::1729850395
 grid.gd::GDScript::-1::1729850394::0::1::::GaeaGrid<>Resource<>::
 plugin.cfg::TextFile::-1::1729850395::0::1::::<><>::
 plugin.gd::GDScript::-1::1729850395::0::1::::<>EditorPlugin<>::
-::res://addons/gaea/editor/::1730288276
+::res://addons/gaea/editor/::1732816695
 clear.svg::CompressedTexture2D::5078786316858368456::1729850393::1732816695::1::::<><>::
 download_update_panel.gd::GDScript::-1::1729850393::0::1::::<>Control<>::
 download_update_panel.tscn::PackedScene::2207553941160856703::1729850393::0::1::::<><>::uid://b4nwpbrra72fj::::res://addons/gaea/editor/logo.png<>res://addons/gaea/editor/download_update_panel.gd
@@ -21,7 +19,7 @@ reload.svg::CompressedTexture2D::7636415239406091336::1729850393::1732816695::1:
 threshold_visualizer.gd::GDScript::-1::1729850393::0::1::::<>TextureRect<>::
 update_button.gd::GDScript::-1::1730288276::0::1::::<>Button<>::
 update_button.tscn::PackedScene::1924680899962474071::1729850393::0::1::::<><>::res://addons/gaea/editor/update_button.gd<>uid://6pmddcctde0v::::res://addons/gaea/editor/download_update_panel.tscn
-::res://addons/gaea/generators/::1729850396
+::res://addons/gaea/generators/::1732816695
 chunk_aware_generator.svg::CompressedTexture2D::4399251370745892222::1729850394::1732816695::1::::<><>::
 generator.gd::GDScript::-1::1729850394::0::1::::GaeaGenerator<>Node<>res://addons/gaea/generators/generator.svg::
 generator.svg::CompressedTexture2D::7556607453030425742::1729850394::1732816695::1::::<><>::
@@ -31,24 +29,24 @@ chunk_aware_generator_2d.gd::GDScript::-1::1729850393::0::1::::ChunkAwareGenerat
 generator_2d.gd::GDScript::-1::1729850394::0::1::::GaeaGenerator2D<>GaeaGenerator<>::
 generator_settings_2d.gd::GDScript::-1::1729850394::0::1::::GeneratorSettings2D<>Resource<>res://addons/gaea/generators/generator_settings.svg::
 grid_2d.gd::GDScript::-1::1729850394::0::1::::GaeaGrid2D<>GaeaGrid<>::
-::res://addons/gaea/generators/2D/cellular_generator/::1729850396
+::res://addons/gaea/generators/2D/cellular_generator/::1732816695
 cellular_generator.gd::GDScript::-1::1729850393::0::1::::CellularGenerator<>GaeaGenerator2D<>res://addons/gaea/generators/2D/cellular_generator/cellular_generator.svg::
 cellular_generator.svg::CompressedTexture2D::2489972738627251148::1729850393::1732816695::1::::<><>::
 cellular_generator_settings.gd::GDScript::-1::1729850393::0::1::::CellularGeneratorSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/heightmap_generator/::1729850396
+::res://addons/gaea/generators/2D/heightmap_generator/::1732816695
 heightmap_generator_2d.gd::GDScript::-1::1729850394::0::1::::HeightmapGenerator2D<>ChunkAwareGenerator2D<>res://addons/gaea/generators/2D/heightmap_generator/heightmap_generator_2d.svg::
 heightmap_generator_2d.svg::CompressedTexture2D::7804342115597507298::1729850394::1732816695::1::::<><>::
 heightmap_generator_2d_settings.gd::GDScript::-1::1729850394::0::1::::HeightmapGenerator2DSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/noise_generator/::1729850396
+::res://addons/gaea/generators/2D/noise_generator/::1732816695
 noise_generator.gd::GDScript::-1::1729850394::0::1::::NoiseGenerator<>ChunkAwareGenerator2D<>res://addons/gaea/generators/2D/noise_generator/noise_generator.svg::
 noise_generator.svg::CompressedTexture2D::1200808923553916311::1729850394::1732816695::1::::<><>::
 noise_generator_data.gd::GDScript::-1::1729850394::0::1::::NoiseGeneratorData<>Resource<>::
 noise_generator_settings.gd::GDScript::-1::1729850394::0::1::::NoiseGeneratorSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/walker_generator/::1730202863
+::res://addons/gaea/generators/2D/walker_generator/::1732816695
 walker_generator.gd::GDScript::-1::1730202863::0::1::::WalkerGenerator<>GaeaGenerator2D<>res://addons/gaea/generators/2D/walker_generator/walker_generator.svg::
 walker_generator.svg::CompressedTexture2D::4794092832639402112::1729850394::1732816695::1::::<><>::
 walker_generator_settings.gd::GDScript::-1::1729850394::0::1::::WalkerGeneratorSettings<>GeneratorSettings2D<>::
-::res://addons/gaea/generators/2D/wave_function_generator/::1729850396
+::res://addons/gaea/generators/2D/wave_function_generator/::1732816695
 wave_function_2d_entry.gd::GDScript::-1::1729850394::0::1::::WaveFunction2DEntry<>Resource<>::
 wave_function_generator.svg::CompressedTexture2D::5086903406018483302::1729850394::1732816695::1::::<><>::
 wave_function_generator_2d.gd::GDScript::-1::1729850394::0::1::::WaveFunctionGenerator2D<>GaeaGenerator2D<>res://addons/gaea/generators/2D/wave_function_generator/wave_function_generator.svg::
@@ -63,7 +61,7 @@ heightmap_generator_3d.gd::GDScript::-1::1729850394::0::1::::HeightmapGenerator3
 heightmap_generator_3d_settings.gd::GDScript::-1::1729850394::0::1::::HeightmapGenerator3DSettings<>GeneratorSettings3D<>::
 ::res://addons/gaea/modifiers/::1729850395
 modifier.gd::GDScript::-1::1729850395::0::1::::Modifier<>Resource<>::
-::res://addons/gaea/modifiers/2D/::1729850396
+::res://addons/gaea/modifiers/2D/::1732816695
 advanced_modifier.gd::GDScript::-1::1729850394::0::1::::AdvancedModifier2D<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/advanced_modifier.svg::
 advanced_modifier.svg::CompressedTexture2D::1947748413212094542::1729850394::1732816695::1::::<><>::
 carver.gd::GDScript::-1::1729850394::0::1::::Carver<>ChunkAwareModifier2D<>res://addons/gaea/modifiers/2D/carver.svg::
@@ -97,19 +95,19 @@ noise_painter_3d.gd::GDScript::-1::1729850395::0::1::::NoisePainter3D<>ChunkAwar
 ::res://addons/gaea/modifiers/3D/conditions/::1729850395
 condition_3d.gd::GDScript::-1::1729850395::0::1::::AdvancedModifierCondition3D<>AdvancedModifierCondition<>::
 offset_condition_3d.gd::GDScript::-1::1729850395::0::1::::OffsetCondition3D<>AdvancedModifierCondition3D<>::
-::res://addons/gaea/modifiers/conditions/::1729850396
+::res://addons/gaea/modifiers/conditions/::1732816695
 chance_condition.gd::GDScript::-1::1729850395::0::1::::ChanceCondition<>AdvancedModifierCondition<>::
 condition.gd::GDScript::-1::1729850395::0::1::::AdvancedModifierCondition<>Resource<>res://addons/gaea/modifiers/conditions/condition.svg::
 condition.svg::CompressedTexture2D::7592994287858839831::1729850395::1732816695::1::::<><>::
 noise_condition.gd::GDScript::-1::1729850395::0::1::::NoiseCondition<>AdvancedModifierCondition<>::
-::res://addons/gaea/others/::1729850396
+::res://addons/gaea/others/::1732816695
 chunk_loader.svg::CompressedTexture2D::286339547622317856::1729850395::1732816695::1::::<><>::
 chunk_loader_2d.gd::GDScript::-1::1729850395::0::1::::ChunkLoader2D<>Node2D<>res://addons/gaea/others/chunk_loader.svg::
 chunk_loader_3d.gd::GDScript::-1::1729850395::0::1::::ChunkLoader3D<>Node3D<>res://addons/gaea/others/chunk_loader.svg::
 falloff_map.gd::GDScript::-1::1729850395::0::1::::FalloffMap<>Resource<>::
 threaded_chunk_loader_2d.gd::GDScript::-1::1729850395::0::1::::ThreadedChunkLoader2D<>ChunkLoader2D<>::
 threaded_chunk_loader_3d.gd::GDScript::-1::1729850395::0::1::::ThreadedChunkLoader3D<>ChunkLoader3D<>::
-::res://addons/gaea/renderers/::1729850396
+::res://addons/gaea/renderers/::1732816695
 gaea_renderer.gd::GDScript::-1::1729850395::0::1::::GaeaRenderer<>Node<>res://addons/gaea/renderers/gaea_renderer.svg::
 gaea_renderer.svg::CompressedTexture2D::7750084002812481298::1729850395::1732816695::1::::<><>::
 ::res://addons/gaea/renderers/2D/::1729850395
@@ -120,14 +118,14 @@ tilemap_gaea_renderer.gd::GDScript::-1::1729850395::0::1::::TilemapGaeaRenderer<
 gaea_renderer_3d.gd::GDScript::-1::1729850395::0::1::::GaeaRenderer3D<>GaeaRenderer<>::
 gridmap_gaea_renderer.gd::GDScript::-1::1729850395::0::1::::GridmapGaeaRenderer<>GaeaRenderer3D<>::
 threaded_gridmap_gaea_renderer.gd::GDScript::-1::1729850395::0::1::::ThreadedGridmapGaeaRenderer<>GridmapGaeaRenderer<>::
-::res://addons/gaea/tile_info/::1729850396
+::res://addons/gaea/tile_info/::1732816695
 gridmap_tile_info.gd::GDScript::-1::1729850395::0::1::::GridmapTileInfo<>TileInfo<>::
 random_tile_info.gd::GDScript::-1::1729850395::0::1::::RandomTileInfo<>TileInfo<>::
 tilemap_tile_info.gd::GDScript::-1::1729850395::0::1::::TilemapTileInfo<>TileInfo<>::
 tile_info.gd::GDScript::-1::1729850395::0::1::::TileInfo<>Resource<>res://addons/gaea/tile_info/tile_info.svg::
 tile_info.svg::CompressedTexture2D::2363771520064696099::1729850395::1732816695::1::::<><>::
 ::res://Resources/::1732524392
-::res://Resources/32Rogues_environment_tiles/::1731596346
+::res://Resources/32Rogues_environment_tiles/::1732816695
 Orc-Peon-Cyan.png::CompressedTexture2D::7420115538397184835::1729096429::1732816695::1::::<><>::
 Orc-Peon-Red.png::CompressedTexture2D::7431452766240265210::1729096438::1732816695::1::::<><>::
 Orc-Soldier-Cyan.png::CompressedTexture2D::7888018195668910114::1729096472::1732816695::1::::<><>::
@@ -135,7 +133,7 @@ Orc-Soldier-Red.png::CompressedTexture2D::1732526881818485092::1729096475::17328
 ranged-SpriteAttack.png::CompressedTexture2D::4542702761407070305::1731596346::1732816695::1::::<><>::
 Slime.png::CompressedTexture2D::4663653635375731357::1729096453::1732816695::1::::<><>::
 tiles.png::CompressedTexture2D::5020426109500427328::1728983022::1732816695::1::::<><>::
-::res://Resources/CutTileset/::1728734439
+::res://Resources/CutTileset/::1732816695
 tile000.png::CompressedTexture2D::6463777228981093783::1728734439::1732816695::1::::<><>::
 tile001.png::CompressedTexture2D::211502820093901435::1728734439::1732816695::1::::<><>::
 tile002.png::CompressedTexture2D::2903934730243216703::1728734439::1732816695::1::::<><>::
@@ -486,9 +484,9 @@ tile346.png::CompressedTexture2D::7126975750267145073::1728734439::1732816695::1
 tile347.png::CompressedTexture2D::3613645030619465986::1728734439::1732816695::1::::<><>::
 tile348.png::CompressedTexture2D::8372726687339449451::1728734439::1732816695::1::::<><>::
 tile349.png::CompressedTexture2D::5619361798311445294::1728734439::1732816695::1::::<><>::
-::res://Resources/HUD-UI/::1729593097
+::res://Resources/HUD-UI/::1732816695
 hck-ui-set-1.png::CompressedTexture2D::6598991887459709258::1729593055::1732816695::1::::<><>::
-::res://Resources/HUD-UI/PXUI-Basic/::1729593097
+::res://Resources/HUD-UI/PXUI-Basic/::1732816695
 arrow_example.png::CompressedTexture2D::9153937954466395948::1729593097::1732816695::1::::<><>::
 checkbox_check_example.png::CompressedTexture2D::6560548091733085534::1729593097::1732816695::1::::<><>::
 checkbox_example.png::CompressedTexture2D::339439229821042508::1729593097::1732816695::1::::<><>::
@@ -498,13 +496,13 @@ panel_Example2.png::CompressedTexture2D::868534923105622073::1729593097::1732816
 panel_Example3.png::CompressedTexture2D::1646892895672932494::1729593097::1732816695::1::::<><>::
 panel_Example4.png::CompressedTexture2D::4983263969646038624::1729593097::1732816695::1::::<><>::
 ::res://Resources/HUD-UI/PXUI-Basic/PSD/::1729593097
-::res://Resources/kenney_fantasy-ui-borders/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/::1732816695
 License.txt::TextFile::-1::1728726631::0::1::::<><>::
 Preview.png::CompressedTexture2D::1921056966974779662::1728726631::1732816694::1::::<><>::
 Sample.png::CompressedTexture2D::8143158304873808805::1728726631::1732816695::1::::<><>::
 ::res://Resources/kenney_fantasy-ui-borders/PNG/::1728726631
 ::res://Resources/kenney_fantasy-ui-borders/PNG/Default/::1728726631
-::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Border/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Border/::1732816695
 panel-border-000.png::CompressedTexture2D::316972754720147637::1728726631::1732816695::1::::<><>::
 panel-border-001.png::CompressedTexture2D::1889764778628024273::1728726631::1732816695::1::::<><>::
 panel-border-002.png::CompressedTexture2D::6586017193388475558::1728726631::1732816695::1::::<><>::
@@ -537,21 +535,21 @@ panel-border-028.png::CompressedTexture2D::1274916873198984567::1728726631::1732
 panel-border-029.png::CompressedTexture2D::4464496447649676092::1728726631::1732816695::1::::<><>::
 panel-border-030.png::CompressedTexture2D::8655519362136961117::1728726631::1732816695::1::::<><>::
 panel-border-031.png::CompressedTexture2D::7877757075865882836::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Divider/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Divider/::1732816695
 divider-000.png::CompressedTexture2D::6900864304284028416::1728726631::1732816695::1::::<><>::
 divider-001.png::CompressedTexture2D::6987984824499838728::1728726631::1732816695::1::::<><>::
 divider-002.png::CompressedTexture2D::5337249421778554029::1728726631::1732816695::1::::<><>::
 divider-003.png::CompressedTexture2D::6367444132175967315::1728726631::1732816695::1::::<><>::
 divider-004.png::CompressedTexture2D::6567988091893306757::1728726631::1732816695::1::::<><>::
 divider-005.png::CompressedTexture2D::8792114456475898860::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Divider Fade/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Divider Fade/::1732816695
 divider-fade-000.png::CompressedTexture2D::3691108224309333220::1728726631::1732816695::1::::<><>::
 divider-fade-001.png::CompressedTexture2D::470628505924304011::1728726631::1732816695::1::::<><>::
 divider-fade-002.png::CompressedTexture2D::8697125531276910829::1728726631::1732816695::1::::<><>::
 divider-fade-003.png::CompressedTexture2D::4496262006230473894::1728726631::1732816695::1::::<><>::
 divider-fade-004.png::CompressedTexture2D::4851584247508000475::1728726631::1732816695::1::::<><>::
 divider-fade-005.png::CompressedTexture2D::8174690077663416755::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Panel/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Panel/::1732816695
 panel-000.png::CompressedTexture2D::8329436464508997433::1728726631::1732816695::1::::<><>::
 panel-001.png::CompressedTexture2D::8469483943726057695::1728726631::1732816695::1::::<><>::
 panel-002.png::CompressedTexture2D::1335095127279982305::1728726631::1732816695::1::::<><>::
@@ -584,7 +582,7 @@ panel-028.png::CompressedTexture2D::5416194722529052642::1728726631::1732816695:
 panel-029.png::CompressedTexture2D::6455213394327880450::1728726631::1732816695::1::::<><>::
 panel-030.png::CompressedTexture2D::5218610960413369513::1728726631::1732816695::1::::<><>::
 panel-031.png::CompressedTexture2D::836612536068173923::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Transparent border/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Transparent border/::1732816695
 panel-transparent-border-000.png::CompressedTexture2D::7155604296823873609::1728726631::1732816695::1::::<><>::
 panel-transparent-border-001.png::CompressedTexture2D::1319615431379128259::1728726631::1732816695::1::::<><>::
 panel-transparent-border-002.png::CompressedTexture2D::8694361648466936515::1728726631::1732816695::1::::<><>::
@@ -617,7 +615,7 @@ panel-transparent-border-028.png::CompressedTexture2D::2415827882961263728::1728
 panel-transparent-border-029.png::CompressedTexture2D::1166099651278010117::1728726631::1732816695::1::::<><>::
 panel-transparent-border-030.png::CompressedTexture2D::2651329638504978471::1728726631::1732816695::1::::<><>::
 panel-transparent-border-031.png::CompressedTexture2D::3541562877335656895::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Transparent center/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Default/Transparent center/::1732816695
 panel-transparent-center-000.png::CompressedTexture2D::4031630563607429240::1728726631::1732816695::1::::<><>::
 panel-transparent-center-001.png::CompressedTexture2D::8144325034854612434::1728726631::1732816695::1::::<><>::
 panel-transparent-center-002.png::CompressedTexture2D::7288610534639219010::1728726631::1732816695::1::::<><>::
@@ -651,7 +649,7 @@ panel-transparent-center-029.png::CompressedTexture2D::7666231956717118924::1728
 panel-transparent-center-030.png::CompressedTexture2D::7800120714126372225::1728726631::1732816695::1::::<><>::
 panel-transparent-center-031.png::CompressedTexture2D::1258644370140113912::1728726631::1732816695::1::::<><>::
 ::res://Resources/kenney_fantasy-ui-borders/PNG/Double/::1728726631
-::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Border/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Border/::1732816695
 panel-border-000.png::CompressedTexture2D::2381932131391055690::1728726631::1732816695::1::::<><>::
 panel-border-001.png::CompressedTexture2D::760950689064886618::1728726631::1732816695::1::::<><>::
 panel-border-002.png::CompressedTexture2D::6285617992249383421::1728726631::1732816695::1::::<><>::
@@ -684,21 +682,21 @@ panel-border-028.png::CompressedTexture2D::521911094662890116::1728726631::17328
 panel-border-029.png::CompressedTexture2D::7134021214703902012::1728726631::1732816695::1::::<><>::
 panel-border-030.png::CompressedTexture2D::8873178338457676418::1728726631::1732816695::1::::<><>::
 panel-border-031.png::CompressedTexture2D::1303553371980232818::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Divider/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Divider/::1732816695
 divider-000.png::CompressedTexture2D::6542481442303204753::1728726631::1732816695::1::::<><>::
 divider-001.png::CompressedTexture2D::2062645828640277301::1728726631::1732816695::1::::<><>::
 divider-002.png::CompressedTexture2D::8788040939836286554::1728726631::1732816695::1::::<><>::
 divider-003.png::CompressedTexture2D::2954835100329286202::1728726631::1732816695::1::::<><>::
 divider-004.png::CompressedTexture2D::148552674783946857::1728726631::1732816695::1::::<><>::
 divider-005.png::CompressedTexture2D::6734056498578149481::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Divider Fade/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Divider Fade/::1732816695
 divider-fade-000.png::CompressedTexture2D::4036704787461526901::1728726631::1732816695::1::::<><>::
 divider-fade-001.png::CompressedTexture2D::9151253524665038302::1728726631::1732816695::1::::<><>::
 divider-fade-002.png::CompressedTexture2D::8724785532450369140::1728726631::1732816695::1::::<><>::
 divider-fade-003.png::CompressedTexture2D::5941675103136570005::1728726631::1732816695::1::::<><>::
 divider-fade-004.png::CompressedTexture2D::9035321534882890778::1728726631::1732816695::1::::<><>::
 divider-fade-005.png::CompressedTexture2D::4873572592968925750::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Panel/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Panel/::1732816695
 panel-000.png::CompressedTexture2D::2406900844817786693::1728726631::1732816695::1::::<><>::
 panel-001.png::CompressedTexture2D::680315554433335083::1728726631::1732816695::1::::<><>::
 panel-002.png::CompressedTexture2D::8478327636396362101::1728726631::1732816695::1::::<><>::
@@ -731,7 +729,7 @@ panel-028.png::CompressedTexture2D::5703799148364507621::1728726631::1732816695:
 panel-029.png::CompressedTexture2D::7611329000185930003::1728726631::1732816695::1::::<><>::
 panel-030.png::CompressedTexture2D::1686640598442744114::1728726631::1732816695::1::::<><>::
 panel-031.png::CompressedTexture2D::5377088992345067716::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Transparent border/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Transparent border/::1732816695
 panel-transparent-border-000.png::CompressedTexture2D::8421004707551307298::1728726631::1732816695::1::::<><>::
 panel-transparent-border-001.png::CompressedTexture2D::67363430299088909::1728726631::1732816695::1::::<><>::
 panel-transparent-border-002.png::CompressedTexture2D::5041262685149465157::1728726631::1732816695::1::::<><>::
@@ -764,7 +762,7 @@ panel-transparent-border-028.png::CompressedTexture2D::7835687519353896034::1728
 panel-transparent-border-029.png::CompressedTexture2D::8979267720691109113::1728726631::1732816695::1::::<><>::
 panel-transparent-border-030.png::CompressedTexture2D::5396642924972883266::1728726631::1732816695::1::::<><>::
 panel-transparent-border-031.png::CompressedTexture2D::8731982080467444059::1728726631::1732816695::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Transparent center/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/PNG/Double/Transparent center/::1732816695
 panel-transparent-center-000.png::CompressedTexture2D::7770377651755113960::1728726631::1732816695::1::::<><>::
 panel-transparent-center-001.png::CompressedTexture2D::6289096558714981937::1728726631::1732816695::1::::<><>::
 panel-transparent-center-002.png::CompressedTexture2D::3744217563103232508::1728726631::1732816695::1::::<><>::
@@ -797,12 +795,12 @@ panel-transparent-center-028.png::CompressedTexture2D::2799991221207724809::1728
 panel-transparent-center-029.png::CompressedTexture2D::1400979499965061060::1728726631::1732816694::1::::<><>::
 panel-transparent-center-030.png::CompressedTexture2D::5300881425123315607::1728726631::1732816694::1::::<><>::
 panel-transparent-center-031.png::CompressedTexture2D::4820417599434267691::1728726631::1732816694::1::::<><>::
-::res://Resources/kenney_fantasy-ui-borders/Vector/::1728726631
+::res://Resources/kenney_fantasy-ui-borders/Vector/::1732816695
 fantasy-ui-borders.svg::CompressedTexture2D::754822746102711867::1728726631::1732816695::1::::<><>::
 ::res://Resources/Magic/::1731082595
 ::res://Resources/Magic/Pixelart Spells/::1731082595
 ::res://Resources/Magic/Pixelart Spells/Asprite Files/::1731082595
-::res://Resources/Magic/Pixelart Spells/PNG Files/::1731082595
+::res://Resources/Magic/Pixelart Spells/PNG Files/::1732816694
 Arcane Bolt.png::CompressedTexture2D::5878829027093651237::1731082595::1732816694::1::::<><>::
 Black And White Ray.png::CompressedTexture2D::856333379170063447::1731082595::1732816694::1::::<><>::
 Black And White Sparks.png::CompressedTexture2D::632667174967177152::1731082595::1732816694::1::::<><>::
@@ -825,60 +823,60 @@ Water Blast.png::CompressedTexture2D::8495846828249197165::1731082595::173281669
 Water Bolt.png::CompressedTexture2D::3562182497429614434::1731082595::1732816694::1::::<><>::
 Water Orb.png::CompressedTexture2D::9011834775080484134::1731082595::1732816694::1::::<><>::
 Wind Bolt.png::CompressedTexture2D::9098003053674420239::1731082595::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/::1731523730
+::res://Resources/Mythic Dungeon/::1732816694
 Archer-Green.png::CompressedTexture2D::972900554946995698::1731523729::1732816694::1::::<><>::
 ::res://Resources/Mythic Dungeon/Other Game-Engines/::1676544715
-::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (16x16)/::1731442790
+::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (16x16)/::1732816694
 SpriteSheet_A_16x16_VerzatileDev.png::CompressedTexture2D::5464758618227576850::1676545499::1732816694::1::::<><>::
 SpriteSheet_B_16x16_VerzatileDev.png::CompressedTexture2D::8348282809540217795::1676514200::1732816694::1::::<><>::
 SpriteSheet_C_16x16_VerzatileDev.png::CompressedTexture2D::4299991903272888626::1676514184::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (32x32)/::1731442790
+::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (32x32)/::1732816695
 SpriteSheet_A_32x32_VerzatileDev.png::CompressedTexture2D::1461563047573202194::1676545554::1732816695::1::::<><>::
 SpriteSheet_B_32x32_VerzatileDev.png::CompressedTexture2D::7896375368501518260::1676514274::1732816694::1::::<><>::
 SpriteSheet_C_32x32_VerzatileDev.png::CompressedTexture2D::1305388227933330903::1676514284::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (48x48)/::1731442790
+::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (48x48)/::1732816695
 SpriteSheet_A_48x48_VerzatileDev.png::CompressedTexture2D::2346531946267137799::1676545580::1732816695::1::::<><>::
 SpriteSheet_B_48x48_VerzatileDev.png::CompressedTexture2D::7843054231731817726::1676514340::1732816694::1::::<><>::
 SpriteSheet_C_48x48_VerzatileDev.png::CompressedTexture2D::1461029897406982597::1676514330::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (64x64)/::1731442790
+::res://Resources/Mythic Dungeon/Other Game-Engines/Other Engines (64x64)/::1732816695
 SpriteSheet_A_64x64_VerzatileDev.png::CompressedTexture2D::7654518135435200792::1676545608::1732816695::1::::<><>::
 SpriteSheet_B_64x64_VerzatileDev.png::CompressedTexture2D::3258084724061068895::1676545128::1732816694::1::::<><>::
 SpriteSheet_C_64x64_VerzatileDev.png::CompressedTexture2D::4596521390935245036::1676545143::1732816695::1::::<><>::
-::res://Resources/Mythic Dungeon/RPG Maker MV/::1731442790
+::res://Resources/Mythic Dungeon/RPG Maker MV/::1732816694
 SpriteSheet_A_48x48_VerzatileDev.png::CompressedTexture2D::5869019685956301495::1676545580::1732816694::1::::<><>::
 SpriteSheet_B_48x48_VerzatileDev.png::CompressedTexture2D::4938197156556235004::1676513696::1732816694::1::::<><>::
 SpriteSheet_C_48x48_VerzatileDev.png::CompressedTexture2D::5486313586165272230::1676513705::1732816694::1::::<><>::
 ::res://Resources/Mythic Dungeon/RPG Maker MZ/::1676514096
-::res://Resources/Mythic Dungeon/RPG Maker MZ/RPG Maker MZ (16x16)/::1731442790
+::res://Resources/Mythic Dungeon/RPG Maker MZ/RPG Maker MZ (16x16)/::1732816694
 SpriteSheet_A_16x16_VerzatileDev.png::CompressedTexture2D::3233674820727468932::1676545499::1732816694::1::::<><>::
 SpriteSheet_B_16x16_VerzatileDev.png::CompressedTexture2D::8579868957961678505::1676514200::1732816694::1::::<><>::
 SpriteSheet_C_16x16_VerzatileDev.png::CompressedTexture2D::8311239569554946635::1676514184::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/RPG Maker MZ/RPG Maker MZ (32x32)/::1731442790
+::res://Resources/Mythic Dungeon/RPG Maker MZ/RPG Maker MZ (32x32)/::1732816694
 SpriteSheet_A_32x32_VerzatileDev.png::CompressedTexture2D::938763889515680555::1676545554::1732816694::1::::<><>::
 SpriteSheet_B_32x32_VerzatileDev.png::CompressedTexture2D::4083027727849523184::1676514274::1732816694::1::::<><>::
 SpriteSheet_C_32x32_VerzatileDev.png::CompressedTexture2D::3333236514631533317::1676514284::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/RPG Maker MZ/RPG Maker MZ (48x48)/::1731442790
+::res://Resources/Mythic Dungeon/RPG Maker MZ/RPG Maker MZ (48x48)/::1732816695
 SpriteSheet_A_48x48_VerzatileDev.png::CompressedTexture2D::3739872291361372263::1676545580::1732816695::1::::<><>::
 SpriteSheet_B_48x48_VerzatileDev.png::CompressedTexture2D::8932628441340599391::1676514340::1732816694::1::::<><>::
 SpriteSheet_C_48x48_VerzatileDev.png::CompressedTexture2D::2414105837055209241::1676514330::1732816694::1::::<><>::
-::res://Resources/Mythic Dungeon/RPG Maker VX Ace/::1731442790
+::res://Resources/Mythic Dungeon/RPG Maker VX Ace/::1732816694
 SpriteSheet_A_32x32_VerzatileDev.png::CompressedTexture2D::2933925424986980846::1676545554::1732816694::1::::<><>::
 SpriteSheet_B_32x32_VerzatileDev.png::CompressedTexture2D::7276326473529004560::1676514274::1732816694::1::::<><>::
 SpriteSheet_C_32x32_VerzatileDev.png::CompressedTexture2D::4558974196171743646::1676514284::1732816694::1::::<><>::
-::res://Resources/Player/::1731577636
+::res://Resources/Player/::1732816694
 Archer-Green.png::CompressedTexture2D::471395874563180011::1647288742::1732816694::1::::<><>::
 Human-Soldier-Cyan.png::CompressedTexture2D::1081189163629763935::1731577635::1732816694::1::::<><>::
 Human-Soldier-Red-export.png::CompressedTexture2D::5384325625801265839::1729590826::1732816694::1::::<><>::
 Human-Soldier-Red.png::CompressedTexture2D::2311022095120654910::1728899645::1732816694::1::::<><>::
-::res://Resources/Portal/::1730486418
+::res://Resources/Portal/::1732816694
 Dimensional_Portal.png::CompressedTexture2D::9160500670645521630::1730486418::1732816694::1::::<><>::
-::res://Resources/Projectiles/::1731596362
+::res://Resources/Projectiles/::1732816694
 ranged-SpriteAttack.png::CompressedTexture2D::7509177985419585580::1731596361::1732816694::1::::<><>::
 ranged-thekingphoenix.png::CompressedTexture2D::5403594609646474629::1730978606::1732816694::1::::<><>::
 ::res://Resources/sbs_-_top_down_dungeon_pack/::1731438192
 License.txt::TextFile::-1::1696212708::0::1::::<><>::
 ::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/::1651075002
-::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/::1731442790
+::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/::1732816695
 Floor - Dirt 1 64x64.png::CompressedTexture2D::1846242045303020139::1632935181::1732816694::1::::<><>::
 Floor - Dirt 2 64x64.png::CompressedTexture2D::4181340669283480765::1696732189::1732816694::1::::<><>::
 Floor - Glass 1 64x64.png::CompressedTexture2D::4251349215751541580::1632984400::1732816694::1::::<><>::
@@ -912,7 +910,7 @@ Floor-Stone_04-64x64.png::CompressedTexture2D::7096465656669520248::1696804844::
 Floor-Wood_01-64x64.png::CompressedTexture2D::6598843745106800789::1683323373::1732816695::1::::<><>::
 Floor-Wood_02-64x64.png::CompressedTexture2D::6997051941120640198::1696811830::1732816695::1::::<><>::
 ::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Tiled Tsx/::1696807522
-::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/::1731442790
+::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/::1732816695
 Wall - Brick 1 64x64.png::CompressedTexture2D::4224941998724735591::1632824808::1732816695::1::::<><>::
 Wall - Brick 2 64x64.png::CompressedTexture2D::1206851730078426363::1632985035::1732816695::1::::<><>::
 Wall - Brick 3 64x64.png::CompressedTexture2D::331427574332226103::1632985814::1732816695::1::::<><>::
@@ -953,7 +951,7 @@ Wall-Stone_03-64x64.png::CompressedTexture2D::5908845497233456169::1696803742::1
 Wall-Stone_04-64x64.png::CompressedTexture2D::103796256369142099::1696804257::1732816695::1::::<><>::
 ::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Tiled Tsx/::1696804284
 ::res://Resources/ShaderPixelArt/::1731424281
-::res://Resources/Shikashi's Fantasy Icons Pack v2/::1728734378
+::res://Resources/Shikashi's Fantasy Icons Pack v2/::1732816695
 #1 - Transparent Icons.png::CompressedTexture2D::6344260944127468871::1728724651::1732816695::1::::<><>::
 #2 - Transparent Icons & Drop Shadow.png::CompressedTexture2D::1303457930381772310::1728724651::1732816695::1::::<><>::
 Background 1a.png::CompressedTexture2D::571421757807401216::1728724651::1732816695::1::::<><>::
@@ -972,13 +970,13 @@ BG 9.png::CompressedTexture2D::2742906896805801724::1728724651::1732816695::1:::
 BG 10.png::CompressedTexture2D::6170744070559978361::1728724651::1732816695::1::::<><>::
 BG 11.png::CompressedTexture2D::896920273949942446::1728724651::1732816695::1::::<><>::
 Shikashi's Fantasy Icons Pack.txt::TextFile::-1::1728724651::0::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/::1728734420
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/::1732816695
 License.txt::TextFile::-1::1728726619::0::1::::<><>::
 Preview.png::CompressedTexture2D::5017987735569324918::1728726619::1732816695::1::::<><>::
 Sample.png::CompressedTexture2D::6353547197919747336::1728726619::1732816695::1::::<><>::
 ::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/::1728726619
 ::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/::1728726619
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Border/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Border/::1732816695
 panel-border-000.png::CompressedTexture2D::2203155578406649602::1728726619::1732816694::1::::<><>::
 panel-border-001.png::CompressedTexture2D::6441950576385665695::1728726619::1732816694::1::::<><>::
 panel-border-002.png::CompressedTexture2D::8872898902896441363::1728726619::1732816694::1::::<><>::
@@ -1011,21 +1009,21 @@ panel-border-028.png::CompressedTexture2D::5060151309905866957::1728726619::1732
 panel-border-029.png::CompressedTexture2D::5123680347154799267::1728726619::1732816694::1::::<><>::
 panel-border-030.png::CompressedTexture2D::8532376199546531453::1728726619::1732816694::1::::<><>::
 panel-border-031.png::CompressedTexture2D::3579859225956842505::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Divider/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Divider/::1732816694
 divider-000.png::CompressedTexture2D::7462310061251503781::1728726619::1732816694::1::::<><>::
 divider-001.png::CompressedTexture2D::7639901690802841917::1728726619::1732816694::1::::<><>::
 divider-002.png::CompressedTexture2D::5945775191591828298::1728726619::1732816694::1::::<><>::
 divider-003.png::CompressedTexture2D::825744508484536952::1728726619::1732816694::1::::<><>::
 divider-004.png::CompressedTexture2D::7858745911467581848::1728726619::1732816694::1::::<><>::
 divider-005.png::CompressedTexture2D::1076343719973631567::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Divider Fade/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Divider Fade/::1732816694
 divider-fade-000.png::CompressedTexture2D::8287752208422099693::1728726619::1732816694::1::::<><>::
 divider-fade-001.png::CompressedTexture2D::1975630070153129818::1728726619::1732816694::1::::<><>::
 divider-fade-002.png::CompressedTexture2D::322982607432846003::1728726619::1732816694::1::::<><>::
 divider-fade-003.png::CompressedTexture2D::8111571147806617247::1728726619::1732816694::1::::<><>::
 divider-fade-004.png::CompressedTexture2D::2563637418244947293::1728726619::1732816694::1::::<><>::
 divider-fade-005.png::CompressedTexture2D::5125082537986932354::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Panel/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Panel/::1732816694
 panel-000.png::CompressedTexture2D::4207640930923397402::1728726619::1732816694::1::::<><>::
 panel-001.png::CompressedTexture2D::4855831296049243031::1728726619::1732816694::1::::<><>::
 panel-002.png::CompressedTexture2D::7967423925371881265::1728726619::1732816694::1::::<><>::
@@ -1058,7 +1056,7 @@ panel-028.png::CompressedTexture2D::1576180050227898453::1728726619::1732816694:
 panel-029.png::CompressedTexture2D::4625734464225550611::1728726619::1732816694::1::::<><>::
 panel-030.png::CompressedTexture2D::507473843637971813::1728726619::1732816694::1::::<><>::
 panel-031.png::CompressedTexture2D::5559281485142887369::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Transparent border/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Transparent border/::1732816694
 panel-transparent-border-000.png::CompressedTexture2D::5952907110167704995::1728726619::1732816694::1::::<><>::
 panel-transparent-border-001.png::CompressedTexture2D::7676692551952527420::1728726619::1732816694::1::::<><>::
 panel-transparent-border-002.png::CompressedTexture2D::8449741997036335999::1728726619::1732816694::1::::<><>::
@@ -1091,7 +1089,7 @@ panel-transparent-border-028.png::CompressedTexture2D::7710756354176283251::1728
 panel-transparent-border-029.png::CompressedTexture2D::2310824980849278593::1728726619::1732816694::1::::<><>::
 panel-transparent-border-030.png::CompressedTexture2D::1070413671597304149::1728726619::1732816694::1::::<><>::
 panel-transparent-border-031.png::CompressedTexture2D::2731778203076826791::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Transparent center/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Default/Transparent center/::1732816694
 panel-transparent-center-000.png::CompressedTexture2D::4893925875499670745::1728726619::1732816694::1::::<><>::
 panel-transparent-center-001.png::CompressedTexture2D::8587185741253314013::1728726619::1732816694::1::::<><>::
 panel-transparent-center-002.png::CompressedTexture2D::4152203764665629579::1728726619::1732816694::1::::<><>::
@@ -1125,7 +1123,7 @@ panel-transparent-center-029.png::CompressedTexture2D::7165656684533201880::1728
 panel-transparent-center-030.png::CompressedTexture2D::2487159403200686558::1728726619::1732816694::1::::<><>::
 panel-transparent-center-031.png::CompressedTexture2D::7165270681054035506::1728726619::1732816694::1::::<><>::
 ::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/::1728726619
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Border/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Border/::1732816694
 panel-border-000.png::CompressedTexture2D::4871435612959213788::1728726619::1732816694::1::::<><>::
 panel-border-001.png::CompressedTexture2D::7620650171413024128::1728726619::1732816694::1::::<><>::
 panel-border-002.png::CompressedTexture2D::6550652122142727804::1728726619::1732816694::1::::<><>::
@@ -1158,21 +1156,21 @@ panel-border-028.png::CompressedTexture2D::5297680012379472651::1728726619::1732
 panel-border-029.png::CompressedTexture2D::6756892305576170826::1728726619::1732816694::1::::<><>::
 panel-border-030.png::CompressedTexture2D::3870088580870835970::1728726619::1732816694::1::::<><>::
 panel-border-031.png::CompressedTexture2D::8271702594032584135::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Divider/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Divider/::1732816694
 divider-000.png::CompressedTexture2D::2429220244612682299::1728726619::1732816694::1::::<><>::
 divider-001.png::CompressedTexture2D::2095609615116476203::1728726619::1732816694::1::::<><>::
 divider-002.png::CompressedTexture2D::876495736775212844::1728726619::1732816694::1::::<><>::
 divider-003.png::CompressedTexture2D::6516284169611956297::1728726619::1732816694::1::::<><>::
 divider-004.png::CompressedTexture2D::7106754244276765839::1728726619::1732816694::1::::<><>::
 divider-005.png::CompressedTexture2D::2781249938360259145::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Divider Fade/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Divider Fade/::1732816694
 divider-fade-000.png::CompressedTexture2D::5080540788614332174::1728726619::1732816694::1::::<><>::
 divider-fade-001.png::CompressedTexture2D::2682176789290022953::1728726619::1732816694::1::::<><>::
 divider-fade-002.png::CompressedTexture2D::5362610290210812526::1728726619::1732816694::1::::<><>::
 divider-fade-003.png::CompressedTexture2D::8653558983158630880::1728726619::1732816694::1::::<><>::
 divider-fade-004.png::CompressedTexture2D::7195223988477469727::1728726619::1732816694::1::::<><>::
 divider-fade-005.png::CompressedTexture2D::7791150669351594950::1728726619::1732816694::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Panel/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Panel/::1732816695
 panel-000.png::CompressedTexture2D::4560691748375454980::1728726619::1732816694::1::::<><>::
 panel-001.png::CompressedTexture2D::216383281120649210::1728726619::1732816694::1::::<><>::
 panel-002.png::CompressedTexture2D::6524098453336746659::1728726619::1732816694::1::::<><>::
@@ -1205,7 +1203,7 @@ panel-028.png::CompressedTexture2D::5827308033010871998::1728726619::1732816695:
 panel-029.png::CompressedTexture2D::1057752218137591584::1728726619::1732816695::1::::<><>::
 panel-030.png::CompressedTexture2D::7488310421565393190::1728726619::1732816695::1::::<><>::
 panel-031.png::CompressedTexture2D::2748560526322344178::1728726619::1732816695::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Transparent border/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Transparent border/::1732816695
 panel-transparent-border-000.png::CompressedTexture2D::1746323263122233574::1728726619::1732816695::1::::<><>::
 panel-transparent-border-001.png::CompressedTexture2D::6807266352234408931::1728726619::1732816695::1::::<><>::
 panel-transparent-border-002.png::CompressedTexture2D::185835923081468997::1728726619::1732816695::1::::<><>::
@@ -1238,7 +1236,7 @@ panel-transparent-border-028.png::CompressedTexture2D::4111837490418901944::1728
 panel-transparent-border-029.png::CompressedTexture2D::438496266721495876::1728726619::1732816695::1::::<><>::
 panel-transparent-border-030.png::CompressedTexture2D::7573324462122951376::1728726619::1732816695::1::::<><>::
 panel-transparent-border-031.png::CompressedTexture2D::6395090260507077522::1728726619::1732816695::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Transparent center/::1728726619
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/PNG/Double/Transparent center/::1732816695
 panel-transparent-center-000.png::CompressedTexture2D::8614588130421246749::1728726619::1732816695::1::::<><>::
 panel-transparent-center-001.png::CompressedTexture2D::1616450100531098365::1728726619::1732816695::1::::<><>::
 panel-transparent-center-002.png::CompressedTexture2D::7376585913344870370::1728726619::1732816695::1::::<><>::
@@ -1271,16 +1269,16 @@ panel-transparent-center-028.png::CompressedTexture2D::3022793353238125492::1728
 panel-transparent-center-029.png::CompressedTexture2D::2483102466180293733::1728726619::1732816695::1::::<><>::
 panel-transparent-center-030.png::CompressedTexture2D::5178022347408982054::1728726619::1732816695::1::::<><>::
 panel-transparent-center-031.png::CompressedTexture2D::3427774548393821973::1728726619::1732816695::1::::<><>::
-::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/Vector/::1728726620
+::res://Resources/Shikashi's Fantasy Icons Pack v2/kenney_fantasy-ui-borders/Vector/::1732816695
 fantasy-ui-borders.svg::CompressedTexture2D::5554069424411889098::1728726619::1732816695::1::::<><>::
-::res://Resources/signposts & decoy/::1732524403
+::res://Resources/signposts & decoy/::1732816695
 signpost-outsidestuff.png::CompressedTexture2D::629501998753476856::1732524403::1732816695::1::::<><>::
 ::res://Resources/ThemeDownloads/::1728811586
-::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/::1728811586
+::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/::1732816695
 license.txt::TextFile::-1::1728811579::0::1::::<><>::
 preview.png::CompressedTexture2D::8052639530846137322::1728811579::1732816695::1::::<><>::
 sample.png::CompressedTexture2D::4395919838934660840::1728811579::1732816695::1::::<><>::
-::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/PNG/::1728811586
+::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/PNG/::1732816695
 arrowBeige_left.png::CompressedTexture2D::2600103168648115703::1728811579::1732816695::1::::<><>::
 arrowBeige_right.png::CompressedTexture2D::3732757439048786973::1728811579::1732816695::1::::<><>::
 arrowBlue_left.png::CompressedTexture2D::6114914279407638047::1728811579::1732816695::1::::<><>::
@@ -1368,182 +1366,184 @@ panel_beige.png::CompressedTexture2D::373359373189626707::1728811579::1732816695
 panel_beigeLight.png::CompressedTexture2D::703080104931210447::1728811579::1732816695::1::::<><>::
 panel_blue.png::CompressedTexture2D::6268887261027801320::1728811579::1732816695::1::::<><>::
 panel_brown.png::CompressedTexture2D::6209835989531340960::1728811579::1732816695::1::::<><>::
-::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/Spritesheet/::1728811586
+::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/Spritesheet/::1732816695
 uipack_rpg_sheet.png::CompressedTexture2D::7692039467205370662::1728811579::1732816695::1::::<><>::
 uipack_rpg_sheet.xml::TextFile::-1::1728811579::0::1::::<><>::
-::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/Vector/::1728811586
+::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/Vector/::1732816695
 uipack_rpg_vector.svg::CompressedTexture2D::4064249268548025805::1728811579::1732816695::1::::<><>::
-::res://Resources/Weapon effects/::1729260889
+::res://Resources/Weapon effects/::1732816695
 Big_Preview.png::CompressedTexture2D::4021572028004805063::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 1/::1729260889
+::res://Resources/Weapon effects/Alternative 1/::1732816695
 Preview_Alternative_1.png::CompressedTexture2D::6209060844757723271::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 1/1/::1729260889
+::res://Resources/Weapon effects/Alternative 1/1/::1732816695
 Alternative_1_01.png::CompressedTexture2D::3481106457009447935::1729260851::1732816695::1::::<><>::
 Alternative_1_02.png::CompressedTexture2D::4917373289174179517::1729260851::1732816695::1::::<><>::
 Alternative_1_03.png::CompressedTexture2D::5756990492157526668::1729260851::1732816695::1::::<><>::
 Alternative_1_04.png::CompressedTexture2D::8372666813817651733::1729260851::1732816695::1::::<><>::
 Alternative_1_05.png::CompressedTexture2D::5174642082310725160::1729260851::1732816695::1::::<><>::
 Alternative_1_06.png::CompressedTexture2D::8752784124494585457::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 1/2/::1729260889
+::res://Resources/Weapon effects/Alternative 1/2/::1732816695
 Alternative_1_07.png::CompressedTexture2D::1018425339916219907::1729260851::1732816695::1::::<><>::
 Alternative_1_08.png::CompressedTexture2D::508371866957541085::1729260851::1732816695::1::::<><>::
 Alternative_1_09.png::CompressedTexture2D::3431920960163018357::1729260851::1732816695::1::::<><>::
 Alternative_1_10.png::CompressedTexture2D::393754211909727837::1729260851::1732816695::1::::<><>::
 Alternative_1_11.png::CompressedTexture2D::5849338032475602545::1729260851::1732816695::1::::<><>::
 Alternative_1_12.png::CompressedTexture2D::2747927472505842948::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 1/3/::1729260889
+::res://Resources/Weapon effects/Alternative 1/3/::1732816695
 Alternative_1_13.png::CompressedTexture2D::497309698537883899::1729260851::1732816695::1::::<><>::
 Alternative_1_14.png::CompressedTexture2D::5198190691353834187::1729260851::1732816695::1::::<><>::
 Alternative_1_15.png::CompressedTexture2D::1953320692122912656::1729260851::1732816695::1::::<><>::
 Alternative_1_16.png::CompressedTexture2D::4727764958494340291::1729260851::1732816695::1::::<><>::
 Alternative_1_17.png::CompressedTexture2D::7859116854341401564::1729260851::1732816695::1::::<><>::
 Alternative_1_18.png::CompressedTexture2D::3436838678084259683::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 1/4/::1729260889
+::res://Resources/Weapon effects/Alternative 1/4/::1732816695
 Alternative_1_19.png::CompressedTexture2D::5406575514220609905::1729260851::1732816695::1::::<><>::
 Alternative_1_20.png::CompressedTexture2D::4626848324358336974::1729260851::1732816695::1::::<><>::
 Alternative_1_21.png::CompressedTexture2D::7972247367438987239::1729260851::1732816695::1::::<><>::
 Alternative_1_22.png::CompressedTexture2D::8897245510486877243::1729260851::1732816695::1::::<><>::
 Alternative_1_23.png::CompressedTexture2D::3797993027672419931::1729260851::1732816695::1::::<><>::
 Alternative_1_24.png::CompressedTexture2D::6421494658648008412::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 1/5/::1729260889
+::res://Resources/Weapon effects/Alternative 1/5/::1732816695
 Alternative_1_25.png::CompressedTexture2D::7246005894275208495::1729260851::1732816695::1::::<><>::
 Alternative_1_26.png::CompressedTexture2D::1121378780032004537::1729260851::1732816695::1::::<><>::
 Alternative_1_27.png::CompressedTexture2D::4583206626218318845::1729260851::1732816695::1::::<><>::
 Alternative_1_28.png::CompressedTexture2D::2699839815811057494::1729260851::1732816695::1::::<><>::
 Alternative_1_29.png::CompressedTexture2D::3840005747485667090::1729260851::1732816695::1::::<><>::
 Alternative_1_30.png::CompressedTexture2D::8136998799662575219::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 2/::1729260889
+::res://Resources/Weapon effects/Alternative 2/::1732816695
 Preview_Alternative_2.png::CompressedTexture2D::8331955388045590597::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 2/1/::1729260889
+::res://Resources/Weapon effects/Alternative 2/1/::1732816695
 Alternative_2_01.png::CompressedTexture2D::4001602318834303710::1729260851::1732816695::1::::<><>::
 Alternative_2_02.png::CompressedTexture2D::5904601519407130408::1729260851::1732816695::1::::<><>::
 Alternative_2_03.png::CompressedTexture2D::3703028405096265000::1729260851::1732816695::1::::<><>::
 Alternative_2_04.png::CompressedTexture2D::2208574371881307711::1729260851::1732816695::1::::<><>::
 Alternative_2_05.png::CompressedTexture2D::8279388027996947643::1729260851::1732816695::1::::<><>::
 Alternative_2_06.png::CompressedTexture2D::795402917763429135::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 2/2/::1729260889
+::res://Resources/Weapon effects/Alternative 2/2/::1732816695
 Alternative_2_07.png::CompressedTexture2D::5868216034696874981::1729260851::1732816695::1::::<><>::
 Alternative_2_08.png::CompressedTexture2D::971942420340194289::1729260851::1732816695::1::::<><>::
 Alternative_2_09.png::CompressedTexture2D::7352978586174319012::1729260851::1732816695::1::::<><>::
 Alternative_2_10.png::CompressedTexture2D::31784474834350716::1729260851::1732816695::1::::<><>::
 Alternative_2_11.png::CompressedTexture2D::824598754639429853::1729260851::1732816695::1::::<><>::
 Alternative_2_12.png::CompressedTexture2D::5062889426809697384::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 2/3/::1729260889
+::res://Resources/Weapon effects/Alternative 2/3/::1732816695
 Alternative_2_13.png::CompressedTexture2D::5356430177494030440::1729260851::1732816695::1::::<><>::
 Alternative_2_14.png::CompressedTexture2D::7165897072700515945::1729260851::1732816695::1::::<><>::
 Alternative_2_15.png::CompressedTexture2D::5198118121362156521::1729260851::1732816695::1::::<><>::
 Alternative_2_16.png::CompressedTexture2D::1958318448377795967::1729260851::1732816695::1::::<><>::
 Alternative_2_17.png::CompressedTexture2D::7341518869501002358::1729260851::1732816695::1::::<><>::
 Alternative_2_18.png::CompressedTexture2D::6610762403401099855::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 2/4/::1729260889
+::res://Resources/Weapon effects/Alternative 2/4/::1732816695
 Alternative_2_19.png::CompressedTexture2D::4239973769537645613::1729260851::1732816695::1::::<><>::
 Alternative_2_20.png::CompressedTexture2D::3351159935930400330::1729260851::1732816695::1::::<><>::
 Alternative_2_21.png::CompressedTexture2D::3067271855839813437::1729260851::1732816695::1::::<><>::
 Alternative_2_22.png::CompressedTexture2D::7133386013719403195::1729260851::1732816695::1::::<><>::
 Alternative_2_23.png::CompressedTexture2D::5285560515459784333::1729260851::1732816695::1::::<><>::
 Alternative_2_24.png::CompressedTexture2D::5519777727125486590::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 2/5/::1729260889
+::res://Resources/Weapon effects/Alternative 2/5/::1732816695
 Alternative_2_25.png::CompressedTexture2D::8328536526262818032::1729260851::1732816695::1::::<><>::
 Alternative_2_26.png::CompressedTexture2D::1315467051495804078::1729260851::1732816695::1::::<><>::
 Alternative_2_27.png::CompressedTexture2D::213494642722734509::1729260851::1732816695::1::::<><>::
 Alternative_2_28.png::CompressedTexture2D::5430884760284077186::1729260851::1732816695::1::::<><>::
 Alternative_2_29.png::CompressedTexture2D::5832189257671503237::1729260851::1732816695::1::::<><>::
 Alternative_2_30.png::CompressedTexture2D::1312516468317768057::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 3/::1729260889
+::res://Resources/Weapon effects/Alternative 3/::1732816695
 Preview_Alternative_3.png::CompressedTexture2D::5030769524958169105::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 3/1/::1729260889
+::res://Resources/Weapon effects/Alternative 3/1/::1732816695
 Alternative_3_01.png::CompressedTexture2D::8758779899205954141::1729260851::1732816695::1::::<><>::
 Alternative_3_02.png::CompressedTexture2D::8535992691090375329::1729260851::1732816695::1::::<><>::
 Alternative_3_03.png::CompressedTexture2D::8864459219128589435::1729260851::1732816695::1::::<><>::
 Alternative_3_04.png::CompressedTexture2D::2894322108162776181::1729260851::1732816695::1::::<><>::
 Alternative_3_05.png::CompressedTexture2D::2732930447891291577::1729260851::1732816695::1::::<><>::
 Alternative_3_06.png::CompressedTexture2D::6415510251493381583::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 3/2/::1729260889
+::res://Resources/Weapon effects/Alternative 3/2/::1732816695
 Alternative_3_07.png::CompressedTexture2D::4653626509467996921::1729260851::1732816695::1::::<><>::
 Alternative_3_08.png::CompressedTexture2D::565462742605447097::1729260851::1732816695::1::::<><>::
 Alternative_3_09.png::CompressedTexture2D::4311521904450054693::1729260851::1732816695::1::::<><>::
 Alternative_3_10.png::CompressedTexture2D::4157552144734200805::1729260851::1732816695::1::::<><>::
 Alternative_3_11.png::CompressedTexture2D::5856318295221116899::1729260851::1732816695::1::::<><>::
 Alternative_3_12.png::CompressedTexture2D::8508030649462163567::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 3/3/::1729260889
+::res://Resources/Weapon effects/Alternative 3/3/::1732816695
 Alternative_3_13.png::CompressedTexture2D::5655907891885766960::1729260851::1732816695::1::::<><>::
 Alternative_3_14.png::CompressedTexture2D::336577767435120421::1729260851::1732816695::1::::<><>::
 Alternative_3_15.png::CompressedTexture2D::7043108112402151579::1729260851::1732816695::1::::<><>::
 Alternative_3_16.png::CompressedTexture2D::7110288818175959529::1729260851::1732816695::1::::<><>::
 Alternative_3_17.png::CompressedTexture2D::4846048776449729087::1729260851::1732816695::1::::<><>::
 Alternative_3_18.png::CompressedTexture2D::4125920565149574457::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 3/4/::1729260889
+::res://Resources/Weapon effects/Alternative 3/4/::1732816695
 Alternative_3_19.png::CompressedTexture2D::864334269165905070::1729260851::1732816695::1::::<><>::
 Alternative_3_20.png::CompressedTexture2D::2790282606912328093::1729260851::1732816695::1::::<><>::
 Alternative_3_21.png::CompressedTexture2D::8761371768654921174::1729260851::1732816695::1::::<><>::
 Alternative_3_22.png::CompressedTexture2D::8395005600346443273::1729260851::1732816695::1::::<><>::
 Alternative_3_23.png::CompressedTexture2D::8225928762242466033::1729260851::1732816695::1::::<><>::
 Alternative_3_24.png::CompressedTexture2D::6693192144840508357::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Alternative 3/5/::1729260889
+::res://Resources/Weapon effects/Alternative 3/5/::1732816695
 Alternative_3_25.png::CompressedTexture2D::1722491010165619804::1729260851::1732816695::1::::<><>::
 Alternative_3_26.png::CompressedTexture2D::1761554526116210601::1729260851::1732816695::1::::<><>::
 Alternative_3_27.png::CompressedTexture2D::6152778472582350460::1729260851::1732816695::1::::<><>::
 Alternative_3_28.png::CompressedTexture2D::2110982629558003697::1729260851::1732816695::1::::<><>::
 Alternative_3_29.png::CompressedTexture2D::4434283204031543077::1729260851::1732816695::1::::<><>::
 Alternative_3_30.png::CompressedTexture2D::4278308267648523328::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Classic/::1729260889
+::res://Resources/Weapon effects/Classic/::1732816695
 Preview.png::CompressedTexture2D::7000812175387180444::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Classic/1/::1729260889
+::res://Resources/Weapon effects/Classic/1/::1732816695
 Classic_01.png::CompressedTexture2D::8909013118560458426::1729260851::1732816695::1::::<><>::
 Classic_02.png::CompressedTexture2D::150456422055171495::1729260851::1732816695::1::::<><>::
 Classic_03.png::CompressedTexture2D::672401501735559273::1729260851::1732816695::1::::<><>::
 Classic_04.png::CompressedTexture2D::923561379763946375::1729260851::1732816695::1::::<><>::
 Classic_05.png::CompressedTexture2D::2645867987400576505::1729260851::1732816695::1::::<><>::
 Classic_06.png::CompressedTexture2D::8330351477420336211::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Classic/2/::1729260889
+::res://Resources/Weapon effects/Classic/2/::1732816695
 Classic_07.png::CompressedTexture2D::3816235602401700489::1729260851::1732816695::1::::<><>::
 Classic_08.png::CompressedTexture2D::7622133350916162357::1729260851::1732816695::1::::<><>::
 Classic_09.png::CompressedTexture2D::6582183256472096583::1729260851::1732816695::1::::<><>::
 Classic_10.png::CompressedTexture2D::7562664123199471687::1729260851::1732816695::1::::<><>::
 Classic_11.png::CompressedTexture2D::8859610382352298803::1729260851::1732816695::1::::<><>::
 Classic_12.png::CompressedTexture2D::1706193407211387738::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Classic/3/::1729260889
+::res://Resources/Weapon effects/Classic/3/::1732816695
 Classic_13.png::CompressedTexture2D::1765016423831358216::1729260851::1732816695::1::::<><>::
 Classic_14.png::CompressedTexture2D::7709078908286098098::1729260851::1732816695::1::::<><>::
 Classic_15.png::CompressedTexture2D::4285966628641413492::1729260851::1732816695::1::::<><>::
 Classic_16.png::CompressedTexture2D::871034889208605188::1729260851::1732816695::1::::<><>::
 Classic_17.png::CompressedTexture2D::1023213653243307380::1729260851::1732816695::1::::<><>::
 Classic_18.png::CompressedTexture2D::3665099129674054099::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Classic/4/::1729260889
+::res://Resources/Weapon effects/Classic/4/::1732816695
 Classic_19.png::CompressedTexture2D::2189359014419963671::1729260851::1732816695::1::::<><>::
 Classic_20.png::CompressedTexture2D::3898822999506635299::1729260851::1732816695::1::::<><>::
 Classic_21.png::CompressedTexture2D::3602459304621883430::1729260851::1732816695::1::::<><>::
 Classic_22.png::CompressedTexture2D::2593978441765478444::1729260851::1732816695::1::::<><>::
 Classic_23.png::CompressedTexture2D::1887407833052610332::1729260851::1732816695::1::::<><>::
 Classic_24.png::CompressedTexture2D::6431757664509785567::1729260851::1732816695::1::::<><>::
-::res://Resources/Weapon effects/Classic/5/::1729260889
+::res://Resources/Weapon effects/Classic/5/::1732816695
 Classic_25.png::CompressedTexture2D::7093877411668086206::1729260851::1732816695::1::::<><>::
 Classic_26.png::CompressedTexture2D::265445851386902718::1729260851::1732816695::1::::<><>::
 Classic_27.png::CompressedTexture2D::1672130135910934131::1729260851::1732816695::1::::<><>::
 Classic_28.png::CompressedTexture2D::955101826405455600::1729260851::1732816695::1::::<><>::
 Classic_29.png::CompressedTexture2D::1459764798746467374::1729260851::1732816695::1::::<><>::
 Classic_30.png::CompressedTexture2D::3006812079463861552::1729260851::1732816695::1::::<><>::
-::res://Scenes/::1732810270
-main.gd::GDScript::-1::1732808534::0::1::::<>Node<>::
-main.tscn::PackedScene::5531896129078708689::1732810270::0::1::::<><>::res://Scenes/main.gd<>uid://cay5yudwr3udj::::res://Scenes/UI/ui.tscn
+::res://Scenes/::1732875642
+main.gd::GDScript::-1::1732875642::0::1::::<>Node<>::
+main.tscn::PackedScene::5531896129078708689::1732875642::0::1::::<><>::res://Scenes/main.gd<>uid://cay5yudwr3udj::::res://Scenes/UI/ui.tscn
 ::res://Scenes/Boss/::1732810270
 archer_spawner.gd::GDScript::-1::1732554483::0::1::::<>Node<>::
 BossWalls.gd::GDScript::-1::1731669466::0::1::::<>Area2D<>::
 boss_arena.gd::GDScript::-1::1731687596::0::1::::<>Node2D<>::
 boss_arena.tscn::PackedScene::6147902047627484628::1732810270::0::1::::<><>::res://Scenes/Boss/boss_arena.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://bah2u0wuupo8h::::res://Scenes/Mobs/base_orc.tscn<>res://Scenes/Boss/BossWalls.gd<>res://Scenes/Boss/archer_spawner.gd
-::res://Scenes/DungeonRooms/::1732810270
+::res://Scenes/DungeonRooms/::1732875676
 chest_loot.gd::GDScript::-1::1732550440::0::1::::<>Area2D<>::
 chest_loot.tscn::PackedScene::1941242654088888650::1731321871::0::1::::<><>::res://Scenes/DungeonRooms/chest_loot.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png
 dungeon_floor_1.gd::GDScript::-1::1732441133::0::1::::<>Node2D<>::
 dungeon_floor_generator.tscn::PackedScene::5093052167120836969::1732810270::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_floor_1.gd<>uid://r6riaqhwot8g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Dirt_01-64x64.png<>uid://eystfwy11g20::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://1kllpjq40al4::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Dirt 1 64x64.png<>uid://b2psobtub2c8v::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Glass 1 64x64.png<>uid://d1edh6m6euuyg::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Metal_04-64x64.png<>uid://ootfps8aa58s::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Stone_01-64x64.png<>uid://b1tndoehw572g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Glass 1 64x64.png<>uid://cc10tsvfxtsex::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Dirt_03-64x64.png
+dungeon_floor_titles_ui.gd::GDScript::-1::1732442588::0::1::::<>Control<>::
 dungeon_generator.tscn::PackedScene::4957418959471540529::1732810270::0::1::::<><>::res://dungeon_generator.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png
 dungeon_stairs.gd::GDScript::-1::1732287167::0::1::::<>Area2D<>::
 dungeon_stairs.tscn::PackedScene::7803103968485430222::1732810270::0::1::::<><>::uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>res://Scenes/DungeonRooms/dungeon_stairs.gd
-signpost.tscn::PackedScene::2620165055340241504::1732810270::0::1::::<><>::res://signpost.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png<>uid://b1s41qkbbcpow::::res://Themes/Fonts/Unformital-Bold.otf
+signpost.gd::GDScript::-1::1732528335::0::1::::<>Area2D<>::
+signpost.tscn::PackedScene::2620165055340241504::1732875665::0::1::::<><>::res://Scenes/DungeonRooms/signpost.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png<>uid://b1s41qkbbcpow::::res://Themes/Fonts/Unformital-Bold.otf
 test_room.tscn::PackedScene::6723091000652743382::1732810269::0::1::::<><>::uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://cfxpn7er11c7c::::res://Scenes/Mobs/melee_orc.tscn<>uid://bah2u0wuupo8h::::res://Scenes/Mobs/base_orc.tscn<>uid://4e078fq0l2yb::::res://Scenes/Mobs/ranged_orc.tscn<>uid://c3g5u01s6pmwh::::res://Scenes/Mobs/magic_orc.tscn
 tutorial_decoy.gd::GDScript::-1::1732530719::0::1::::<>CharacterBody2D<>::
 tutorial_dungeon.tscn::PackedScene::3664028540106734544::1732810270::0::1::::<><>::uid://eystfwy11g20::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://b6i47foifo534::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Stone 1 64x64.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://djf48ns3qvpkw::::res://Scenes/DungeonRooms/dungeon_stairs.tscn<>uid://2wl8ohwj7iik::::res://Scenes/DungeonRooms/chest_loot.tscn<>uid://bdlh0aoaktwvg::::res://Scenes/DungeonRooms/signpost.tscn<>res://Scenes/DungeonRooms/tutorial_decoy.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png
-::res://Scenes/Mobs/::1732810270
+::res://Scenes/Mobs/::1732816695
 Archer-Green.png::CompressedTexture2D::2082035045009445707::1731523714::1732816695::1::::<><>::
 arrow_projectile.gd::GDScript::-1::1732270494::0::1::::<>CharacterBody2D<>::
 arrow_projectile.tscn::PackedScene::7504498780313044801::1732810270::0::1::::<><>::res://Scenes/Mobs/arrow_projectile.gd<>uid://ci8socj4o8cqv::::res://Resources/Projectiles/ranged-thekingphoenix.png
@@ -1569,10 +1569,10 @@ archer_arrow_projectile.tscn::PackedScene::6670344696722961265::1732810270::0::1
 player.gd::GDScript::-1::1732810268::0::1::::<>CharacterBody2D<>::
 player.gdshader::Shader::-1::1732815666::0::1::::<><>::
 player.tscn::PackedScene::2783939894081375557::1732810270::0::1::::<><>::res://Scenes/Player/player.gd<>uid://76qgw45c8h47::::res://Resources/Player/Human-Soldier-Red.png<>uid://cikxvfsl0xgx1::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_13.png<>uid://dadhjpgdg3r5j::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_14.png<>uid://cgcaimm7moxgr::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_15.png<>uid://25vho387dt48::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_16.png<>uid://dcuj0jduvo2w5::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_17.png<>uid://c1gkj5lc8onil::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_18.png<>uid://bn0ld5nwfanju::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_20.png<>uid://bjx2rwl2t7knl::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_21.png<>uid://c8vp3chkfrgy2::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_22.png
-::res://Scenes/UI/::1732815645
+::res://Scenes/UI/::1732875676
 BackButton.tscn::PackedScene::4904288064134660484::1731321871::0::1::::<><>::res://Scenes/UI/back_button.gd<>uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres
 back_button.gd::GDScript::-1::1728834339::0::1::::<>Button<>::
-dungeon_floor_titles_ui.tscn::PackedScene::3317092421634770638::1732810270::0::1::::<><>::res://dungeon_floor_titles_ui.gd
+dungeon_floor_titles_ui.tscn::PackedScene::3317092421634770638::1732875676::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_floor_titles_ui.gd
 GameUIResources.tscn::PackedScene::1401023263102698888::1732810270::0::1::::<><>::uid://dbp2nevsfbien::::res://Resources/CutTileset/tile275.png<>uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>res://Scenes/UI/game_ui_resources.gd<>uid://b761dp6ds521a::::res://Resources/CutTileset/tile206.png
 game_hud.gd::GDScript::-1::1732810243::0::1::::<>Control<>::
 game_hud.tscn::PackedScene::6911804962724917788::1732810270::0::1::::<><>::uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn<>res://Scenes/UI/game_hud.gd
@@ -1587,9 +1587,9 @@ training_menu.gd::GDScript::-1::1732809986::0::1::::<>Control<>::
 training_menu.tscn::PackedScene::4571064743871591448::1732815645::0::1::::<><>::uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>uid://co35i88mxrlal::::res://Resources/CutTileset/tile053.png<>uid://ciyhb6gvrogdr::::res://Resources/Player/Human-Soldier-Red-export.png<>res://Scenes/UI/training_menu.gd<>uid://tb8txgygr5wp::::res://Resources/CutTileset/tile049.png<>uid://4v3mt41qj8pn::::res://Resources/CutTileset/tile061.png<>uid://cb4w54r0hpvku::::res://Scenes/UI/BackButton.tscn<>uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn
 ui.tscn::PackedScene::4824251858445185071::1732810269::0::1::::<><>::res://Scenes/UI/UIManager.gd<>uid://bulyv3x21gwsh::::res://Scenes/UI/initial_menu.tscn<>uid://ba1yjqsfyvf1t::::res://Scenes/UI/main_menu.tscn<>uid://b6ei1em0yoxi3::::res://Scenes/UI/training_menu.tscn<>uid://cpu5vs2cuff86::::res://Scenes/UI/smith_menu.tscn<>uid://cotycrlnfanri::::res://Scenes/UI/structures_menu.tscn<>uid://c5qeohdqqvnpc::::res://Scenes/UI/game_hud.tscn<>uid://bni3a634p7bby::::res://Scenes/UI/dungeon_floor_titles_ui.tscn
 UIManager.gd::GDScript::-1::1732442908::0::1::::<>CanvasLayer<>::
-::res://Themes/::1732788228
-menu_theme.tres::Theme::5960767147187376783::1732788228::0::1::::<><>::uid://dpvcw508he2u::::res://Themes/Fonts/Unformital.ttf
-::res://Themes/Fonts/::1730884568
+::res://Themes/::1732875642
+menu_theme.tres::Theme::5960767147187376783::1732875642::0::1::::<><>::uid://dpvcw508he2u::::res://Themes/Fonts/Unformital.ttf
+::res://Themes/Fonts/::1732816694
 ARCADECLASSIC.TTF::FontFile::5455705433821643747::1730827963::1732816694::1::::<><>::
 manaspc.ttf::FontFile::3210893107833248554::1730827876::1732816694::1::::<><>::
 Silver.ttf::FontFile::7161986636402387422::1730629982::1732816694::1::::<><>::

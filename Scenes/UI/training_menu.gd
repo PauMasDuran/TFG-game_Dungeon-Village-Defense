@@ -2,17 +2,26 @@ extends Control
 
 @onready var playerStats = get_tree().get_root().get_node("Main").playerStats
 
+@onready var playerResources = get_tree().get_root().get_node("Main").playerResources
+
 @onready var playerStatsLevel = get_tree().get_root().get_node("Main").trainStats
 
 @onready var upgradeCostGold = get_tree().get_root().get_node("Main").upgradeCostGold
 
 @onready var upgradeCostCrystal = get_tree().get_root().get_node("Main").upgradeCostCrystal
 
+@onready var main = get_tree().get_root().get_node("Main")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	upgradeStats()
 	upgradePrices()
+	main.actualizeResourcesSignal.connect(actualizeHoursAndDays)
+	actualizeHoursAndDays()
 
+func actualizeHoursAndDays():
+	$MarginContainer/VBoxContainer/TopContainer/HoursRemaining.text = "Hours Remaining:\n" + str(playerResources.HoursRemaining)
+	
 
 func upgradePrices():
 	#hpTraining
@@ -64,7 +73,10 @@ func upgradeStats():
 	
 	
 func _on_train_hp_pressed():
-	if playerStatsLevel.HPLevel <= 5:
+	if playerStatsLevel.HPLevel <= 5 and playerResources.Gold >= upgradeCostGold[playerStatsLevel.HPLevel] and playerResources.Crystals >= upgradeCostCrystal[playerStatsLevel.HPLevel] and playerResources.HoursRemaining >= playerStatsLevel.HPLevel:
+		main.loseGold(upgradeCostGold[playerStatsLevel.HPLevel])
+		main.loseCrystals(upgradeCostCrystal[playerStatsLevel.HPLevel])
+		main.loseHours(playerStatsLevel.HPLevel)
 		playerStatsLevel.HPLevel += 1
 		upgradePrices()
 		if playerStatsLevel.HPLevel > 5:
@@ -73,7 +85,10 @@ func _on_train_hp_pressed():
 
 
 func _on_train_atk_pressed():
-	if playerStatsLevel.ATKLevel <= 5:
+	if playerStatsLevel.ATKLevel <= 5 and playerResources.Gold >= upgradeCostGold[playerStatsLevel.ATKLevel] and playerResources.Crystals >= upgradeCostCrystal[playerStatsLevel.ATKLevel] and playerResources.HoursRemaining >= playerStatsLevel.ATKLevel:
+		main.loseGold(upgradeCostGold[playerStatsLevel.ATKLevel])
+		main.loseCrystals(upgradeCostCrystal[playerStatsLevel.ATKLevel])
+		main.loseHours(playerStatsLevel.ATKLevel)
 		playerStatsLevel.ATKLevel += 1
 		upgradePrices()
 		if playerStatsLevel.ATKLevel > 5:
@@ -82,7 +97,10 @@ func _on_train_atk_pressed():
 
 
 func _on_train_spd_pressed():
-	if playerStatsLevel.SPDLevel <= 5:
+	if playerStatsLevel.SPDLevel <= 5 and playerResources.Gold >= upgradeCostGold[playerStatsLevel.SPDLevel] and playerResources.Crystals >= upgradeCostCrystal[playerStatsLevel.SPDLevel] and playerResources.HoursRemaining >= playerStatsLevel.SPDLevel:
+		main.loseGold(upgradeCostGold[playerStatsLevel.SPDLevel])
+		main.loseCrystals(upgradeCostCrystal[playerStatsLevel.SPDLevel])
+		main.loseHours(playerStatsLevel.SPDLevel)
 		playerStatsLevel.SPDLevel += 1
 		upgradePrices()
 		if playerStatsLevel.SPDLevel > 5:

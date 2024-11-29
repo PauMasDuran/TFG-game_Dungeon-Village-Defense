@@ -10,6 +10,7 @@ func _ready():
 	$HPBar.max_value = playerStats.MaxHp
 	$SPBar.max_value = playerStats.MaxSp
 	$BossHPBar.max_value = wallsHP
+	actualizeResources()
 
 func gainHP(quantity):
 	$HPBar.value += quantity

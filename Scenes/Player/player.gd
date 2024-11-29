@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var health_points: int
 var stamina_points: int
+var dash_speed: int
+var sp_drain: int
 
 @export var speed: int
 @export var knockback_strength: float = 10.0  # Adjust the force of knockback
@@ -19,6 +21,8 @@ var lastVelocity = Vector2.ZERO
 
 @onready var playerStatsLevel = get_tree().get_root().get_node("Main").trainStats
 
+@onready var smith = get_tree().get_root().get_node("Main").smith
+
 @onready var gameHud = get_tree().get_root().get_node("Main").get_node("UI").get_node("GameHud")
 
 @onready var camera_limits = Vector2i(0,0)
@@ -26,9 +30,7 @@ var lastVelocity = Vector2.ZERO
 func _ready():
 	disable_all_hit_boxes()
 	upgradePlayerStats()
-	speed = playerStats.Spd
-	health_points = playerStats.MaxHp
-	stamina_points = playerStats.MaxSp
+	
 	gameHud.resetSP()
 	set_camera_limits()
 
@@ -58,9 +60,9 @@ func movement_and_inputs(delta):
 			$AttackTimer.start()
 			animateAttack(lastVelocity)
 		if Input.is_action_pressed("dash") and dashAvailable and stamina_points >= 2:
-			speed = 500
-			stamina_points -= 2
-			gameHud.loseSP(2)
+			speed = dash_speed
+			stamina_points -= 1
+			gameHud.loseSP(1)
 			$DashTimer.start()
 			dashAvailable = false
 
@@ -230,8 +232,8 @@ func _on_sp_regen_timeout():
 
 func gotHitByPlayer():
 	if stamina_points < playerStats.MaxSp:
-		stamina_points += 1
-		gameHud.gainSP(1)
+		stamina_points += sp_drain
+		gameHud.gainSP(sp_drain)
 
 
 func set_camera_limits():
@@ -262,3 +264,15 @@ func upgradePlayerStats():
 	playerStats.MaxHp = playerStatsLevel.HPTraining[playerStatsLevel.HPLevel]
 	playerStats.Atk = playerStatsLevel.ATKTraining[playerStatsLevel.ATKLevel]
 	playerStats.Spd = playerStatsLevel.SPDTraining[playerStatsLevel.SPDLevel]
+	
+	speed = playerStats.Spd
+	health_points = playerStats.MaxHp
+	stamina_points = playerStats.MaxSp
+	
+	playerStats.MaxSp = smith.SPCapacity[smith.SPLevel]
+	playerStats.SPDrain = smith.SPDrain[smith.SPDrainLevel]
+	playerStats.SprintSpd = smith.SprintBoots[smith.SprintLevel]
+	
+	stamina_points = playerStats.MaxSp
+	sp_drain = playerStats.SPDrain
+	dash_speed = playerStats.SprintSpd

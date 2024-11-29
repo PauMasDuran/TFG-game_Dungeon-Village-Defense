@@ -415,6 +415,7 @@ func draw_walls(tile_position,x,y):
 		#tile_map_layer.set_cell(tile_position,wall_id,Vector2i(6,2))
 		pass
 
+
 func draw_floor(tile_position,x,y):
 	var wall_tiles_nearby = grid[x - 1][y - 1] + grid[x][y - 1] + grid[x + 1][y - 1] + grid[x + 1][y] + grid[x + 1][y + 1] + grid[x][y + 1] + grid[x - 1][y + 1] + grid[x - 1][y]
 	

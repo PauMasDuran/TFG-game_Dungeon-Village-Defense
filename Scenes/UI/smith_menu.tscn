@@ -1,17 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpu5vs2cuff86"]
+[gd_scene load_steps=8 format=3 uid="uid://cpu5vs2cuff86"]
 
 [ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_q5m8r"]
 [ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="1_wjb22"]
+[ext_resource type="Script" path="res://Scenes/UI/smith_menu.gd" id="2_o2la8"]
 [ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="2_p64fn"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ad0qa"]
-load_path = "res://.godot/imported/tile117.png-18593ac4aaf57535133bc99b1c5dc65f.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qyaji"]
-load_path = "res://.godot/imported/tile084.png-b2323d8c4906364ec595297582ec4136.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gqtvb"]
-load_path = "res://.godot/imported/tile131.png-13086de73d237690ac39c21e3553acf1.ctex"
+[ext_resource type="Texture2D" uid="uid://fwk2q16s8clq" path="res://Resources/CutTileset/tile117.png" id="3_7l8ff"]
+[ext_resource type="Texture2D" uid="uid://duu2swcdw4rpw" path="res://Resources/CutTileset/tile085.png" id="5_orn7g"]
+[ext_resource type="Texture2D" uid="uid://cv8p040t5okk1" path="res://Resources/CutTileset/tile131.png" id="6_iq4x2"]
 
 [node name="SmithMenu" type="Control"]
 layout_mode = 3
@@ -21,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_q5m8r")
+script = ExtResource("2_o2la8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -113,14 +109,15 @@ size_flags_vertical = 3
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
-texture = SubResource("CompressedTexture2D_ad0qa")
+texture = ExtResource("3_7l8ff")
 expand_mode = 3
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Armor Upgrade"
+text = "Armor Upgrade
+(Max SP)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -162,14 +159,15 @@ size_flags_vertical = 3
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
-texture = SubResource("CompressedTexture2D_qyaji")
+texture = ExtResource("5_orn7g")
 expand_mode = 3
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Sword Upgrade"
+text = "Sword Upgrade
+(SP Drain)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -212,14 +210,15 @@ size_flags_vertical = 3
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
-texture = SubResource("CompressedTexture2D_gqtvb")
+texture = ExtResource("6_iq4x2")
 expand_mode = 3
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Boots Upgrade"
+text = "Boots Upgrade
+(Sprint Speed)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -259,3 +258,7 @@ offset_bottom = 68.0
 grow_horizontal = 0
 grow_vertical = 1
 is_player_resources = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/ArmorUpgradeButton" to="." method="_on_sp_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton" to="." method="_on_drain_sp_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton" to="." method="_on_sprint_speed_upgrade_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccvn73wwr8ccn"]
 
-[ext_resource type="Script" path="res://dungeon_generator.gd" id="1_b7gtv"]
+[ext_resource type="Script" path="res://Scenes/DungeonRooms/dungeon_generator.gd" id="1_b7gtv"]
 [ext_resource type="Texture2D" uid="uid://cdr6xjk1erhxo" path="res://Resources/32Rogues_environment_tiles/tiles.png" id="2_ptxfo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rahm8"]

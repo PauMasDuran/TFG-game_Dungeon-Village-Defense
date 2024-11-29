@@ -7,6 +7,7 @@ extends MarginContainer
 
 func _ready():
 	main.actualizeResourcesSignal.connect(actualizeResources)
+	actualizeResources()
 
 
 func actualizeResources():
