@@ -21,6 +21,7 @@ var slime = preload("res://Scenes/Mobs/slime.tscn")
 var monster_spawner = preload("res://Scenes/Mobs/monster_spawner.tscn")
 var dungeon_stairs = preload("res://Scenes/DungeonRooms/dungeon_stairs.tscn")
 var chest_loot = preload("res://Scenes/DungeonRooms/chest_loot.tscn")
+var camera = preload("res://Scenes/Player/game_camera.tscn")
 # Constants defining the grid size, cell size, and room parameters
 const WIDTH = 32
 const HEIGHT = 32
@@ -740,6 +741,7 @@ func draw_dungeon_decorations(tile_position):
 
 func instantiate_player():
 	var player_instance = player.instantiate()
+	var camera_instance = camera.instantiate()
 	var spawn_room_position = Vector2(
 		int((rooms[0].position.x + rooms[0].size.x / 2) * CELL_SIZE),
 		int((rooms[0].position.y + rooms[0].size.y / 2) * CELL_SIZE)
@@ -747,6 +749,12 @@ func instantiate_player():
 	print(spawn_room_position)
 	player_instance.position = spawn_room_position
 	add_child(player_instance)
+	add_child(camera_instance)
+	
+	
+	$Player.camera = $GameCamera
+	$GameCamera.player = $Player
+
 
 func create_exit():
 	var stairs_instance = dungeon_stairs.instantiate()

@@ -957,12 +957,6 @@ collision_mask = 8
 position = Vector2(0, -0.568182)
 shape = SubResource("CapsuleShape2D_na2rr")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-limit_right = 2048
-limit_bottom = 2048
-
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://bsg5arbd7wgom"]
+[gd_scene load_steps=15 format=4 uid="uid://bsg5arbd7wgom"]
 
 [ext_resource type="Texture2D" uid="uid://eystfwy11g20" path="res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png" id="1_q0ggt"]
 [ext_resource type="Texture2D" uid="uid://b6i47foifo534" path="res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Stone 1 64x64.png" id="2_wjyh6"]
 [ext_resource type="PackedScene" uid="uid://bfwtc3kxiwfxt" path="res://Scenes/Player/player.tscn" id="3_d4mqt"]
+[ext_resource type="PackedScene" uid="uid://bqplwti6h38vm" path="res://Scenes/Player/game_camera.tscn" id="4_i1p8u"]
 [ext_resource type="PackedScene" uid="uid://djf48ns3qvpkw" path="res://Scenes/DungeonRooms/dungeon_stairs.tscn" id="4_q4mna"]
 [ext_resource type="PackedScene" uid="uid://2wl8ohwj7iik" path="res://Scenes/DungeonRooms/chest_loot.tscn" id="5_xyrli"]
 [ext_resource type="PackedScene" uid="uid://bdlh0aoaktwvg" path="res://Scenes/DungeonRooms/signpost.tscn" id="6_62hwb"]
@@ -184,6 +185,9 @@ tile_set = SubResource("TileSet_0upk2")
 
 [node name="Player" parent="." instance=ExtResource("3_d4mqt")]
 position = Vector2(790, 1936)
+
+[node name="GameCamera" parent="." instance=ExtResource("4_i1p8u")]
+position = Vector2(470, 1672)
 
 [node name="DungeonStairs" parent="." instance=ExtResource("4_q4mna")]
 position = Vector2(790, 162)

@@ -25,24 +25,28 @@ var lastVelocity = Vector2.ZERO
 
 @onready var gameHud = get_tree().get_root().get_node("Main").get_node("UI").get_node("GameHud")
 
+@onready var camera = get_parent().get_node("GameCamera")
+
 @onready var camera_limits = Vector2i(0,0)
+
+var camera_limits_set: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	disable_all_hit_boxes()
 	upgradePlayerStats()
 	
 	gameHud.resetSP()
-	set_camera_limits()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if !camera_limits_set:
+		set_camera_limits()
 	
 	if knockback_timer > 0:
 		apply_knockback(delta)
 	
 	movement_and_inputs(delta)
-	smooth_camera()
 
 func movement_and_inputs(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -71,7 +75,6 @@ func movement_and_inputs(delta):
 		lastVelocity = velocity.normalized()
 		animateWalk(lastVelocity)
 		move_and_collide(velocity)
-		
 		#position.x = round(position.x)
 		#position.y = round(position.y)
 	elif not attacking and actionCapable:
@@ -237,7 +240,7 @@ func gotHitByPlayer():
 
 
 func set_camera_limits():
-	var camera = $Camera2D
+	camera_limits_set = true
 	var parentNode = get_parent()
 	if parentNode.is_in_group("DungeonGenerator"):
 		camera.limit_left = 0      # Adjust to the desired left limit
@@ -255,10 +258,6 @@ func set_camera_limits():
 		camera.limit_top = 0       
 		camera.limit_bottom = 17 * 32
 
-func smooth_camera():
-	var camera = $Camera2D
-	camera.position.x = round(camera.position.x)
-	camera.position.y = round(camera.position.y)
 
 func upgradePlayerStats():
 	playerStats.MaxHp = playerStatsLevel.HPTraining[playerStatsLevel.HPLevel]
