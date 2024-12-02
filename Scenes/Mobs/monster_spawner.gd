@@ -8,6 +8,8 @@ var magic_orc = preload("res://Scenes/Mobs/magic_orc.tscn")
 
 var monsters_instances = []
 
+var auraTypes = ["none","green","blue","red","black"]
+
 var player: CharacterBody2D = null
 
 var monster_spawned_alive: int = 0
@@ -30,18 +32,23 @@ func _ready():
 func spawn_monster(monster_id):
 	if monster_id == 0:
 		var slime_instance = slime.instantiate()
+		slime_instance.auraType = auraTypes[randi_range(0,4)]
 		add_child(slime_instance)
 	elif monster_id == 1:
 		var melee_orc_instance = melee_orc.instantiate()
+		melee_orc_instance.auraType = auraTypes[randi_range(0,4)]
 		add_child(melee_orc_instance)
 	elif monster_id == 2:
 		var ranged_orc_instance = ranged_orc.instantiate()
+		ranged_orc_instance.auraType = auraTypes[randi_range(0,4)]
 		add_child(ranged_orc_instance)
 	elif monster_id == 3:
 		var magic_orc_instance = magic_orc.instantiate()
+		magic_orc_instance.auraType = auraTypes[randi_range(0,4)]
 		add_child(magic_orc_instance)
 	elif monster_id == 4:
 		var base_orc_instance = base_orc.instantiate()
+		base_orc_instance.auraType = auraTypes[randi_range(0,4)]
 		add_child(base_orc_instance)
 	monster_spawned_alive += 1
 

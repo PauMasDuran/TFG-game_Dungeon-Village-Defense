@@ -1,9 +1,11 @@
 extends CharacterBody2D
 @export var health_points: int = 4
 @export var speed: float = 60.0
+@export var atk: int 
 @export var detection_radius: float = 200.0
 @export var knockback_strength: float = 10.0
 @export var knockback_duration: float = 0.05
+@export var auraType: String
 
 var knockback_vector: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
@@ -43,6 +45,7 @@ func _ready():
 		player = get_tree().get_root().get_node("Main").get_node("BossArena").get_node("Player")
 	elif get_tree().get_root().get_node("Main").get_node("DungeonFloorGenerator") != null:
 		player = get_tree().get_root().get_node("Main").get_node("DungeonFloorGenerator").get_node("Player")
+	$EnemyPowerLevel.actualize_power_level("MeleeOrc",main.actual_dungeon_floor,auraType)
 	$MonsterHPBar.max_value = health_points
 	$MonsterHPBar.value = health_points
 	$MonsterHPBar.visible = false
@@ -54,9 +57,9 @@ func _physics_process(delta):
 	if knockback_timer > 0:
 		apply_knockback(delta)
 	
-	if player and is_player_in_range() and not hurting and not attacking:
+	if player and is_player_in_range() and not hurting and not attacking and not dead:
 		move_towards_player(delta)
-	elif not hurting and not attacking:
+	elif not hurting and not attacking and not dead:
 		idle_movement(delta)
 
 func is_player_in_range() -> bool:
@@ -212,17 +215,15 @@ func _on_hurt_box_area_entered(area):
 			$MonsterHPBar.value = health_points
 			$MonsterHPBar.visible = true
 			recieve_knockback_from_area(area)
-		elif health_points < 1 and not dead: 
-			health_points -= playerStats.Atk
-			print(health_points)
-			hurting = true
-			dead = true
-			$MonsterHPBar.visible = false
-			$EnemyHitBox.visible = false
-			$CollisionShape2D.disabled = true
-			$HurtBox.visible = false
-			recieve_knockback_from_area(area)
-			death()
+			if health_points < 1 and not dead: 
+				hurting = true
+				dead = true
+				$MonsterHPBar.visible = false
+				$EnemyHitBox.visible = false
+				$CollisionShape2D.disabled = true
+				$HurtBox.visible = false
+				recieve_knockback_from_area(area)
+				death()
 
 
 func _on_enemy_hit_box_area_entered(area):
@@ -231,6 +232,7 @@ func _on_enemy_hit_box_area_entered(area):
 func death():
 	hurting = true
 	dead = true
+	$Aura/CPUParticles2D.emitting = false
 	drop_loot()
 	animateDie(orcActualDirection)
 	$DeathTimer.start()

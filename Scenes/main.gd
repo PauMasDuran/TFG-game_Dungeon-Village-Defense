@@ -21,7 +21,7 @@ var trainStats = {
 	"HPTraining": [25, 50, 100, 175, 300, 500],
 	"ATKLevel": 0,
 	"ATKTraining": [5, 15, 30, 60, 90, 120],
-	"SPDLevel": 0,
+	"SPDLevel": 3,
 	"SPDTraining": [80, 100, 150, 200, 250, 300]
 }
 

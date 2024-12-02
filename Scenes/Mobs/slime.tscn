@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgpieopbs8r4a"]
+[gd_scene load_steps=15 format=3 uid="uid://cgpieopbs8r4a"]
 
 [ext_resource type="Script" path="res://Scenes/Mobs/slime.gd" id="1_mpw10"]
 [ext_resource type="Texture2D" uid="uid://b7pdxujhvf5pp" path="res://Resources/32Rogues_environment_tiles/Slime.png" id="1_ppb70"]
-[ext_resource type="PackedScene" uid="uid://daqcbuxwy00vf" path="res://Scenes/Mobs/slime_aura.tscn" id="2_w74c8"]
+[ext_resource type="PackedScene" uid="uid://dy5d3pbqkjp3" path="res://Scenes/Mobs/enemy_power_level.tscn" id="2_6po50"]
+[ext_resource type="PackedScene" uid="uid://cphnmq2wu3tlj" path="res://Scenes/Mobs/aura.tscn" id="3_gv7bb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws7fj"]
 bg_color = Color(0, 0, 0, 0.313726)
@@ -97,6 +98,7 @@ z_index = 1
 collision_layer = 4
 collision_mask = 43
 script = ExtResource("1_mpw10")
+auraType = "none"
 metadata/_edit_group_ = true
 
 [node name="MonsterHPBar" type="ProgressBar" parent="."]
@@ -110,7 +112,9 @@ value = 50.0
 rounded = true
 show_percentage = false
 
-[node name="SlimeAura" parent="." instance=ExtResource("2_w74c8")]
+[node name="EnemyPowerLevel" parent="." instance=ExtResource("2_6po50")]
+
+[node name="Aura" parent="." instance=ExtResource("3_gv7bb")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

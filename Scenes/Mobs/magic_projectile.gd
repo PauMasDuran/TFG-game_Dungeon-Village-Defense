@@ -7,6 +7,7 @@ var spawnPos : Vector2
 var spawnRot : float
 var zdex : int
 var player : CharacterBody2D
+var atk: int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#player = get_tree().get_root().get_node("Main").get_node("DungeonGenerator").get_node("Player")

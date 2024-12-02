@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed = 100
+var atk: int
 
 var direction : Vector2
 var spawnPos : Vector2

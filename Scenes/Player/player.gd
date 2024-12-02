@@ -214,8 +214,8 @@ func _on_hurt_box_area_entered(area):
 	if area.name == "EnemyHitBox":
 		if health_points > 0:
 			$Sprite2D/AnimationPlayer.play("TakeDmg_down")
-			health_points -= 1
-			gameHud.loseHP(1)
+			health_points -= area.owner.atk
+			gameHud.loseHP(area.owner.atk)
 			$DamagedTimer.start()
 			actionCapable = false
 			receive_knockback_from_attack(area)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bsg5arbd7wgom"]
+[gd_scene load_steps=16 format=4 uid="uid://bsg5arbd7wgom"]
 
 [ext_resource type="Texture2D" uid="uid://eystfwy11g20" path="res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png" id="1_q0ggt"]
 [ext_resource type="Texture2D" uid="uid://b6i47foifo534" path="res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Stone 1 64x64.png" id="2_wjyh6"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bdlh0aoaktwvg" path="res://Scenes/DungeonRooms/signpost.tscn" id="6_62hwb"]
 [ext_resource type="Script" path="res://Scenes/DungeonRooms/tutorial_decoy.gd" id="7_mhtl7"]
 [ext_resource type="Texture2D" uid="uid://i762nw8ot8vs" path="res://Resources/signposts & decoy/signpost-outsidestuff.png" id="7_q1iki"]
+[ext_resource type="PackedScene" uid="uid://cgpieopbs8r4a" path="res://Scenes/Mobs/slime.tscn" id="10_bghsx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_81fds"]
 texture = ExtResource("1_q0ggt")
@@ -242,5 +243,8 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialDecoy/HurtBox"]
 position = Vector2(0.5, 4.87546)
 shape = SubResource("RectangleShape2D_lhu3l")
+
+[node name="slime" parent="." instance=ExtResource("10_bghsx")]
+position = Vector2(768, 659)
 
 [connection signal="area_entered" from="TutorialDecoy/HurtBox" to="TutorialDecoy" method="_on_hurt_box_area_entered"]
