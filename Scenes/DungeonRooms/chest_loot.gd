@@ -18,6 +18,11 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		$Sprite2D/AnimationPlayer.play("chest_opened")
 		if opened == false:
-			main.addGold(50)
-			main.addCrystals(50)
+			drop_loot()
 			opened = true
+
+func drop_loot():
+	var lootQuantity = randi_range(50,100) 
+	main.addGold(lootQuantity * main.actual_dungeon_floor)
+	lootQuantity = randi_range(50,100) 
+	main.addCrystals(lootQuantity * main.actual_dungeon_floor)

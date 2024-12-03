@@ -216,15 +216,19 @@ func _on_hurt_box_area_entered(area):
 			$Sprite2D/AnimationPlayer.play("TakeDmg_down")
 			health_points -= area.owner.atk
 			gameHud.loseHP(area.owner.atk)
-			$DamagedTimer.start()
 			actionCapable = false
 			receive_knockback_from_attack(area)
+			$DamagedTimer.start()
+			
 		else: 
 			$Sprite2D/AnimationPlayer.play("Die_down")
 
 
 func _on_damaged_timer_timeout():
 	actionCapable = true
+	$PlayerHurtBox.monitoring = false
+	$InvulnerativeTimer.start()
+
 
 
 func _on_sp_regen_timeout():
@@ -275,3 +279,7 @@ func upgradePlayerStats():
 	stamina_points = playerStats.MaxSp
 	sp_drain = playerStats.SPDrain
 	dash_speed = playerStats.SprintSpd
+
+
+func _on_invulnerative_timer_timeout():
+	$PlayerHurtBox.monitoring = true

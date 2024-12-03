@@ -304,5 +304,6 @@ func _on_ranged_attack_casting_timer_timeout():
 	projectiles_node.add_child(projectile_instance)
 
 func drop_loot():
+	var auraTypes = ["","none","green","blue","red","black"]
 	var lootQuantity = randi_range(15,30) 
-	main.addGold(lootQuantity)
+	main.addGold(lootQuantity * main.actual_dungeon_floor * auraTypes.find("auraType"))

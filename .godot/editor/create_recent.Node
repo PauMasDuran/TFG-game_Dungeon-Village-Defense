@@ -1,4 +1,7 @@
-Node
+Timer
 Camera2D
+AnimationPlayer
+Sprite2D
+Node
 CPUParticles2D
 GPUParticles2D

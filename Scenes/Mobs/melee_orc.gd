@@ -258,5 +258,6 @@ func _on_melee_area_detection_area_entered(area):
 		$MeleeAreaDetection/CollisionShape2D.disabled = true
 
 func drop_loot():
+	var auraTypes = ["","none","green","blue","red","black"]
 	var lootQuantity = randi_range(15,30) 
-	main.addGold(lootQuantity)
+	main.addGold(lootQuantity * main.actual_dungeon_floor * auraTypes.find("auraType"))
