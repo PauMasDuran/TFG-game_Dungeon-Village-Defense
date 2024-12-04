@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://03f45ospwqxm"]
+
+[ext_resource type="SpriteFrames" uid="uid://cvu0euqhuklkr" path="res://Scenes/Boss/barrel.tres" id="1_ytfxs"]
+
+[node name="BossSlimes" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_ytfxs")
+animation = &"barrel1"
+frame = 11
+frame_progress = 0.0903891
