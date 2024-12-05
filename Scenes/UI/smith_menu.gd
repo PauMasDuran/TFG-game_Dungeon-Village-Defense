@@ -42,8 +42,8 @@ func upgradePrices():
 	else:
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/GameUIResources.visible = false
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/Label2.visible = false
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/ArmorUpgradeButton.text = "Maxed"
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/ArmorUpgradeButton.disabled = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton.text = "Maxed"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton.disabled = true
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/Label.text = "Sword Maxed Out!"
 	
 	$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/GameUIResources
@@ -55,8 +55,8 @@ func upgradePrices():
 	else:
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/GameUIResources.visible = false
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/Label2.visible = false
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/ArmorUpgradeButton.text = "Maxed"
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/ArmorUpgradeButton.disabled = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton.text = "Maxed"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton.disabled = true
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/Label.text = "Boots Maxed Out!"
 
 

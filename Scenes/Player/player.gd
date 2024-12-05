@@ -256,11 +256,16 @@ func set_camera_limits():
 		camera.limit_right = 25*64 # Adjust to the desired right limit
 		camera.limit_top = 0       # Adjust to the desired top limit
 		camera.limit_bottom = 64*64
+	elif parentNode.name == "DungeonFloorBoss":
+		camera.limit_left = 0   # Adjust to the desired left limit
+		camera.limit_right = 25*64 # Adjust to the desired right limit
+		camera.limit_top = 0       # Adjust to the desired top limit
+		camera.limit_bottom = 64*64
 	else:
 		camera.limit_left = 0      
-		camera.limit_right = 32 * 32 
+		camera.limit_right = 25*64
 		camera.limit_top = 0       
-		camera.limit_bottom = 17 * 32
+		camera.limit_bottom = 64*64
 
 
 func upgradePlayerStats():

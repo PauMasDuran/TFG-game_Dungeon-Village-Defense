@@ -101,6 +101,7 @@ func _on_hurt_box_area_entered(area):
 				$CollisionShape2D.disabled = true
 				$HurtBox.visible = false
 				recieve_knockback_from_area(area)
+				drop_loot()
 				death()
 
 func death():
@@ -111,7 +112,6 @@ func death():
 	$DeathTimer.start()
 
 func _on_death_timer_timeout():
-	drop_loot()
 	queue_free()
 	
 
@@ -130,4 +130,4 @@ func _on_idle_movement_timer_timeout():
 func drop_loot():
 	var auraTypes = ["","none","green","blue","red","black"]
 	var lootQuantity = randi_range(15,30) 
-	main.addGold(lootQuantity * main.actual_dungeon_floor * auraTypes.find("auraType"))
+	main.addGold(round(lootQuantity * $EnemyPowerLevel.get_floor_boost(main.actual_dungeon_floor) * auraTypes.find(auraType)))

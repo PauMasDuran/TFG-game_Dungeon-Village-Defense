@@ -14,5 +14,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if body.name == "Player" and main_node.actual_dungeon_floor < 3:
 		main_node.go_to_next_dungeon_floor()
-	elif body.name == "Player" and main_node.actual_dungeon_floor == 3:
+	elif body.name == "Player" and main_node.actual_dungeon_floor == 3 and main_node.dungeon_boss_room:
+		main_node.go_to_next_dungeon_floor()
+	elif body.name == "Player" and main_node.actual_dungeon_floor == 3 and !main_node.dungeon_boss_room:
 		main_node.exit_dungeon()

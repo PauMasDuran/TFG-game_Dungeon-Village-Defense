@@ -21,7 +21,7 @@ var trainStats = {
 	"HPTraining": [25, 50, 100, 175, 300, 500],
 	"ATKLevel": 0,
 	"ATKTraining": [5, 15, 30, 60, 90, 120],
-	"SPDLevel": 3,
+	"SPDLevel": 5,
 	"SPDTraining": [80, 100, 150, 200, 250, 300]
 }
 
@@ -30,7 +30,7 @@ var smith = {
 	"SPCapacity": [25, 50, 100, 175, 300, 500],
 	"SPDrainLevel": 0,
 	"SPDrain": [5, 10, 20, 35, 60, 90],
-	"SprintLevel": 0,
+	"SprintLevel": 5,
 	"SprintBoots": [300, 350, 400, 450, 500, 600]
 }
 
@@ -47,14 +47,18 @@ signal actualizeResourcesSignal
 
 var actual_dungeon_floor: int
 
+var dungeon_boss_room: bool = false
+
 @onready var dungeonScene = load("res://Scenes/DungeonRooms/dungeon_generator.tscn")
 @onready var testScene = load("res://Scenes/DungeonRooms/test_room.tscn")
 @onready var bossScene = load("res://Scenes/Boss/boss_arena.tscn")
 @onready var dungeonFloor1 = load("res://Scenes/DungeonRooms/dungeon_floor_generator.tscn")
+@onready var dungeonBossFloor = load("res://Scenes/DungeonRooms/dungeon_floor_boss.tscn")
 @onready var tutorialDungeon = load("res://Scenes/DungeonRooms/tutorial_dungeon.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	resetDay()
+	dungeon_boss_room = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -101,10 +105,14 @@ func exit_dungeon():
 func go_to_next_dungeon_floor():
 	if $TutorialDungeon != null:
 		$TutorialDungeon.queue_free()
+	elif $DungeonFloorBoss != null:
+		$DungeonFloorBoss.queue_free()
 	else:
 		$DungeonFloorGenerator.queue_free()
 	remove_all_children($Projectiles)
-	actual_dungeon_floor += 1
+	if !dungeon_boss_room:
+		actual_dungeon_floor += 1
+		
 	$UI.go_to_next_dungeon_floor()
 	#var dungeon_instance = dungeonScene.instantiate()
 	$TimerBetweenDungeonScenes.start()
@@ -116,9 +124,15 @@ func remove_all_children(node: Node):
 
 
 func _on_timer_between_dungeon_scenes_timeout():
-	var dungeon_instance = dungeonFloor1.instantiate()
+	var dungeon_instance = null
+	if dungeon_boss_room:
+		dungeon_instance = dungeonBossFloor.instantiate()
+		dungeon_boss_room = false
+	else:
+		dungeon_instance = dungeonFloor1.instantiate()
+		dungeon_boss_room = true
 	add_child(dungeon_instance)
-	dungeon_node = $DungeonFloorGenerator
+	dungeon_node = dungeon_instance
 	$UI.arrive_to_next_dungeon_floor()
 
 
@@ -145,3 +159,4 @@ func loseHours(Quantity):
 func resetDay():
 	playerResources.HoursRemaining = 12
 	actualizeResourcesSignal.emit()
+	dungeon_boss_room = false

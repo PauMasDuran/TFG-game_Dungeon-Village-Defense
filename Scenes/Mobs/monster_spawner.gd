@@ -88,9 +88,9 @@ func _on_death_timer_timeout():
 
 func drop_loot():
 	var lootQuantity = randi_range(5,20) 
-	main.addGold(lootQuantity * main.actual_dungeon_floor)
+	main.addGold(round(lootQuantity * get_floor_boost(main.actual_dungeon_floor)))
 	lootQuantity = randi_range(30,50) 
-	main.addCrystals(lootQuantity * main.actual_dungeon_floor)
+	main.addCrystals(round(lootQuantity * get_floor_boost(main.actual_dungeon_floor)))
 	
 
 
@@ -104,3 +104,18 @@ func _on_animation_player_animation_finished(anim_name):
 		$Sprite2D.visible = false
 		$monster_respawn.start()
 		
+
+func get_floor_boost(floorLevel):
+		match floorLevel:
+			-1:
+				return 1
+			0:
+				return 1
+			1: 
+				return 1.2
+			2:
+				return 1.5
+			3:
+				return 2
+			_: 
+				return 1

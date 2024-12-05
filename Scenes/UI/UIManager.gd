@@ -55,7 +55,7 @@ func main_menu_boss_pressed():
 
 func go_to_next_dungeon_floor():
 	game_hud.visible = false
-	$DungeonFloorTitlesUI.set_title(main.actual_dungeon_floor)
+	$DungeonFloorTitlesUI.set_title(main.actual_dungeon_floor,main.dungeon_boss_room)
 	$DungeonFloorTitlesUI.visible = true
 
 func arrive_to_next_dungeon_floor():

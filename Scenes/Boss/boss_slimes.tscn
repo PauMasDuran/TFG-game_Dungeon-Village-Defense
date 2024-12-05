@@ -1,11 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://03f45ospwqxm"]
+[gd_scene load_steps=6 format=3 uid="uid://03f45ospwqxm"]
 
-[ext_resource type="SpriteFrames" uid="uid://cvu0euqhuklkr" path="res://Scenes/Boss/barrel.tres" id="1_ytfxs"]
+[ext_resource type="Script" path="res://Scenes/Boss/boss_slimes.gd" id="1_1hmcu"]
+[ext_resource type="SpriteFrames" uid="uid://cf0gtrso652ju" path="res://Scenes/Boss/boss_slime_green.tres" id="1_tywli"]
 
-[node name="BossSlimes" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lpfx5"]
+radius = 9.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_or87q"]
+radius = 33.91
+height = 67.82
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3yd80"]
+radius = 16.57
+height = 33.14
+
+[node name="BossSlimes" type="CharacterBody2D"]
+script = ExtResource("1_1hmcu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_ytfxs")
-animation = &"barrel1"
-frame = 11
-frame_progress = 0.0903891
+sprite_frames = ExtResource("1_tywli")
+animation = &"death_left"
+frame = 1
+frame_progress = 0.0295224
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_lpfx5")
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+scale = Vector2(0.879999, 0.68)
+collision_layer = 8
+collision_mask = 8
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
+shape = SubResource("CapsuleShape2D_or87q")
+
+[node name="HurtBox" type="Area2D" parent="."]
+scale = Vector2(1, 0.922989)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CapsuleShape2D_3yd80")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_area_entered"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

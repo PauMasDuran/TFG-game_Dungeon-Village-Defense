@@ -23,6 +23,21 @@ func _on_body_entered(body):
 
 func drop_loot():
 	var lootQuantity = randi_range(50,100) 
-	main.addGold(lootQuantity * main.actual_dungeon_floor)
+	main.addGold(round(lootQuantity * get_floor_boost(main.actual_dungeon_floor)))
 	lootQuantity = randi_range(50,100) 
-	main.addCrystals(lootQuantity * main.actual_dungeon_floor)
+	main.addCrystals(round(lootQuantity * get_floor_boost(main.actual_dungeon_floor)))
+	
+func get_floor_boost(floorLevel):
+		match floorLevel:
+			-1:
+				return 1
+			0:
+				return 1
+			1: 
+				return 1.2
+			2:
+				return 1.5
+			3:
+				return 2
+			_: 
+				return 1
