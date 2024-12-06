@@ -215,6 +215,7 @@ func _on_hurt_box_area_entered(area):
 		if health_points > 0:
 			$Sprite2D/AnimationPlayer.play("TakeDmg_down")
 			health_points -= area.owner.atk
+			print("hp: ", health_points)
 			gameHud.loseHP(area.owner.atk)
 			actionCapable = false
 			receive_knockback_from_attack(area)

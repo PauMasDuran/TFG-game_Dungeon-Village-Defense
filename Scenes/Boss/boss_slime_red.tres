@@ -773,7 +773,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e0fdc")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_down",
 "speed": 9.0
 }, {
@@ -805,7 +805,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6fn6i")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_left",
 "speed": 9.0
 }, {
@@ -837,7 +837,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bbgqt")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_right",
 "speed": 9.0
 }, {
@@ -869,7 +869,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1w7eq")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_up",
 "speed": 9.0
 }, {
@@ -904,7 +904,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rl0yy")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_down",
 "speed": 9.0
 }, {
@@ -939,7 +939,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hu1f1")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_left",
 "speed": 9.0
 }, {
@@ -974,7 +974,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w0v2r")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_right",
 "speed": 9.0
 }, {
@@ -1009,7 +1009,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_etc7m")
 }],
-"loop": true,
+"loop": false,
 "name": &"death_up",
 "speed": 9.0
 }, {
@@ -1029,7 +1029,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u6pqn")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt_down",
 "speed": 9.0
 }, {
@@ -1049,7 +1049,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p6lyo")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt_left",
 "speed": 9.0
 }, {
@@ -1069,7 +1069,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w13s5")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt_right",
 "speed": 9.0
 }, {
@@ -1089,7 +1089,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_251vq")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt_up",
 "speed": 9.0
 }, {

@@ -245,6 +245,6 @@ position = Vector2(0.5, 4.87546)
 shape = SubResource("RectangleShape2D_lhu3l")
 
 [node name="BossSlimes" parent="." instance=ExtResource("10_rkwoa")]
-position = Vector2(778, 647)
+position = Vector2(806, 644)
 
 [connection signal="area_entered" from="TutorialDecoy/HurtBox" to="TutorialDecoy" method="_on_hurt_box_area_entered"]

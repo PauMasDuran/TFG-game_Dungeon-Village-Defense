@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://5guix2x10j4e"]
+[gd_scene load_steps=25 format=4 uid="uid://5guix2x10j4e"]
 
 [ext_resource type="Script" path="res://Scenes/DungeonRooms/dungeon_floor_boss.gd" id="1_dac6d"]
 [ext_resource type="Texture2D" uid="uid://eystfwy11g20" path="res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png" id="1_ova0r"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://djf48ns3qvpkw" path="res://Scenes/DungeonRooms/dungeon_stairs.tscn" id="10_8ts5j"]
 [ext_resource type="PackedScene" uid="uid://bfwtc3kxiwfxt" path="res://Scenes/Player/player.tscn" id="11_5s7gb"]
 [ext_resource type="PackedScene" uid="uid://bqplwti6h38vm" path="res://Scenes/Player/game_camera.tscn" id="12_ixmvk"]
+[ext_resource type="PackedScene" uid="uid://ch05inrjch6cq" path="res://Scenes/Boss/slime_boss_spawner.tscn" id="14_v05os"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omrcx"]
 texture = ExtResource("1_ova0r")
@@ -651,10 +652,13 @@ position = Vector2(576, 408)
 position = Vector2(576, 352)
 
 [node name="Player" parent="." instance=ExtResource("11_5s7gb")]
-position = Vector2(576, 1056)
+position = Vector2(576, 1048)
 
 [node name="GameCamera" parent="." instance=ExtResource("12_ixmvk")]
 position = Vector2(726, 2184)
+
+[node name="SlimeBossSpawner" parent="." instance=ExtResource("14_v05os")]
+position = Vector2(576, 648)
 
 [node name="DoorDetector" type="Area2D" parent="."]
 collision_layer = 0

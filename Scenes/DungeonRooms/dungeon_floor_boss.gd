@@ -35,6 +35,9 @@ func boss_battle_mode():
 				tilemap.set_cell(Vector2i(cellx,celly), main.actual_dungeon_floor, Vector2i(4,3))
 			else:
 				tilemap.set_cell(Vector2i(cellx,celly), main.actual_dungeon_floor, Vector2i(5,3))
+	
+	$SlimeBossSpawner.spawn_slime_boss()
+	$GameCamera.is_dungeon_boss_battle = true
 
 func normal_mode():
 	var x_cells_positions = [3,4,5,6]
@@ -50,6 +53,8 @@ func normal_mode():
 				tilemap.set_cell(Vector2i(cellx,celly), main.actual_dungeon_floor + 4,tilemap_default_doors[totalcounter])
 			totalcounter += 1
 			count += 1
+	
+	$GameCamera.is_dungeon_boss_battle = false
 
 
 
@@ -57,7 +62,7 @@ func _on_door_detector_body_entered(body):
 	if body.name == "Player" and !boss_battle_triggered:
 		boss_battle_mode()
 		boss_battle_triggered = true
-		$Timer.start()
+		#$Timer.start()
 
 
 func _on_timer_timeout():

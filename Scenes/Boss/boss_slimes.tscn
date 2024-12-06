@@ -1,40 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://03f45ospwqxm"]
+[gd_scene load_steps=9 format=3 uid="uid://03f45ospwqxm"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/boss_slimes.gd" id="1_1hmcu"]
-[ext_resource type="SpriteFrames" uid="uid://cf0gtrso652ju" path="res://Scenes/Boss/boss_slime_green.tres" id="1_tywli"]
+[ext_resource type="PackedScene" uid="uid://dy5d3pbqkjp3" path="res://Scenes/Mobs/enemy_power_level.tscn" id="2_l4ifm"]
+[ext_resource type="SpriteFrames" uid="uid://cd4j2v2uv4j1l" path="res://Scenes/Boss/boss_slime_red.tres" id="3_avjic"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31ij8"]
+bg_color = Color(0, 0, 0, 0.313726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2umwf"]
+bg_color = Color(0.462745, 0.0313726, 0.0588235, 0.545098)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lpfx5"]
 radius = 9.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_or87q"]
-radius = 33.91
-height = 67.82
+[sub_resource type="CircleShape2D" id="CircleShape2D_ldiba"]
+radius = 28.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3yd80"]
-radius = 16.57
-height = 33.14
+[sub_resource type="CircleShape2D" id="CircleShape2D_qw6ob"]
+radius = 7.07107
 
 [node name="BossSlimes" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 39
 script = ExtResource("1_1hmcu")
+auraType = "none"
+
+[node name="EnemyPowerLevel" parent="." instance=ExtResource("2_l4ifm")]
+
+[node name="MonsterHPBar" type="ProgressBar" parent="."]
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = -10.0
+theme_override_styles/background = SubResource("StyleBoxFlat_31ij8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2umwf")
+value = 50.0
+rounded = true
+show_percentage = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_tywli")
-animation = &"death_left"
-frame = 1
-frame_progress = 0.0295224
+sprite_frames = ExtResource("3_avjic")
+animation = &"hurt_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_lpfx5")
 
 [node name="EnemyHitBox" type="Area2D" parent="."]
-scale = Vector2(0.879999, 0.68)
 collision_layer = 8
 collision_mask = 8
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
-shape = SubResource("CapsuleShape2D_or87q")
+shape = SubResource("CircleShape2D_ldiba")
+
+[node name="NormalAttackCastingTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="NormalAttackTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="DamagedTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 1.1
+one_shot = true
 
 [node name="HurtBox" type="Area2D" parent="."]
 scale = Vector2(1, 0.922989)
@@ -42,8 +75,11 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-shape = SubResource("CapsuleShape2D_3yd80")
+shape = SubResource("CircleShape2D_qw6ob")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="area_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_area_entered"]
+[connection signal="timeout" from="NormalAttackCastingTimer" to="." method="_on_normal_attack_casting_timer_timeout"]
+[connection signal="timeout" from="NormalAttackTimer" to="." method="_on_normal_attack_timer_timeout"]
+[connection signal="timeout" from="DamagedTimer" to="." method="_on_damaged_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
