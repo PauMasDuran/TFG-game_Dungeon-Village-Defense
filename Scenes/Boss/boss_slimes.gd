@@ -19,13 +19,19 @@ var idle_movement_direction: Vector2 = Vector2.ZERO
 
 var slimeActualDirection: Vector2 = Vector2.ZERO
 
+var boss_is_in_teleporter:bool = false
+
 var player: CharacterBody2D = null
 
 var attacking: bool = false
+var special_attacking:bool = false
 
+var idling: bool = false
 var hurting: bool = false
 
 var dead: bool = false
+
+var boss_mode: bool = false
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -45,19 +51,24 @@ func _ready():
 		player = get_tree().get_root().get_node("Main").get_node("BossArena").get_node("Player")
 	elif get_tree().get_root().get_node("Main").get_node("DungeonFloorGenerator") != null:
 		player = get_tree().get_root().get_node("Main").get_node("DungeonFloorGenerator").get_node("Player")
+	$EnemyPowerLevel.actualize_power_level("BossSlime",main.actual_dungeon_floor,auraType)
 	$EnemyHitBox/CollisionShape2D.disabled = true
 	$MonsterHPBar.max_value = health_points
 	$MonsterHPBar.value = health_points
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	print("special_attacking", special_attacking)
 	print("attacking: ", attacking)
 	print("hurting: ", hurting)
 	
 	if knockback_timer > 0:
 		apply_knockback(delta)
 	
-	normal_battle_mode(delta)
+	if !boss_mode and not dead:
+		normal_battle_mode(delta)
+	elif not dead:
+		special_battle_mode(delta)
 
 
 func normal_battle_mode(delta):
@@ -70,6 +81,30 @@ func normal_battle_mode(delta):
 	elif distance_to_player >= run_detection_radius and not attacking and not hurting and not dead:
 		walk_towards_player(delta)
 		print("walking")
+
+func special_battle_mode(delta):
+	if !boss_is_in_teleporter:
+		run_towards_teleporter(delta)
+	elif boss_is_in_teleporter and not idling and not hurting and not dead: 
+		animate_idle()
+		idling = true
+		if !special_attacking:
+			special_attacks()
+	elif hurting and not dead:
+		boss_mode = false
+	elif not idling:
+		idling = true
+		animate_idle()
+
+func run_towards_teleporter(delta):
+	var direction = (get_parent().global_position - global_position).normalized()
+	slimeActualDirection = direction
+	move_and_collide(direction * runSpeed * delta)
+	animate_run(direction)
+
+func special_attacks():
+	special_attacking = true
+	$SpecialAttackTimer.start()
 
 func distance_to_player():
 	return self.global_position.distance_to(player.global_position)
@@ -92,9 +127,9 @@ func normal_attack_player():
 	animate_attack(direction)
 	$NormalAttackCastingTimer.start()
 	
-	
+
 func animate_idle():
-	pass
+	animated_sprite.play("idle_down")
 
 func apply_knockback(delta):
 	knockback_timer -= delta  # Decrease timer
@@ -183,6 +218,7 @@ func _on_death_timer_timeout():
 
 
 func _on_animated_sprite_2d_animation_finished():
+	idling = false
 	if animated_sprite.animation == "attack_down":
 		attacking = false
 	elif animated_sprite.animation == "attack_up":
@@ -203,6 +239,16 @@ func _on_animated_sprite_2d_animation_finished():
 	elif animated_sprite.animation == "hurt_left":
 		hurting = false
 		attacking = false
+	elif animated_sprite.animation == "idle_down":
+		idling = false
+	elif animated_sprite.animation == "death_down":
+		animated_sprite.visible == false
+	elif animated_sprite.animation == "death_up":
+		animated_sprite.visible == false
+	elif animated_sprite.animation == "death_right":
+		animated_sprite.visible == false
+	elif animated_sprite.animation == "death_left":
+		animated_sprite.visible == false
 
 
 func _on_hurt_box_area_entered(area):
@@ -237,7 +283,24 @@ func drop_loot():
 func death():
 	hurting = true
 	dead = true
+	$Aura.visible = false
 	animate_death(slimeActualDirection)
 	if get_parent().name == "SlimeBossSpawner":
 		get_parent().boss_was_defeated()
 	$DeathTimer.start()
+
+
+func _on_special_attack_timer_timeout():
+	if randi() % 2 == 0:
+		get_parent().call_random_saturation_lightning_strikes(atk,self)
+	else:
+		get_parent().call_guided_lightning_strikes(atk,player,self)
+
+
+func _on_mode_timer_timeout():
+	if boss_mode == false:
+		boss_mode = true
+		idling = false
+	elif boss_mode == true:
+		boss_mode = false
+		idling = false

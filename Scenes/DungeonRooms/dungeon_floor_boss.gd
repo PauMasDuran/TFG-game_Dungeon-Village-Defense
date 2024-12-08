@@ -66,6 +66,5 @@ func _on_door_detector_body_entered(body):
 
 
 func _on_timer_timeout():
-	print("shoudl have turned")
 	normal_mode()
 	

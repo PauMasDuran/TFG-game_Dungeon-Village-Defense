@@ -1,6 +1,11 @@
-res://Scenes/main.tscn
+res://Scenes/Boss/slime_boss_spawner.tscn
 res://Themes/menu_theme.tres
 res://Scenes/Boss/boss_slime_green.tres
+res://Scenes/Boss/boss_slime_red.tres
+res://Scenes/Boss/boss_slime_blue.tres
+res://Scenes/Boss/lightning.tres
+res://Scenes/Boss/boss_slimes.gd
+res://Scenes/main.tscn
 res://Scenes/DungeonRooms/dungeon_floor_generator.tscn
 res://Scenes/UI/training_menu.tscn
 res://Scenes/UI/GameUIResources.tscn
@@ -23,10 +28,6 @@ res://Scenes/Mobs/monster_spawner.tscn
 res://Scenes/UI/game_hud.tscn
 res://Scenes/Boss/boss_slimes.tscn
 res://Scenes/DungeonRooms/dungeon_floor_boss.tscn
-res://Scenes/Boss/slime_boss_spawner.tscn
-res://Scenes/Boss/boss_slimes.gd
+res://Scenes/Boss/boss_lightning_attack.tscn
 res://Scenes/Boss/slime_boss_spawner.gd
-res://Scenes/Boss/boss_slime_red.tres
-res://Scenes/Boss/boss_slime_blue.tres
-res://game_camera.gd
-res://Scenes/DungeonRooms/dungeon_floor_boss.gd
+res://enemy_power_level.gd

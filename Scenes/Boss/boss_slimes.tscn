@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://03f45ospwqxm"]
+[gd_scene load_steps=10 format=3 uid="uid://03f45ospwqxm"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/boss_slimes.gd" id="1_1hmcu"]
+[ext_resource type="PackedScene" uid="uid://cphnmq2wu3tlj" path="res://Scenes/Mobs/aura.tscn" id="2_fhub5"]
 [ext_resource type="PackedScene" uid="uid://dy5d3pbqkjp3" path="res://Scenes/Mobs/enemy_power_level.tscn" id="2_l4ifm"]
-[ext_resource type="SpriteFrames" uid="uid://cd4j2v2uv4j1l" path="res://Scenes/Boss/boss_slime_red.tres" id="3_avjic"]
+[ext_resource type="SpriteFrames" uid="uid://cd4j2v2uv4j1l" path="res://Scenes/Boss/boss_slime_red.tres" id="3_c3qqc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31ij8"]
 bg_color = Color(0, 0, 0, 0.313726)
@@ -25,6 +26,8 @@ collision_mask = 39
 script = ExtResource("1_1hmcu")
 auraType = "none"
 
+[node name="Aura" parent="." instance=ExtResource("2_fhub5")]
+
 [node name="EnemyPowerLevel" parent="." instance=ExtResource("2_l4ifm")]
 
 [node name="MonsterHPBar" type="ProgressBar" parent="."]
@@ -39,8 +42,8 @@ rounded = true
 show_percentage = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("3_avjic")
-animation = &"hurt_up"
+sprite_frames = ExtResource("3_c3qqc")
+animation = &"idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -66,8 +69,16 @@ wait_time = 0.5
 one_shot = true
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 1.1
+wait_time = 3.0
 one_shot = true
+
+[node name="SpecialAttackTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="ModeTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
 
 [node name="HurtBox" type="Area2D" parent="."]
 scale = Vector2(1, 0.922989)
@@ -82,4 +93,6 @@ shape = SubResource("CircleShape2D_qw6ob")
 [connection signal="timeout" from="NormalAttackTimer" to="." method="_on_normal_attack_timer_timeout"]
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_damaged_timer_timeout"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="SpecialAttackTimer" to="." method="_on_special_attack_timer_timeout"]
+[connection signal="timeout" from="ModeTimer" to="." method="_on_mode_timer_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

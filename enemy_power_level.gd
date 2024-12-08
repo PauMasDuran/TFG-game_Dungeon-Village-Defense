@@ -26,6 +26,11 @@ var enemies_stats_dict = {
 		"ATK": 25,
 		"SPD": 60
 	},
+	"BossSlime":{
+		"HP":45,
+		"ATK": 15,
+		"SPD": 60
+	}
 }
 
 var auraDict = {

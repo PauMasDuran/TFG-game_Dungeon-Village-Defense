@@ -198,7 +198,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4tlq3")
 }],
-"loop": true,
+"loop": false,
 "name": &"lightning1",
 "speed": 9.0
 }, {
@@ -233,7 +233,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sp2v1")
 }],
-"loop": true,
+"loop": false,
 "name": &"lightning2",
 "speed": 9.0
 }, {
@@ -268,7 +268,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7cqhd")
 }],
-"loop": true,
+"loop": false,
 "name": &"lightning3",
 "speed": 9.0
 }, {
@@ -303,7 +303,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l1y8q")
 }],
-"loop": true,
+"loop": false,
 "name": &"lightning4",
 "speed": 9.0
 }]
