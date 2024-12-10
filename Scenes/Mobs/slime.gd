@@ -36,7 +36,6 @@ func _ready():
 		player = get_tree().get_root().get_node("Main").get_node("BossArena").get_node("Player")
 	elif get_tree().get_root().get_node("Main").get_node("DungeonFloorGenerator") != null:
 		player = get_tree().get_root().get_node("Main").get_node("DungeonFloorGenerator").get_node("Player")
-	print(player)
 	$EnemyPowerLevel.actualize_power_level("Slime",main.actual_dungeon_floor,auraType)
 	$MonsterHPBar.max_value = health_points
 	$MonsterHPBar.value = health_points
@@ -88,7 +87,6 @@ func _on_hurt_box_area_entered(area):
 			hurting = true
 			$Sprite2D/AnimationPlayer.play("TakeDmg")
 			health_points -= playerStats.Atk
-			print(health_points)
 			$DamagedTimer.start()
 			$MonsterHPBar.value = health_points
 			$MonsterHPBar.visible = true

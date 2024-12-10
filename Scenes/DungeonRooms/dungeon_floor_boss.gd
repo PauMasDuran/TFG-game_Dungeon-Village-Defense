@@ -16,7 +16,6 @@ func _ready():
 
 func actualise_cells():
 	for cell in tilemap.get_used_cells():
-		print(cell)
 		if tilemap.get_cell_source_id(cell) == tiles_walls_id:
 			tilemap.set_cell(cell,main.actual_dungeon_floor,tilemap.get_cell_atlas_coords(cell))
 		elif tilemap.get_cell_source_id(cell) == tiles_floor_id:

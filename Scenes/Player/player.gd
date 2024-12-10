@@ -262,11 +262,7 @@ func set_camera_limits():
 		camera.limit_right = 25*64 # Adjust to the desired right limit
 		camera.limit_top = 0       # Adjust to the desired top limit
 		camera.limit_bottom = 64*64
-	else:
-		camera.limit_left = 0      
-		camera.limit_right = 25*64
-		camera.limit_top = 0       
-		camera.limit_bottom = 64*64
+	
 
 
 func upgradePlayerStats():

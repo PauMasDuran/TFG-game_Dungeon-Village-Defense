@@ -58,10 +58,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	print("special_attacking", special_attacking)
-	print("attacking: ", attacking)
-	print("hurting: ", hurting)
-	
 	if knockback_timer > 0:
 		apply_knockback(delta)
 	
@@ -77,10 +73,9 @@ func normal_battle_mode(delta):
 		normal_attack_player()
 	if distance_to_player < run_detection_radius and not attacking and not hurting and not dead:
 		run_towards_player(delta)
-		print("running")
+		
 	elif distance_to_player >= run_detection_radius and not attacking and not hurting and not dead:
 		walk_towards_player(delta)
-		print("walking")
 
 func special_battle_mode(delta):
 	if !boss_is_in_teleporter:
@@ -260,7 +255,6 @@ func _on_hurt_box_area_entered(area):
 			$NormalAttackTimer.stop()
 			animate_hurt(slimeActualDirection)
 			health_points -= playerStats.Atk
-			print(health_points)
 			$DamagedTimer.start()
 			$MonsterHPBar.value = health_points
 			recieve_knockback_from_area(area)

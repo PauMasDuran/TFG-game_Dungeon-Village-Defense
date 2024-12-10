@@ -800,8 +800,8 @@ height = 20.4546
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
+y_sort_enabled = true
 texture_filter = 1
-position = Vector2(145, 124)
 collision_layer = 2
 collision_mask = 49
 script = ExtResource("1_15kyh")
@@ -809,6 +809,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -3)
 texture = ExtResource("1_av740")
 hframes = 24
 vframes = 8
@@ -883,7 +884,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(0, 3.505)
+position = Vector2(0, 0.505)
 rotation = 1.5708
 scale = Vector2(1.28, 1.28)
 shape = SubResource("CapsuleShape2D_ew0r4")
@@ -913,6 +914,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="HitBox" type="Area2D" parent="."]
+position = Vector2(0, -3)
 collision_layer = 8
 
 [node name="CollisionRight" type="CollisionShape2D" parent="HitBox"]
@@ -954,7 +956,7 @@ scale = Vector2(1, 1.08486)
 shape = SubResource("RectangleShape2D_28mj3")
 
 [node name="PlayerHurtBox" type="Area2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(0, -2.5)
 scale = Vector2(0.82, 0.879999)
 collision_layer = 8
 collision_mask = 8
