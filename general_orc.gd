@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var knockback_duration: float = 0.05
 @export var auraType: String
 
+var explosive_barrel = preload("res://Scenes/Boss/explosive_barrel.tscn")
+
 var runSpeed: float = speed*1.5
 
 var knockback_vector: Vector2 = Vector2.ZERO
@@ -19,12 +21,11 @@ var idle_movement_direction: Vector2 = Vector2.ZERO
 
 var orcActualDirection: Vector2 = Vector2.ZERO
 
-var boss_is_in_teleporter:bool = false
-
 var player: CharacterBody2D = null
 
 var attacking: bool = false
 var special_attacking:bool = false
+var barrel_exists:bool = false
 
 var idling: bool = false
 var hurting: bool = false
@@ -82,9 +83,15 @@ func _physics_process(delta):
 			target_wall(delta)
 		elif decoy != null and not aggro_to_player:
 			target_decoy(delta)
-		elif aggro_to_player or distance_to_player() <= 150 :
+		elif aggro_to_player or distance_to_player() <= 150 or king.agroo_to_player:
 			target_player(delta)
 	
+
+func spawn_barrel():
+	var barrel_instance = explosive_barrel.instantiate()
+	barrel_instance.position = position + orcActualDirection * 30
+	barrel_instance.orc_general_owner = self
+	get_parent().get_parent().get_node("Projectiles").add_child(barrel_instance)
 
 func target_decoy(delta):
 	if distance_to_decoy() > attack_detection_radius and not attacking:
@@ -105,6 +112,9 @@ func attack_decoy():
 	animate_attack(orcActualDirection)
 	$AttackTimer.start()
 	$AttackCastingTimer.start()
+	if not barrel_exists:
+		spawn_barrel()
+		barrel_exists = true
 
 func target_player(delta):
 	if distance_to_player() > attack_detection_radius and not attacking:
@@ -146,6 +156,9 @@ func attack_wall():
 	animate_attack(orcActualDirection)
 	$AttackTimer.start()
 	$AttackCastingTimer.start()
+	if not barrel_exists:
+		spawn_barrel()
+		barrel_exists = true
 
 func distance_to_player():
 	return self.global_position.distance_to(player.global_position)
@@ -262,7 +275,7 @@ func recieve_knockback_from_area(area):
 	knockback_timer = knockback_duration
 
 func _on_death_timer_timeout():
-	king.actual_minion_number -= 1
+	king.actual_general_number -= 1
 	queue_free()
 
 

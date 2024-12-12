@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddahd7i4jnir2"]
+
+[ext_resource type="Script" path="res://orc_boss_center.gd" id="1_u1mol"]
+[ext_resource type="Texture2D" uid="uid://bp7nynyuupnmv" path="res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n2.png" id="2_g6upy"]
+[ext_resource type="Texture2D" uid="uid://j7ub6ovptd5f" path="res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n3.png" id="3_nlv6j"]
+[ext_resource type="Texture2D" uid="uid://ceopk86xnb4f2" path="res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n1.png" id="4_i7exd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbvrh"]
+atlas = ExtResource("2_g6upy")
+region = Rect2(0, 0, 650, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ds38"]
+atlas = ExtResource("3_nlv6j")
+region = Rect2(0, 0, 650, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8113w"]
+atlas = ExtResource("4_i7exd")
+region = Rect2(0, 0, 650, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uw4ju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbvrh")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ds38")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8113w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbvrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ds38")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pff3d"]
+
+[node name="OrcBossCenter" type="Node2D"]
+z_index = 1
+script = ExtResource("1_u1mol")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(67, 51)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_uw4ju")
+animation = &"spawn"
+
+[node name="TeleporterCenter" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TeleporterCenter"]
+position = Vector2(65, 50)
+shape = SubResource("CircleShape2D_pff3d")
+
+[connection signal="body_entered" from="TeleporterCenter" to="." method="_on_teleporter_center_body_entered"]
+[connection signal="body_exited" from="TeleporterCenter" to="." method="_on_teleporter_center_body_exited"]

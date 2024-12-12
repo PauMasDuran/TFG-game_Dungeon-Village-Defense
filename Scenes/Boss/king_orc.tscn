@@ -1,50 +1,54 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbkjh6sm3rolt"]
+[gd_scene load_steps=11 format=3 uid="uid://dac0q777kfyfm"]
 
-[ext_resource type="SpriteFrames" uid="uid://1kc21pcoj8yj" path="res://Scenes/Boss/boss_orc_minion.tres" id="1_ad0y1"]
-[ext_resource type="Script" path="res://Scenes/Boss/minion_orc.gd" id="1_lmyuh"]
+[ext_resource type="Script" path="res://king_orc.gd" id="1_tb50m"]
+[ext_resource type="SpriteFrames" uid="uid://s35nl2naxvfw" path="res://Scenes/Boss/boss_orc_king.tres" id="2_lo856"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qrfbl"]
-radius = 4.0
-height = 8.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2g8bt"]
+radius = 3.0
+height = 6.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld7od"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slogg"]
 size = Vector2(19.3182, 55.8824)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2h6r"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnmmp"]
 size = Vector2(45.4546, 20.5882)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhw2b"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beu2p"]
 size = Vector2(20.4546, 55.8824)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2qq7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00qm1"]
 size = Vector2(47.7273, 22.0588)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jihta"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ipg4"]
+radius = 8.66749
 height = 30.3362
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpasl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsgqk"]
 bg_color = Color(0, 0, 0, 0.313726)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf4rg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08xi1"]
 bg_color = Color(0.462745, 0.0313726, 0.0588235, 0.545098)
 
-[node name="MinionOrc" type="CharacterBody2D" groups=["Monsters"]]
+[node name="KingOrc" type="CharacterBody2D"]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(1, 6)
 collision_layer = 4
-collision_mask = 5
-script = ExtResource("1_lmyuh")
-auraType = "none"
+collision_mask = 7
+script = ExtResource("1_tb50m")
+default_general_number = 2
+default_minion_number = 3
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -5)
-sprite_frames = ExtResource("1_ad0y1")
-animation = &"attack_down"
+sprite_frames = ExtResource("2_lo856")
+animation = &"run_attack_left"
+frame_progress = 0.901039
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
-shape = SubResource("CapsuleShape2D_qrfbl")
+shape = SubResource("CapsuleShape2D_2g8bt")
 
 [node name="EnemyHitBox" type="Area2D" parent="."]
 position = Vector2(-1, -7)
@@ -56,32 +60,32 @@ metadata/_edit_group_ = true
 [node name="CollisionShapeRight" type="CollisionShape2D" parent="EnemyHitBox"]
 position = Vector2(23.2955, 2.94118)
 scale = Vector2(1, 0.999999)
-shape = SubResource("RectangleShape2D_ld7od")
+shape = SubResource("RectangleShape2D_slogg")
 
 [node name="CollisionShapeBot" type="CollisionShape2D" parent="EnemyHitBox"]
 position = Vector2(4.54546, 20.5882)
 scale = Vector2(1, 0.999999)
-shape = SubResource("RectangleShape2D_m2h6r")
+shape = SubResource("RectangleShape2D_xnmmp")
 
 [node name="CollisionShapeLeft" type="CollisionShape2D" parent="EnemyHitBox"]
 position = Vector2(-19.3182, 2.94118)
 scale = Vector2(1, 0.999999)
-shape = SubResource("RectangleShape2D_nhw2b")
+shape = SubResource("RectangleShape2D_beu2p")
 
 [node name="CollisionShapeTop" type="CollisionShape2D" parent="EnemyHitBox"]
 position = Vector2(1.54972e-06, -25.7353)
 scale = Vector2(1, 0.999999)
-shape = SubResource("RectangleShape2D_u2qq7")
+shape = SubResource("RectangleShape2D_00qm1")
 
 [node name="HurtBox" type="Area2D" parent="."]
-position = Vector2(-1, -9)
+position = Vector2(0, -5)
 scale = Vector2(1, 0.922989)
 collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(1, 0)
-shape = SubResource("CapsuleShape2D_jihta")
+position = Vector2(0, -4.33375)
+shape = SubResource("CapsuleShape2D_6ipg4")
 
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -103,16 +107,25 @@ one_shot = true
 wait_time = 5.0
 one_shot = true
 
+[node name="SpawningTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="LightningTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [node name="MonsterHPBar" type="ProgressBar" parent="." groups=["Monsters"]]
 offset_left = -8.0
 offset_top = -32.0
 offset_right = 9.0
 offset_bottom = -30.0
-theme_override_styles/background = SubResource("StyleBoxFlat_bpasl")
-theme_override_styles/fill = SubResource("StyleBoxFlat_yf4rg")
+theme_override_styles/background = SubResource("StyleBoxFlat_gsgqk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_08xi1")
 value = 50.0
 rounded = true
 show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_area_entered"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
@@ -121,3 +134,5 @@ show_percentage = false
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="AttackCastingTimer" to="." method="_on_attack_casting_timer_timeout"]
 [connection signal="timeout" from="AggroTimer" to="." method="_on_aggro_timer_timeout"]
+[connection signal="timeout" from="SpawningTimer" to="." method="_on_spawning_timer_timeout"]
+[connection signal="timeout" from="LightningTimer" to="." method="_on_lightning_timer_timeout"]

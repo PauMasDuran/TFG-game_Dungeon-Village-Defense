@@ -16,7 +16,7 @@ bg_color = Color(0, 0, 0, 0.313726)
 bg_color = Color(0.462745, 0.0313726, 0.0588235, 0.545098)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c0u4v"]
-radius = 245.986
+radius = 150.0
 
 [node name="Decoy" type="StaticBody2D"]
 z_index = 1
@@ -28,18 +28,18 @@ script = ExtResource("1_kqb62")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(0, -15)
+position = Vector2(-2, -7)
 texture = ExtResource("2_5whpr")
 hframes = 4
 vframes = 2
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10.25)
+position = Vector2(-2, 18.25)
 shape = SubResource("RectangleShape2D_ipcex")
 
 [node name="HurtBox" type="Area2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(-2, 3)
 scale = Vector2(1, 0.922989)
 collision_layer = 8
 collision_mask = 8
@@ -49,10 +49,9 @@ position = Vector2(1, -5.9589)
 shape = SubResource("RectangleShape2D_e73w4")
 
 [node name="DecoyHPBar" type="ProgressBar" parent="."]
-offset_left = -15.0
-offset_top = -53.0
-offset_right = 2.0
-offset_bottom = -51.0
+offset_left = -17.0
+offset_top = -45.0
+offset_bottom = -43.0
 scale = Vector2(1.97368, 1.97274)
 theme_override_styles/background = SubResource("StyleBoxFlat_4fe3i")
 theme_override_styles/fill = SubResource("StyleBoxFlat_g6jml")
@@ -61,6 +60,7 @@ rounded = true
 show_percentage = false
 
 [node name="AggroZone" type="Area2D" parent="."]
+position = Vector2(-2, 8)
 collision_layer = 0
 collision_mask = 4
 

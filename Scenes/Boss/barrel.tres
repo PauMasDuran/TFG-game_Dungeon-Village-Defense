@@ -99,7 +99,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yitp8")
+}],
+"loop": false,
+"name": &"arming",
+"speed": 9.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_huq37")
 }, {
@@ -114,7 +119,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cv22w")
+}],
+"loop": true,
+"name": &"countdown",
+"speed": 9.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x0fwm")
 }, {
@@ -148,7 +158,15 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rcppd")
 }],
-"loop": true,
-"name": &"barrel1",
-"speed": 9.0
+"loop": false,
+"name": &"explosion",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yitp8")
+}],
+"loop": false,
+"name": &"off",
+"speed": 5.0
 }]
