@@ -487,3 +487,8 @@ offset_bottom = 68.0
 grow_horizontal = 0
 grow_vertical = 1
 is_player_resources = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton" to="." method="_on_wall_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton" to="." method="_on_heal_pad_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton" to="." method="_on_decoy_upgrade_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton" to="." method="_on_turrets_upgrade_button_pressed"]

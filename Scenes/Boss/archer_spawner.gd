@@ -2,10 +2,14 @@ extends Node
 
 @onready var archer = preload("res://Scenes/Player/archer.tscn") 
 # Called when the node enters the scene tree for the first time.
+@onready var structures = get_tree().get_root().get_node("Main").structures
 
-var archers_level: int = 2
+var archers_level: int 
 
 var walls_position_y = 503
+
+func _ready():
+	archers_level = structures.ArcherUpgrade[structures.ArcherLevel]
 
 func spawn_archers():
 	for index in range(archers_level):

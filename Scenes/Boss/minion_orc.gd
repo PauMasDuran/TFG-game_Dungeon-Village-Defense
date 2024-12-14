@@ -76,7 +76,9 @@ func _physics_process(delta):
 	if knockback_timer > 0:
 		apply_knockback(delta)
 	if not dead and not hurting:
-		if king.aggro_to_player == true:
+		if king.dead == true:
+			death()
+		elif king.aggro_to_player == true:
 			target_player(delta)
 		elif decoy == null and distance_to_player() > 150:
 			target_wall(delta)
@@ -84,6 +86,7 @@ func _physics_process(delta):
 			target_decoy(delta)
 		elif aggro_to_player or distance_to_player() <= 150 :
 			target_player(delta)
+		
 	
 
 func target_decoy(delta):

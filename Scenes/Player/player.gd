@@ -35,7 +35,9 @@ func _ready():
 	disable_all_hit_boxes()
 	upgradePlayerStats()
 	
+	
 	gameHud.resetSP()
+	gameHud.resetHP()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -237,6 +239,14 @@ func _on_sp_regen_timeout():
 		stamina_points += 1
 		gameHud.gainSP(1)
 
+func is_in_healing_pad(healing_rate):
+	if health_points < playerStats.MaxHp:
+		if health_points + healing_rate >= playerStats.MaxHp:
+			health_points = playerStats.MaxHp
+			gameHud.resetHP()
+		else:
+			health_points += healing_rate
+			gameHud.gainHP(healing_rate)
 
 func gotHitByPlayer():
 	if stamina_points < playerStats.MaxSp:

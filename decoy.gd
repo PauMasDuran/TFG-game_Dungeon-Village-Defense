@@ -1,9 +1,10 @@
 extends StaticBody2D
 
 @export var health_points : int = 30
-
+@onready var structures = get_tree().get_root().get_node("Main").structures
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	health_points = structures.DecoyUpgrade[structures.DecoyLevel]
 	$DecoyHPBar.max_value = health_points
 	$DecoyHPBar.value = health_points
 

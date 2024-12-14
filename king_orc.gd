@@ -342,6 +342,8 @@ func death():
 	hurting = true
 	dead = true
 	animate_death(orcActualDirection)
+	aggro_to_player = false
+	
 	$DeathTimer.start()
 
 func apply_knockback(delta):
@@ -356,6 +358,7 @@ func recieve_knockback_from_area(area):
 	knockback_timer = knockback_duration
 
 func _on_death_timer_timeout():
+	main.exit_boss_arena()
 	queue_free()
 
 

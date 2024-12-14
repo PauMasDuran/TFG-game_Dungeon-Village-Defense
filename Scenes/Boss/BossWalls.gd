@@ -4,9 +4,10 @@ var health_points: int
 
 @onready var gameHud = get_tree().get_root().get_node("Main").get_node("UI").get_node("GameHud")
 @onready var main = get_tree().get_root().get_node("Main")
+@onready var structures = get_tree().get_root().get_node("Main").structures
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	health_points = main.BossArenaWallsHP
+	health_points = structures.WallUpgrade[structures.WallLevel]
 	gameHud.get_node("WallsHPBar").value = health_points
 
 
