@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7pmtv2w8uput"
+path="res://.godot/imported/21_orc_damage_3.wav-ef0d0693c535c89101d1f9c46540a1ec.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/21_orc_damage_3.wav"
+dest_files=["res://.godot/imported/21_orc_damage_3.wav-ef0d0693c535c89101d1f9c46540a1ec.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

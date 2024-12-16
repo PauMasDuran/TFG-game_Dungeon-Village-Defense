@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://co62ga3b3yjej"
+path="res://.godot/imported/04_Fire_explosion_04_medium.wav-4c3a49121170b24e384060ba55be1d84.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/RPG_Essentials_Free/8_Atk_Magic_SFX/04_Fire_explosion_04_medium.wav"
+dest_files=["res://.godot/imported/04_Fire_explosion_04_medium.wav-4c3a49121170b24e384060ba55be1d84.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

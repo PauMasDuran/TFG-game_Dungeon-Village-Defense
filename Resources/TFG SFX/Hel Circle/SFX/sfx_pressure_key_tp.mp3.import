@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddagck4bmeooa"
+path="res://.godot/imported/sfx_pressure_key_tp.mp3-8d84d802f226353aa7691f15e7a457f9.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/SFX/sfx_pressure_key_tp.mp3"
+dest_files=["res://.godot/imported/sfx_pressure_key_tp.mp3-8d84d802f226353aa7691f15e7a457f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

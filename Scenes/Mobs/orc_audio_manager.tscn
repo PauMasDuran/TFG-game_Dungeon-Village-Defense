@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4mv8gtuvklsr"]
+
+[ext_resource type="Script" path="res://Scenes/Music/audio_manager.gd" id="1_nuy8e"]
+[ext_resource type="AudioStream" uid="uid://b1qlx70acn2b4" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/25_orc_walk_stone_1.wav" id="2_cepvt"]
+[ext_resource type="AudioStream" uid="uid://khxy6fk6hxx8" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav" id="3_cqjwt"]
+[ext_resource type="AudioStream" uid="uid://d2u0cgewksbxi" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_1.wav" id="4_gr4fd"]
+[ext_resource type="AudioStream" uid="uid://dbgqrgbi0gtok" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/21_orc_damage_1.wav" id="5_74gqd"]
+[ext_resource type="AudioStream" uid="uid://dpyc2vc7wconi" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/69_Enemy_death_01.wav" id="6_16tms"]
+[ext_resource type="AudioStream" uid="uid://co62ga3b3yjej" path="res://Resources/TFG SFX/RPG_Essentials_Free/8_Atk_Magic_SFX/04_Fire_explosion_04_medium.wav" id="7_sj5ow"]
+[ext_resource type="AudioStream" uid="uid://cjxa17bn2c0t1" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/bow-and-arrow-shoot-sound-effect-2-239699.mp3" id="7_swlqa"]
+
+[node name="OrcAudioManager" type="Node2D"]
+script = ExtResource("1_nuy8e")
+
+[node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cepvt")
+max_distance = 300.0
+attenuation = 4.0
+bus = &"SFX"
+
+[node name="AttackingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cqjwt")
+bus = &"SFX"
+
+[node name="DashingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gr4fd")
+bus = &"SFX"
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_74gqd")
+bus = &"SFX"
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="DyingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_16tms")
+bus = &"SFX"
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_swlqa")
+max_distance = 500.0
+attenuation = 1.8025
+bus = &"SFX"
+
+[node name="MagicSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_sj5ow")
+max_distance = 500.0
+attenuation = 2.2974

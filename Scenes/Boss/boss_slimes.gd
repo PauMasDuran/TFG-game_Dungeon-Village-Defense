@@ -28,6 +28,7 @@ var special_attacking:bool = false
 
 var idling: bool = false
 var hurting: bool = false
+var walking: bool = false
 
 var dead: bool = false
 
@@ -38,6 +39,8 @@ var boss_mode: bool = false
 @onready var main = get_tree().get_root().get_node("Main")
 
 @onready var playerStats = get_tree().get_root().get_node("Main").playerStats
+
+@onready var audio_manager = $SlimeAudioManager
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -138,6 +141,10 @@ func recieve_knockback_from_area(area):
 	knockback_timer = knockback_duration
 
 func animate_walk(slimeActualDirection):
+	if not walking:
+		$WalkingTimer.start()
+		walking = true
+		audio_manager.play_walking_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("walk_right")
@@ -149,6 +156,10 @@ func animate_walk(slimeActualDirection):
 		animated_sprite.play("walk_up")
 
 func animate_run(slimeActualDirection):
+	if not walking:
+		$WalkingTimer.start()
+		walking = true
+		audio_manager.play_running_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("run_right")
@@ -160,6 +171,7 @@ func animate_run(slimeActualDirection):
 		animated_sprite.play("run_up")
 
 func animate_attack(slimeActualDirection):
+	
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("attack_right")
@@ -171,6 +183,7 @@ func animate_attack(slimeActualDirection):
 		animated_sprite.play("attack_up")
 
 func animate_hurt(slimeActualDirection):
+	audio_manager.play_hurt_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("hurt_right")
@@ -182,6 +195,7 @@ func animate_hurt(slimeActualDirection):
 		animated_sprite.play("hurt_up")
 
 func animate_death(slimeActualDirection):
+	audio_manager.play_dying_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("death_right")
@@ -197,6 +211,7 @@ func animate_death(slimeActualDirection):
 func _on_normal_attack_casting_timer_timeout():
 	$EnemyHitBox/CollisionShape2D.disabled = false
 	$NormalAttackTimer.start()
+	audio_manager.play_attacking_sound()
 	
 
 func _on_normal_attack_timer_timeout():
@@ -298,3 +313,6 @@ func _on_mode_timer_timeout():
 	elif boss_mode == true:
 		boss_mode = false
 		idling = false
+
+func _on_walking_timer_timeout():
+	walking = false

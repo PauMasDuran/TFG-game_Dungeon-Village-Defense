@@ -20,6 +20,7 @@ var player: CharacterBody2D = null
 var monster_spawner: StaticBody2D = null
 
 var attacking: bool = false
+var walking: bool = false
 # 0 = melee, 1 = ranged, 2 = magic, 
 var attackType: int = 0
 var hurting: bool = false
@@ -33,6 +34,8 @@ var dead: bool = false
 @onready var projectiles_node = get_tree().get_root().get_node("Main").get_node("Projectiles")
 
 @onready var main = get_tree().get_root().get_node("Main")
+
+@onready var audio_manager = $OrcAudioManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -70,6 +73,10 @@ func move_towards_player(delta):
 	orcActualDirection = direction
 	move_and_collide(direction * speed * delta)
 	animateWalk(direction)
+	if not walking:
+		$WalkingTimer.start()
+		walking = true
+		audio_manager.play_walking_sound()
 	#print(direction)
 
 func idle_movement(delta):
@@ -120,6 +127,7 @@ func animateIdle(lastVelocity):
 		$Sprite2D/AnimationPlayer.play("Idle_up_right")
 
 func animateAtk(lastVelocity):
+	audio_manager.play_attacking_sound()
 	var angle = lastVelocity.angle()
 	if angle >= -PI/8 and angle < PI/8:
 		$Sprite2D/AnimationPlayer.play("Atk_right")
@@ -139,6 +147,7 @@ func animateAtk(lastVelocity):
 		$Sprite2D/AnimationPlayer.play("Atk_up_right")
 
 func animateRangedAtk(lastVelocity):
+	
 	var angle = lastVelocity.angle()
 	if angle >= -PI/8 and angle < PI/8:
 		$Sprite2D/AnimationPlayer.play("RangedAtk_right")
@@ -209,6 +218,7 @@ func _on_hurt_box_area_entered(area):
 		if health_points >= 1:
 			hurting = true
 			$Sprite2D/AnimationPlayer.play("TakeDmg")
+			audio_manager.play_hurt_sound()
 			health_points -= playerStats.Atk
 			print(health_points)
 			$DamagedTimer.start()
@@ -261,3 +271,7 @@ func drop_loot():
 	var auraTypes = ["","none","green","blue","red","black"]
 	var lootQuantity = randi_range(15,30) 
 	main.addGold(round(lootQuantity * $EnemyPowerLevel.get_floor_boost(main.actual_dungeon_floor) * auraTypes.find(auraType)))
+
+
+func _on_walking_timer_timeout():
+	walking = false

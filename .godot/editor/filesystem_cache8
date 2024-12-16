@@ -1,15 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734178508
-boss_lightning_attack.gd::GDScript::-1::1733596094::0::1::::<>Node2D<>::
-decoy.gd::GDScript::-1::1734104440::0::1::::<>StaticBody2D<>::
-enemy_power_level.gd::GDScript::-1::1733678764::0::1::::<>Node<>::
+::res://::1734337509
+default_bus_layout.tres::AudioBusLayout::1007159148313413528::1734337147::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1732720836::0::1::::<><>::
 game_camera.gd::GDScript::-1::1733818490::0::1::::<>Camera2D<>::
-general_orc.gd::GDScript::-1::1734081163::0::1::::<>CharacterBody2D<>::
-healing_pad.gd::GDScript::-1::1734104464::0::1::::<>Area2D<>::
 icon.svg::CompressedTexture2D::8684235404640419836::1728548413::1732816695::1::::<><>::
-king_orc.gd::GDScript::-1::1734081587::0::1::::<>CharacterBody2D<>::
-orc_boss_center.gd::GDScript::-1::1734014804::0::1::::<>Node2D<>::
 ::res://addons/::1729850393
 ::res://addons/gaea/::1729850395
 grid.gd::GDScript::-1::1729850394::0::1::::GaeaGrid<>Resource<>::
@@ -131,7 +125,7 @@ random_tile_info.gd::GDScript::-1::1729850395::0::1::::RandomTileInfo<>TileInfo<
 tilemap_tile_info.gd::GDScript::-1::1729850395::0::1::::TilemapTileInfo<>TileInfo<>::
 tile_info.gd::GDScript::-1::1729850395::0::1::::TileInfo<>Resource<>res://addons/gaea/tile_info/tile_info.svg::
 tile_info.svg::CompressedTexture2D::2363771520064696099::1729850395::1732816695::1::::<><>::
-::res://Resources/::1734077575
+::res://Resources/::1734337431
 ::res://Resources/32Rogues_environment_tiles/::1732816695
 Orc-Peon-Cyan.png::CompressedTexture2D::7420115538397184835::1729096429::1732816695::1::::<><>::
 Orc-Peon-Red.png::CompressedTexture2D::7431452766240265210::1729096438::1732816695::1::::<><>::
@@ -594,7 +588,7 @@ U_3_Destroy.png::CompressedTexture2D::4038233562691803152::1733304756::173330475
 U_4.png::CompressedTexture2D::1318648026373581128::1733304756::1733304757::1::::<><>::
 U_4_Build.png::CompressedTexture2D::5618041371930305702::1733304756::1733304757::1::::<><>::
 U_4_Destroy.png::CompressedTexture2D::3858668101645850437::1733304756::1733304757::1::::<><>::
-::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/2 Barricades/Archer/::1733304757
+::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/2 Barricades/Archer/::1734337431
 D_Attack.png::CompressedTexture2D::6053978961052178510::1733304756::1733304757::1::::<><>::
 D_Idle.png::CompressedTexture2D::8485045229437153945::1733304756::1733304757::1::::<><>::
 D_Preattack.png::CompressedTexture2D::5065889362051533931::1733304756::1733304757::1::::<><>::
@@ -2032,6 +2026,278 @@ panel-transparent-center-031.png::CompressedTexture2D::3427774548393821973::1728
 fantasy-ui-borders.svg::CompressedTexture2D::5554069424411889098::1728726619::1732816695::1::::<><>::
 ::res://Resources/signposts & decoy/::1732816695
 signpost-outsidestuff.png::CompressedTexture2D::629501998753476856::1732524403::1732816695::1::::<><>::
+::res://Resources/TFG SFX/::1734337377
+::res://Resources/TFG SFX/Hel Circle/::1734337377
+::res://Resources/TFG SFX/Hel Circle/Music/::1734337432
+cave_tuto.mp3::AudioStreamMP3::4272259277182717361::1734337377::1734337432::1::::<><>::
+eglise_orgue.mp3::AudioStreamMP3::5835394519028647035::1734337377::1734337432::1::::<><>::
+haunted.mp3::AudioStreamMP3::921107225826152771::1734337377::1734337432::1::::<><>::
+jardins.mp3::AudioStreamMP3::3690021989589875277::1734337377::1734337432::1::::<><>::
+mystery.mp3::AudioStreamMP3::5701931469920671555::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/Hel Circle/SFX/::1734337432
+sfx_circle.mp3::AudioStreamMP3::1592362726329424661::1734337377::1734337432::1::::<><>::
+sfx_dash.mp3::AudioStreamMP3::5936446592909853605::1734337377::1734337432::1::::<><>::
+sfx_death_into_ghost.mp3::AudioStreamMP3::4495917947104012074::1734337377::1734337432::1::::<><>::
+sfx_door.mp3::AudioStreamMP3::720831639560376225::1734337377::1734337432::1::::<><>::
+sfx_outofcircle.mp3::AudioStreamMP3::3762872410221422449::1734337377::1734337432::1::::<><>::
+sfx_outofcircle_ghost_into_body.mp3::AudioStreamMP3::8195541511265614220::1734337377::1734337432::1::::<><>::
+sfx_platform_crumble.mp3::AudioStreamMP3::7910098253187214954::1734337377::1734337432::1::::<><>::
+sfx_player_fall.mp3::AudioStreamMP3::7455964798883155975::1734337377::1734337432::1::::<><>::
+sfx_player_footsteps.mp3::AudioStreamMP3::8342588072760633296::1734337377::1734337432::1::::<><>::
+sfx_player_jump.mp3::AudioStreamMP3::1632748338795499725::1734337377::1734337432::1::::<><>::
+sfx_player_tp.mp3::AudioStreamMP3::5424048351037664540::1734337377::1734337432::1::::<><>::
+sfx_pressure_key_tp.mp3::AudioStreamMP3::7370197025632283732::1734337377::1734337432::1::::<><>::
+sfx_pressure_plate.mp3::AudioStreamMP3::3762047117670301733::1734337377::1734337432::1::::<><>::
+sfx_resurrection.mp3::AudioStreamMP3::8833936250377692708::1734337377::1734337432::1::::<><>::
+sfx_spike_impact.mp3::AudioStreamMP3::8152609592113565800::1734337377::1734337432::1::::<><>::
+sfx_upgrade.mp3::AudioStreamMP3::5983347531707833872::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/::1734338797
+01_chest_open_1.wav::AudioStreamWAV::9060590589480780618::1734337377::1734337432::1::::<><>::
+01_chest_open_2.wav::AudioStreamWAV::135262353149455924::1734337377::1734337432::1::::<><>::
+01_chest_open_3.wav::AudioStreamWAV::5782987181981298942::1734337377::1734337432::1::::<><>::
+01_chest_open_4.wav::AudioStreamWAV::6575943039213154331::1734337377::1734337432::1::::<><>::
+02_chest_close_1.wav::AudioStreamWAV::7969319933613622271::1734337377::1734337432::1::::<><>::
+02_chest_close_2.wav::AudioStreamWAV::7438868809982753266::1734337377::1734337432::1::::<><>::
+02_chest_close_3.wav::AudioStreamWAV::487212142297940368::1734337377::1734337432::1::::<><>::
+03_crate_open_1.wav::AudioStreamWAV::7922226170961023051::1734337377::1734337432::1::::<><>::
+03_crate_open_2.wav::AudioStreamWAV::329954098374428697::1734337377::1734337432::1::::<><>::
+03_crate_open_3.wav::AudioStreamWAV::8914634951504701123::1734337377::1734337432::1::::<><>::
+04_sack_open_1.wav::AudioStreamWAV::5902889903838602513::1734337377::1734337432::1::::<><>::
+04_sack_open_2.wav::AudioStreamWAV::5024089701827968616::1734337377::1734337432::1::::<><>::
+04_sack_open_3.wav::AudioStreamWAV::5216758937416010811::1734337377::1734337432::1::::<><>::
+05_door_open_1.mp3::AudioStreamMP3::3639891971541165111::1734337377::1734337432::1::::<><>::
+05_door_open_2.mp3::AudioStreamMP3::9140608869840799193::1734337377::1734337432::1::::<><>::
+06_door_close_1.mp3::AudioStreamMP3::7105409436795863875::1734337377::1734337432::1::::<><>::
+06_door_close_2.mp3::AudioStreamMP3::3901490959188356846::1734337377::1734337432::1::::<><>::
+07_human_atk_sword_1.wav::AudioStreamWAV::398326243944960169::1734337377::1734337432::1::::<><>::
+07_human_atk_sword_2.wav::AudioStreamWAV::7928121236353759982::1734337377::1734337432::1::::<><>::
+07_human_atk_sword_3.wav::AudioStreamWAV::9111588160143238016::1734337377::1734337432::1::::<><>::
+08_human_charge_1.wav::AudioStreamWAV::6169809774566368106::1734337377::1734337432::1::::<><>::
+08_human_charge_2.wav::AudioStreamWAV::1609087537558427196::1734337377::1734337432::1::::<><>::
+09_human_charging_1_loop.wav::AudioStreamWAV::8490786336566994662::1734337377::1734337432::1::::<><>::
+09_human_charging_2_loop.wav::AudioStreamWAV::6960992150487522737::1734337377::1734337432::1::::<><>::
+10_human_special_atk_1.wav::AudioStreamWAV::7132589140455465229::1734337377::1734337432::1::::<><>::
+10_human_special_atk_2.wav::AudioStreamWAV::3448479974313504128::1734337377::1734337432::1::::<><>::
+11_human_damage_1.wav::AudioStreamWAV::3099623205010170791::1734337377::1734337432::1::::<><>::
+11_human_damage_2.wav::AudioStreamWAV::1581885193266160710::1734337377::1734337432::1::::<><>::
+11_human_damage_3.wav::AudioStreamWAV::1124846385100510820::1734337377::1734337432::1::::<><>::
+12_human_jump_1.wav::AudioStreamWAV::7262125271619983532::1734337377::1734337432::1::::<><>::
+12_human_jump_2.wav::AudioStreamWAV::1504208455748599712::1734337377::1734337432::1::::<><>::
+12_human_jump_3.wav::AudioStreamWAV::5173699840776275704::1734337377::1734337432::1::::<><>::
+13_human_jump_land_1.wav::AudioStreamWAV::4801085414913555741::1734337377::1734337432::1::::<><>::
+13_human_jump_land_2.wav::AudioStreamWAV::5240686404111905988::1734337377::1734337432::1::::<><>::
+14_human_death_spin.wav::AudioStreamWAV::6748291248837031566::1734337377::1734337432::1::::<><>::
+15_human_dash_1.wav::AudioStreamWAV::9097170203127315082::1734337377::1734337432::1::::<><>::
+15_human_dash_2.wav::AudioStreamWAV::2244153525278827891::1734337377::1734337432::1::::<><>::
+16_human_walk_stone_1.wav::AudioStreamWAV::8186838536686835036::1734337377::1734338797::1::::<><>::
+16_human_walk_stone_2.wav::AudioStreamWAV::3308603248536512224::1734337377::1734337432::1::::<><>::
+16_human_walk_stone_3.wav::AudioStreamWAV::676148701654502419::1734337377::1734337432::1::::<><>::
+17_orc_atk_sword_1.wav::AudioStreamWAV::717780066990048179::1734337377::1734337432::1::::<><>::
+17_orc_atk_sword_2.wav::AudioStreamWAV::8172860357961930360::1734337377::1734337432::1::::<><>::
+17_orc_atk_sword_3.wav::AudioStreamWAV::51109035595010748::1734337377::1734337432::1::::<><>::
+18_orc_charge.wav::AudioStreamWAV::3845525838444650578::1734337377::1734337432::1::::<><>::
+19_orc_charging_loop.wav::AudioStreamWAV::3543836559023706310::1734337377::1734337432::1::::<><>::
+20_orc_special_atk.wav::AudioStreamWAV::615607558546135432::1734337377::1734337432::1::::<><>::
+21_orc_damage_1.wav::AudioStreamWAV::7242839308704396210::1734337377::1734337432::1::::<><>::
+21_orc_damage_2.wav::AudioStreamWAV::4277058913750358073::1734337377::1734337432::1::::<><>::
+21_orc_damage_3.wav::AudioStreamWAV::2277772342469878311::1734337377::1734337432::1::::<><>::
+22_orc_jump_1.wav::AudioStreamWAV::8087648650809172837::1734337377::1734337432::1::::<><>::
+22_orc_jump_2.wav::AudioStreamWAV::5427333336057581698::1734337377::1734337432::1::::<><>::
+23_orc_jump_land.wav::AudioStreamWAV::2117897202761016115::1734337377::1734337432::1::::<><>::
+24_orc_death_spin.wav::AudioStreamWAV::8392931473677110017::1734337377::1734337432::1::::<><>::
+25_orc_walk_stone_1.wav::AudioStreamWAV::4245071341897673075::1734337377::1734337432::1::::<><>::
+25_orc_walk_stone_2.wav::AudioStreamWAV::1596924535948506221::1734337377::1734337432::1::::<><>::
+25_orc_walk_stone_3.wav::AudioStreamWAV::7842860241367302685::1734337377::1734337432::1::::<><>::
+26_sword_hit_1.wav::AudioStreamWAV::8745957452709015790::1734337377::1734337432::1::::<><>::
+26_sword_hit_2.wav::AudioStreamWAV::5038675374723591685::1734337377::1734337432::1::::<><>::
+26_sword_hit_3.wav::AudioStreamWAV::2399342099798950607::1734337377::1734337432::1::::<><>::
+27_sword_miss_1.wav::AudioStreamWAV::9031709098903101444::1734337377::1734337432::1::::<><>::
+27_sword_miss_2.wav::AudioStreamWAV::824678829938760349::1734337377::1734337432::1::::<><>::
+27_sword_miss_3.wav::AudioStreamWAV::7127311257367098584::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/RPG_Essentials_Free/::1734337432
+Cover.png::CompressedTexture2D::8061677517974168926::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/RPG_Essentials_Free/8_Atk_Magic_SFX/::1734337432
+04_Fire_explosion_04_medium.wav::AudioStreamWAV::5821131005600962773::1734337377::1734337432::1::::<><>::
+13_Ice_explosion_01.wav::AudioStreamWAV::7607264994894323385::1734337377::1734337432::1::::<><>::
+18_Thunder_02.wav::AudioStreamWAV::3838929242857232096::1734337377::1734337432::1::::<><>::
+22_Water_02.wav::AudioStreamWAV::8591048332834611914::1734337377::1734337432::1::::<><>::
+25_Wind_01.wav::AudioStreamWAV::3667538379314063454::1734337377::1734337432::1::::<><>::
+30_Earth_02.wav::AudioStreamWAV::1606340683816900698::1734337377::1734337432::1::::<><>::
+45_Charge_05.wav::AudioStreamWAV::3109909053180583230::1734337377::1734337432::1::::<><>::
+46_Poison_01.wav::AudioStreamWAV::9086134539756316167::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/RPG_Essentials_Free/8_Buffs_Heals_SFX/::1734337432
+02_Heal_02.wav::AudioStreamWAV::5140359161803579351::1734337377::1734337432::1::::<><>::
+16_Atk_buff_04.wav::AudioStreamWAV::1808655186630214502::1734337377::1734337432::1::::<><>::
+17_Def_buff_01.wav::AudioStreamWAV::5971230997039559417::1734337377::1734337432::1::::<><>::
+21_Debuff_01.wav::AudioStreamWAV::2910901595476470332::1734337377::1734337432::1::::<><>::
+30_Revive_03.wav::AudioStreamWAV::2393912162231218644::1734337377::1734337432::1::::<><>::
+39_Absorb_04.wav::AudioStreamWAV::1219886997288014021::1734337377::1734337432::1::::<><>::
+44_Sleep_01.wav::AudioStreamWAV::3078433404712639774::1734337377::1734337432::1::::<><>::
+48_Speed_up_02.wav::AudioStreamWAV::4774304644031753556::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/::1734358204
+03_Claw_03.wav::AudioStreamWAV::2433612421298317820::1734337377::1734337432::1::::<><>::
+08_Bite_04.wav::AudioStreamWAV::4166954659891576275::1734337377::1734337432::1::::<><>::
+15_Impact_flesh_02.wav::AudioStreamWAV::1199059935020382006::1734337377::1734337432::1::::<><>::
+22_Slash_04.wav::AudioStreamWAV::7370113899946282964::1734337377::1734337432::1::::<><>::
+35_Miss_Evade_02.wav::AudioStreamWAV::6613446627621895209::1734337377::1734337432::1::::<><>::
+39_Block_03.wav::AudioStreamWAV::4747953817321973308::1734337377::1734337432::1::::<><>::
+51_Flee_02.wav::AudioStreamWAV::6650184916732568710::1734337377::1734337432::1::::<><>::
+55_Encounter_02.wav::AudioStreamWAV::6766468670892357827::1734337377::1734337432::1::::<><>::
+69_Enemy_death_01.wav::AudioStreamWAV::8261810529731578730::1734337377::1734337432::1::::<><>::
+77_flesh_02.wav::AudioStreamWAV::1884568089678638020::1734337377::1734337432::1::::<><>::
+bow-and-arrow-shoot-sound-effect-2-239699.mp3::AudioStreamMP3::5452069762032254500::1734358204::1734358205::1::::<><>::
+::res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/::1734337432
+001_Hover_01.wav::AudioStreamWAV::7597694801900609325::1734337377::1734337432::1::::<><>::
+013_Confirm_03.wav::AudioStreamWAV::9041445735137901564::1734337377::1734337432::1::::<><>::
+029_Decline_09.wav::AudioStreamWAV::2835969056910957853::1734337377::1734337432::1::::<><>::
+033_Denied_03.wav::AudioStreamWAV::6955745405364138497::1734337377::1734337432::1::::<><>::
+051_use_item_01.wav::AudioStreamWAV::2540464812008620248::1734337377::1734337432::1::::<><>::
+070_Equip_10.wav::AudioStreamWAV::4364232919101065166::1734337377::1734337432::1::::<><>::
+071_Unequip_01.wav::AudioStreamWAV::4655357463801456998::1734337377::1734337432::1::::<><>::
+079_Buy_sell_01.wav::AudioStreamWAV::7168869328621456671::1734337377::1734337432::1::::<><>::
+092_Pause_04.wav::AudioStreamWAV::8354315456437110636::1734337377::1734337432::1::::<><>::
+098_Unpause_04.wav::AudioStreamWAV::8786248148318953302::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/RPG_Essentials_Free/12_Player_Movement_SFX/::1734337432
+03_Step_grass_03.wav::AudioStreamWAV::574612146267675852::1734337377::1734337432::1::::<><>::
+08_Step_rock_02.wav::AudioStreamWAV::6284847560699335396::1734337377::1734337432::1::::<><>::
+12_Step_wood_03.wav::AudioStreamWAV::3400568995191121880::1734337377::1734337432::1::::<><>::
+14_Step_water_02.wav::AudioStreamWAV::7376598585622018656::1734337377::1734337432::1::::<><>::
+26_Swim_Submerged_02.wav::AudioStreamWAV::5477876550377036779::1734337377::1734337432::1::::<><>::
+30_Jump_03.wav::AudioStreamWAV::715324682787878543::1734337377::1734337432::1::::<><>::
+42_Cling_climb_03.wav::AudioStreamWAV::2801778603240350269::1734337377::1734337432::1::::<><>::
+45_Landing_01.wav::AudioStreamWAV::4479945124173178987::1734337377::1734337432::1::::<><>::
+52_Dive_02.wav::AudioStreamWAV::9048937735175590851::1734337377::1734337432::1::::<><>::
+56_Attack_03.wav::AudioStreamWAV::4550844122712136264::1734337377::1734337432::1::::<><>::
+61_Hit_03.wav::AudioStreamWAV::3523823512541435711::1734337377::1734337432::1::::<><>::
+88_Teleport_02.wav::AudioStreamWAV::5227972744906258437::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/battle/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/interface/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/inventory/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/misc/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/beetle/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/giant/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/gutteral beast/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/misc/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/ogre/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/shade/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/NPC/slime/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/__MACOSX/RPG Sound Pack/world/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/battle/::1734337432
+magic1.wav::AudioStreamWAV::2400688349677068422::1734337376::1734337432::1::::<><>::
+spell.wav::AudioStreamWAV::1203121793328762218::1734337376::1734337432::1::::<><>::
+swing2.wav::AudioStreamWAV::8206324934983440859::1734337376::1734337432::1::::<><>::
+swing3.wav::AudioStreamWAV::1318481213827559047::1734337376::1734337432::1::::<><>::
+swing.wav::AudioStreamWAV::3113799082906634934::1734337376::1734337432::1::::<><>::
+sword-unsheathe2.wav::AudioStreamWAV::6807924948683927701::1734337376::1734337432::1::::<><>::
+sword-unsheathe3.wav::AudioStreamWAV::7318786632490496427::1734337376::1734337432::1::::<><>::
+sword-unsheathe4.wav::AudioStreamWAV::5027607655432206525::1734337376::1734337432::1::::<><>::
+sword-unsheathe5.wav::AudioStreamWAV::3446038633963301672::1734337376::1734337432::1::::<><>::
+sword-unsheathe.wav::AudioStreamWAV::41979656271196913::1734337376::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/interface/::1734337432
+interface1.wav::AudioStreamWAV::3815249467376462490::1734337377::1734337432::1::::<><>::
+interface2.wav::AudioStreamWAV::8041965016899424059::1734337377::1734337432::1::::<><>::
+interface3.wav::AudioStreamWAV::6215067018683955113::1734337377::1734337432::1::::<><>::
+interface4.wav::AudioStreamWAV::8328090743810800580::1734337377::1734337432::1::::<><>::
+interface5.wav::AudioStreamWAV::7699124773607300349::1734337377::1734337432::1::::<><>::
+interface6.wav::AudioStreamWAV::8905110782341426632::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/inventory/::1734337432
+armor-light.wav::AudioStreamWAV::4675628905596548828::1734337377::1734337432::1::::<><>::
+beads.wav::AudioStreamWAV::3485242856337392606::1734337377::1734337432::1::::<><>::
+bottle.wav::AudioStreamWAV::6426900590761936660::1734337377::1734337432::1::::<><>::
+bubble2.wav::AudioStreamWAV::7772874529959995886::1734337377::1734337432::1::::<><>::
+bubble3.wav::AudioStreamWAV::5138992929835709517::1734337377::1734337432::1::::<><>::
+bubble.wav::AudioStreamWAV::3500225293827302406::1734337377::1734337432::1::::<><>::
+chainmail1.wav::AudioStreamWAV::5643837753202968884::1734337377::1734337432::1::::<><>::
+chainmail2.wav::AudioStreamWAV::2870109632835827957::1734337377::1734337432::1::::<><>::
+cloth-heavy.wav::AudioStreamWAV::7824171992442569722::1734337377::1734337432::1::::<><>::
+cloth.wav::AudioStreamWAV::6315765765134844779::1734337377::1734337432::1::::<><>::
+coin2.wav::AudioStreamWAV::5173104840386620748::1734337377::1734337432::1::::<><>::
+coin3.wav::AudioStreamWAV::2321509953264038913::1734337377::1734337432::1::::<><>::
+coin.wav::AudioStreamWAV::5791595744851683789::1734337377::1734337432::1::::<><>::
+metal-ringing.wav::AudioStreamWAV::1558447162708882868::1734337377::1734337432::1::::<><>::
+metal-small1.wav::AudioStreamWAV::6444146784179031878::1734337377::1734337432::1::::<><>::
+metal-small2.wav::AudioStreamWAV::6042520999023647734::1734337377::1734337432::1::::<><>::
+metal-small3.wav::AudioStreamWAV::982347009718377838::1734337377::1734337432::1::::<><>::
+wood-small.wav::AudioStreamWAV::7980946167160640321::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/misc/::1734337432
+burp.wav::AudioStreamWAV::4319460568124616825::1734337377::1734337432::1::::<><>::
+random1.wav::AudioStreamWAV::6674619135001996987::1734337377::1734337432::1::::<><>::
+random2.wav::AudioStreamWAV::4546759025459067389::1734337377::1734337432::1::::<><>::
+random3.wav::AudioStreamWAV::3472970241571737224::1734337377::1734337432::1::::<><>::
+random4.wav::AudioStreamWAV::4444225841672884122::1734337377::1734337432::1::::<><>::
+random5.wav::AudioStreamWAV::8155122437724436073::1734337377::1734337432::1::::<><>::
+random6.wav::AudioStreamWAV::286427059430774796::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/::1734337377
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/beetle/::1734337432
+bite-small2.wav::AudioStreamWAV::1651584585896803183::1734337377::1734337432::1::::<><>::
+bite-small3.wav::AudioStreamWAV::1113639097251911979::1734337377::1734337432::1::::<><>::
+bite-small.wav::AudioStreamWAV::7143583932539438562::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/giant/::1734337432
+giant1.wav::AudioStreamWAV::3013395258624023393::1734337377::1734337432::1::::<><>::
+giant2.wav::AudioStreamWAV::6267605503522484410::1734337377::1734337432::1::::<><>::
+giant3.wav::AudioStreamWAV::6785651762490670825::1734337377::1734337432::1::::<><>::
+giant4.wav::AudioStreamWAV::1195891707844075326::1734337377::1734337432::1::::<><>::
+giant5.wav::AudioStreamWAV::1409761633741410132::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/gutteral beast/::1734337432
+mnstr1.wav::AudioStreamWAV::4862468212449098882::1734337377::1734337432::1::::<><>::
+mnstr2.wav::AudioStreamWAV::6793981711939368851::1734337377::1734337432::1::::<><>::
+mnstr3.wav::AudioStreamWAV::7816718946914542423::1734337377::1734337432::1::::<><>::
+mnstr4.wav::AudioStreamWAV::7359867740643499961::1734337377::1734337432::1::::<><>::
+mnstr5.wav::AudioStreamWAV::2230081719639105531::1734337377::1734337432::1::::<><>::
+mnstr6.wav::AudioStreamWAV::8330399204671805145::1734337377::1734337432::1::::<><>::
+mnstr7.wav::AudioStreamWAV::5333909520890759937::1734337377::1734337432::1::::<><>::
+mnstr8.wav::AudioStreamWAV::2346650362831138451::1734337377::1734337432::1::::<><>::
+mnstr9.wav::AudioStreamWAV::3617747495191855889::1734337377::1734337432::1::::<><>::
+mnstr10.wav::AudioStreamWAV::2790482281652170524::1734337377::1734337432::1::::<><>::
+mnstr11.wav::AudioStreamWAV::3541064529955839120::1734337377::1734337432::1::::<><>::
+mnstr12.wav::AudioStreamWAV::3879881222014094613::1734337377::1734337432::1::::<><>::
+mnstr13.wav::AudioStreamWAV::2248555175608957474::1734337377::1734337432::1::::<><>::
+mnstr14.wav::AudioStreamWAV::2343845224608908707::1734337377::1734337432::1::::<><>::
+mnstr15.wav::AudioStreamWAV::4261761666005181500::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/misc/::1734337432
+wolfman.wav::AudioStreamWAV::104569765818374493::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/ogre/::1734337432
+ogre1.wav::AudioStreamWAV::7067625516613176457::1734337377::1734337432::1::::<><>::
+ogre2.wav::AudioStreamWAV::342888262913060115::1734337377::1734337432::1::::<><>::
+ogre3.wav::AudioStreamWAV::4542015454368728634::1734337377::1734337432::1::::<><>::
+ogre4.wav::AudioStreamWAV::1370496050157152446::1734337377::1734337432::1::::<><>::
+ogre5.wav::AudioStreamWAV::5836773269026028486::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/shade/::1734337432
+shade1.wav::AudioStreamWAV::2425946945078227938::1734337377::1734337432::1::::<><>::
+shade2.wav::AudioStreamWAV::2763355888084503117::1734337377::1734337432::1::::<><>::
+shade3.wav::AudioStreamWAV::3023995008060269534::1734337377::1734337432::1::::<><>::
+shade4.wav::AudioStreamWAV::8413119131574578904::1734337377::1734337432::1::::<><>::
+shade5.wav::AudioStreamWAV::6038337767398587476::1734337377::1734337432::1::::<><>::
+shade6.wav::AudioStreamWAV::1025356723218366012::1734337377::1734337432::1::::<><>::
+shade7.wav::AudioStreamWAV::5485868616490632168::1734337376::1734337432::1::::<><>::
+shade8.wav::AudioStreamWAV::8484238904014012765::1734337376::1734337432::1::::<><>::
+shade9.wav::AudioStreamWAV::5869556269118047907::1734337377::1734337432::1::::<><>::
+shade10.wav::AudioStreamWAV::5173781487140915246::1734337377::1734337432::1::::<><>::
+shade11.wav::AudioStreamWAV::323944833321662420::1734337376::1734337432::1::::<><>::
+shade12.wav::AudioStreamWAV::8831577222610864112::1734337377::1734337432::1::::<><>::
+shade13.wav::AudioStreamWAV::1526343416234438868::1734337377::1734337432::1::::<><>::
+shade14.wav::AudioStreamWAV::1677809967152537950::1734337376::1734337432::1::::<><>::
+shade15.wav::AudioStreamWAV::2072732102955634739::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/slime/::1734337432
+slime1.wav::AudioStreamWAV::29410382473549792::1734337377::1734337432::1::::<><>::
+slime2.wav::AudioStreamWAV::6450164292203088496::1734337377::1734337432::1::::<><>::
+slime3.wav::AudioStreamWAV::5749328282931474959::1734337377::1734337432::1::::<><>::
+slime4.wav::AudioStreamWAV::8754748378003327298::1734337377::1734337432::1::::<><>::
+slime5.wav::AudioStreamWAV::1079489664696711227::1734337377::1734337432::1::::<><>::
+slime6.wav::AudioStreamWAV::6619953121845271061::1734337377::1734337432::1::::<><>::
+slime7.wav::AudioStreamWAV::8317534817761304467::1734337377::1734337432::1::::<><>::
+slime8.wav::AudioStreamWAV::4203703004304657008::1734337377::1734337432::1::::<><>::
+slime9.wav::AudioStreamWAV::4116489596397535652::1734337377::1734337432::1::::<><>::
+slime10.wav::AudioStreamWAV::6625404893243508854::1734337377::1734337432::1::::<><>::
+::res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/world/::1734337432
+door.wav::AudioStreamWAV::6340315622106802711::1734337376::1734337432::1::::<><>::
+::res://Resources/TFG SFX/slime/::1734337432
+various-mushy-impacts-or-wet-splats-70685.mp3::AudioStreamMP3::1249680592878449128::1734337377::1734337432::1::::<><>::
 ::res://Resources/ThemeDownloads/::1728811586
 ::res://Resources/ThemeDownloads/kenney_ui-pack-rpg-expansion/::1732816695
 license.txt::TextFile::-1::1728811579::0::1::::<><>::
@@ -2280,74 +2546,80 @@ Classic_27.png::CompressedTexture2D::1672130135910934131::1729260851::1732816695
 Classic_28.png::CompressedTexture2D::955101826405455600::1729260851::1732816695::1::::<><>::
 Classic_29.png::CompressedTexture2D::1459764798746467374::1729260851::1732816695::1::::<><>::
 Classic_30.png::CompressedTexture2D::3006812079463861552::1729260851::1732816695::1::::<><>::
-::res://Scenes/::1734166659
-main.gd::GDScript::-1::1734100199::0::1::::<>Node<>::
-main.tscn::PackedScene::5531896129078708689::1734166659::0::1::::<><>::res://Scenes/main.gd<>uid://cay5yudwr3udj::::res://Scenes/UI/ui.tscn
-::res://Scenes/Boss/::1734166660
+::res://Scenes/::1734349358
+main.gd::GDScript::-1::1734337517::0::1::::<>Node<>::
+main.tscn::PackedScene::5531896129078708689::1734349358::0::1::::<><>::res://Scenes/main.gd<>uid://cay5yudwr3udj::::res://Scenes/UI/ui.tscn
+::res://Scenes/Boss/::1734349358
 archer_spawner.gd::GDScript::-1::1734100316::0::1::::<>Node<>::
-barrel.tres::SpriteFrames::6289620782389913217::1734166659::0::1::::<><>::uid://7nyo2djwg7f6::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/1.png<>uid://b4u8tdwihro6y::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/2.png<>uid://7hqkc28wjtp::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/3.png<>uid://bq4ww4vui76wg::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/Boom2.png
+barrel.tres::SpriteFrames::6289620782389913217::1734337465::0::1::::<><>::uid://7nyo2djwg7f6::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/1.png<>uid://b4u8tdwihro6y::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/2.png<>uid://7hqkc28wjtp::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/3.png<>uid://bq4ww4vui76wg::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/4 Barrel/Boom2.png
 BossWalls.gd::GDScript::-1::1734104421::0::1::::<>Area2D<>::
 boss_arena.gd::GDScript::-1::1731687596::0::1::::<>Node2D<>::
-boss_arena.tscn::PackedScene::6147902047627484628::1734166659::0::1::::<><>::res://Scenes/Boss/boss_arena.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://bqplwti6h38vm::::res://Scenes/Player/game_camera.tscn<>res://Scenes/Boss/BossWalls.gd<>res://Scenes/Boss/archer_spawner.gd<>uid://dkw2y7ianja6n::::res://Scenes/Boss/decoy.tscn<>uid://ddahd7i4jnir2::::res://Scenes/Boss/orc_boss_center.tscn<>uid://dac0q777kfyfm::::res://Scenes/Boss/king_orc.tscn<>uid://cadpsqrty8kfb::::res://Scenes/DungeonRooms/healing_pad.tscn
-boss_lightning_attack.tscn::PackedScene::7779683552085656491::1734166660::0::1::::<><>::res://boss_lightning_attack.gd<>uid://c1cddkpte0wlr::::res://Scenes/Boss/lightning.tres
-boss_orc_general.tres::SpriteFrames::6746102675141942433::1734166659::0::1::::<><>::uid://weleugejphx5::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_attack/orc2_attack_full.png<>uid://b6qoes3p2nwqh::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_death/orc2_death_full.png<>uid://45to642hc1xi::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_hurt/orc2_hurt_full.png<>uid://cipbp34lfyb3h::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_idle/orc2_idle_full.png<>uid://dtkklvm6kp46k::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_run_attack/orc2_run_attack_full.png<>uid://ckh6tck0r0slb::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_run/orc2_run_full.png<>uid://c11bilrk6tqg::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_walk_attack/orc2_walk_attack_full.png<>uid://w6512tqwrjxa::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_walk/orc2_walk_full.png
-boss_orc_king.tres::SpriteFrames::1323047107760173996::1734166659::0::1::::<><>::uid://bq00rdmjqocit::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_attack/orc3_attack_full.png<>uid://ctnglocn7wunu::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_death/orc3_death_full.png<>uid://bk82k1afai5ba::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_hurt/orc3_hurt_full.png<>uid://hkxom1cnmf3i::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_idle/orc3_idle_full.png<>uid://be4r8t1t7reau::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_run_attack/orc3_run_attack_full.png<>uid://dp8jgq6vg3ok5::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_run/orc3_run_full.png<>uid://b5lxfc8sccmfy::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_walk_attack/orc3_walk_attack_full.png<>uid://dq5eir5mmhjb4::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_walk/orc3_walk_full.png
-boss_orc_minion.tres::SpriteFrames::1845724751439547109::1734166659::0::1::::<><>::uid://bc1ifpjmhxqm7::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_attack/orc1_attack_full.png<>uid://07ixguw5jaqx::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_death/orc1_death_full.png<>uid://dh4rqeeuuq6go::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_hurt/orc1_hurt_full.png<>uid://cpprotxoilvji::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_idle/orc1_idle_full.png<>uid://cu1t32jvcsvq1::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_run_attack/orc1_run_attack_front_full.png<>uid://clv2tuyaeuh5l::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_run/orc1_run_full.png<>uid://bj1tqgshyf0b6::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_walk_attack/orc1_walk_attack_front _full.png<>uid://cndpb1ah4n8n3::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_walk/orc1_walk_full.png
+boss_arena.tscn::PackedScene::6147902047627484628::1734346744::0::1::::<><>::res://Scenes/Boss/boss_arena.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://bqplwti6h38vm::::res://Scenes/Player/game_camera.tscn<>res://Scenes/Boss/BossWalls.gd<>res://Scenes/Boss/archer_spawner.gd<>uid://dkw2y7ianja6n::::res://Scenes/Boss/decoy.tscn<>uid://ddahd7i4jnir2::::res://Scenes/Boss/orc_boss_center.tscn<>uid://dac0q777kfyfm::::res://Scenes/Boss/king_orc.tscn<>uid://cadpsqrty8kfb::::res://Scenes/DungeonRooms/healing_pad.tscn
+boss_lightning_attack.gd::GDScript::-1::1733596094::0::1::::<>Node2D<>::
+boss_lightning_attack.tscn::PackedScene::7779683552085656491::1734349358::0::1::::<><>::res://Scenes/Boss/boss_lightning_attack.gd<>uid://c1cddkpte0wlr::::res://Scenes/Boss/lightning.tres
+boss_orc_general.tres::SpriteFrames::6746102675141942433::1734337465::0::1::::<><>::uid://weleugejphx5::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_attack/orc2_attack_full.png<>uid://b6qoes3p2nwqh::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_death/orc2_death_full.png<>uid://45to642hc1xi::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_hurt/orc2_hurt_full.png<>uid://cipbp34lfyb3h::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_idle/orc2_idle_full.png<>uid://dtkklvm6kp46k::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_run_attack/orc2_run_attack_full.png<>uid://ckh6tck0r0slb::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_run/orc2_run_full.png<>uid://c11bilrk6tqg::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_walk_attack/orc2_walk_attack_full.png<>uid://w6512tqwrjxa::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc2/Orc2_walk/orc2_walk_full.png
+boss_orc_king.tres::SpriteFrames::1323047107760173996::1734337465::0::1::::<><>::uid://bq00rdmjqocit::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_attack/orc3_attack_full.png<>uid://ctnglocn7wunu::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_death/orc3_death_full.png<>uid://bk82k1afai5ba::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_hurt/orc3_hurt_full.png<>uid://hkxom1cnmf3i::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_idle/orc3_idle_full.png<>uid://be4r8t1t7reau::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_run_attack/orc3_run_attack_full.png<>uid://dp8jgq6vg3ok5::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_run/orc3_run_full.png<>uid://b5lxfc8sccmfy::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_walk_attack/orc3_walk_attack_full.png<>uid://dq5eir5mmhjb4::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc3/orc3_walk/orc3_walk_full.png
+boss_orc_minion.tres::SpriteFrames::1845724751439547109::1734337465::0::1::::<><>::uid://bc1ifpjmhxqm7::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_attack/orc1_attack_full.png<>uid://07ixguw5jaqx::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_death/orc1_death_full.png<>uid://dh4rqeeuuq6go::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_hurt/orc1_hurt_full.png<>uid://cpprotxoilvji::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_idle/orc1_idle_full.png<>uid://cu1t32jvcsvq1::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_run_attack/orc1_run_attack_front_full.png<>uid://clv2tuyaeuh5l::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_run/orc1_run_full.png<>uid://bj1tqgshyf0b6::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_walk_attack/orc1_walk_attack_front _full.png<>uid://cndpb1ah4n8n3::::res://Resources/Boss-MobResources/craftpix-net-323779-free-top-down-orc-game-character-pixel-art/PNG/Orc1/Orc1_walk/orc1_walk_full.png
 boss_retinue_spawner.gd::GDScript::-1::1734013222::0::1::::<>Node2D<>::
-boss_retinue_spawner.tscn::PackedScene::7847073302448935000::1734166660::0::1::::<><>::res://Scenes/Boss/boss_retinue_spawner.gd<>uid://d3rodwqif3jpm::::res://Resources/Portal/Dimensional_Portal.png
+boss_retinue_spawner.tscn::PackedScene::7847073302448935000::1734346744::0::1::::<><>::res://Scenes/Boss/boss_retinue_spawner.gd<>uid://d3rodwqif3jpm::::res://Resources/Portal/Dimensional_Portal.png
 boss_slimes.gd::GDScript::-1::1733684374::0::1::::<>CharacterBody2D<>::
-boss_slimes.tscn::PackedScene::1812880639218090426::1733819234::0::1::::<><>::res://Scenes/Boss/boss_slimes.gd<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cd4j2v2uv4j1l::::res://Scenes/Boss/boss_slime_red.tres
-boss_slime_blue.tres::SpriteFrames::4481569569118700582::1734166659::0::1::::<><>::uid://dew85jjb0q1h6::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Attack/Slime2_Attack_full.png<>uid://dffvw26llwhpn::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Death/Slime2_Death_full.png<>uid://614c45odcrmo::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Hurt/Slime2_Hurt_full.png<>uid://dei0bngg1bvbr::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Idle/Slime2_Idle_full.png<>uid://bhd1i43obr72g::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Run/Slime2_Run_full.png<>uid://d3yab8g1swpxq::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Walk/Slime2_Walk_full.png
-boss_slime_green.tres::SpriteFrames::5175794182850815186::1734166659::0::1::::<><>::uid://ba1hxx0433ech::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Attack/Slime1_Attack_full.png<>uid://dxe8sjytved4l::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Death/Slime1_Death_full.png<>uid://b4pan5yb0geor::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Hurt/Slime1_Hurt_full.png<>uid://deqdosv5pweqw::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Idle/Slime1_Idle_full.png<>uid://04xdvecaqpce::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Run/Slime1_Run_full.png<>uid://cuvytlgw7qjjp::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Walk/Slime1_Walk_full.png
-boss_slime_red.tres::SpriteFrames::5043870668176358043::1734166659::0::1::::<><>::uid://5vwumm4p3xjw::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Attack/Slime3_Attack_full.png<>uid://xl8xs0ak3qso::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Death/Slime3_Death_full.png<>uid://d2b3oqi5dn2tr::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Hurt/Slime3_Hurt_full.png<>uid://blbl314drg5id::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Idle/Slime3_Idle_full.png<>uid://hjkgj80bypkx::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Run/Slime3_Run_full.png<>uid://dws8cmavu7ytv::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Walk/Slime3_Walk_full.png
-decoy.tscn::PackedScene::7908250709030721219::1734166660::0::1::::<><>::res://decoy.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png
+boss_slimes.tscn::PackedScene::1812880639218090426::1734346744::0::1::::<><>::res://Scenes/Boss/boss_slimes.gd<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cd4j2v2uv4j1l::::res://Scenes/Boss/boss_slime_red.tres
+boss_slime_blue.tres::SpriteFrames::4481569569118700582::1734337465::0::1::::<><>::uid://dew85jjb0q1h6::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Attack/Slime2_Attack_full.png<>uid://dffvw26llwhpn::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Death/Slime2_Death_full.png<>uid://614c45odcrmo::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Hurt/Slime2_Hurt_full.png<>uid://dei0bngg1bvbr::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Idle/Slime2_Idle_full.png<>uid://bhd1i43obr72g::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Run/Slime2_Run_full.png<>uid://d3yab8g1swpxq::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime2/Walk/Slime2_Walk_full.png
+boss_slime_green.tres::SpriteFrames::5175794182850815186::1734337465::0::1::::<><>::uid://ba1hxx0433ech::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Attack/Slime1_Attack_full.png<>uid://dxe8sjytved4l::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Death/Slime1_Death_full.png<>uid://b4pan5yb0geor::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Hurt/Slime1_Hurt_full.png<>uid://deqdosv5pweqw::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Idle/Slime1_Idle_full.png<>uid://04xdvecaqpce::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Run/Slime1_Run_full.png<>uid://cuvytlgw7qjjp::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/Walk/Slime1_Walk_full.png
+boss_slime_red.tres::SpriteFrames::5043870668176358043::1734337465::0::1::::<><>::uid://5vwumm4p3xjw::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Attack/Slime3_Attack_full.png<>uid://xl8xs0ak3qso::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Death/Slime3_Death_full.png<>uid://d2b3oqi5dn2tr::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Hurt/Slime3_Hurt_full.png<>uid://blbl314drg5id::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Idle/Slime3_Idle_full.png<>uid://hjkgj80bypkx::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Run/Slime3_Run_full.png<>uid://dws8cmavu7ytv::::res://Resources/Boss-MobResources/craftpix-net-879657-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime3/Walk/Slime3_Walk_full.png
+decoy.tscn::PackedScene::7908250709030721219::1734346744::0::1::::<><>::res://Scenes/Player/decoy.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png
 explosive_barrel.gd::GDScript::-1::1733909710::0::1::::<>Node2D<>::
-explosive_barrel.tscn::PackedScene::4102061289034604000::1734166660::0::1::::<><>::res://Scenes/Boss/explosive_barrel.gd<>uid://cvu0euqhuklkr::::res://Scenes/Boss/barrel.tres
-general_orc.tscn::PackedScene::4360381312183306941::1734166660::0::1::::<><>::uid://c3d4lchfnpck4::::res://Scenes/Boss/boss_orc_general.tres<>res://general_orc.gd
-king_orc.tscn::PackedScene::7164939035757529950::1734166660::0::1::::<><>::res://king_orc.gd<>uid://s35nl2naxvfw::::res://Scenes/Boss/boss_orc_king.tres
-lightning.tres::SpriteFrames::6602068115118372231::1734166659::0::1::::<><>::uid://77clc5ws8dpw::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/1.png<>uid://cnpfmkxcsvdgv::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/2.png<>uid://c728yf8d67hd0::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/3.png<>uid://brdb2s4xgb0e0::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/4.png
+explosive_barrel.tscn::PackedScene::4102061289034604000::1734346744::0::1::::<><>::res://Scenes/Boss/explosive_barrel.gd<>uid://cvu0euqhuklkr::::res://Scenes/Boss/barrel.tres
+general_orc.gd::GDScript::-1::1734081163::0::1::::<>CharacterBody2D<>::
+general_orc.tscn::PackedScene::4360381312183306941::1734349358::0::1::::<><>::uid://c3d4lchfnpck4::::res://Scenes/Boss/boss_orc_general.tres<>res://Scenes/Boss/general_orc.gd<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
+king_orc.gd::GDScript::-1::1734081587::0::1::::<>CharacterBody2D<>::
+king_orc.tscn::PackedScene::7164939035757529950::1734349358::0::1::::<><>::res://Scenes/Boss/king_orc.gd<>uid://s35nl2naxvfw::::res://Scenes/Boss/boss_orc_king.tres<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
+lightning.tres::SpriteFrames::6602068115118372231::1734337465::0::1::::<><>::uid://77clc5ws8dpw::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/1.png<>uid://cnpfmkxcsvdgv::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/2.png<>uid://c728yf8d67hd0::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/3.png<>uid://brdb2s4xgb0e0::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/3 Lightning/4.png
 minion_orc.gd::GDScript::-1::1734081145::0::1::::<>CharacterBody2D<>::
-minion_orc.tscn::PackedScene::4864234598670725897::1734166660::0::1::::<><>::uid://1kc21pcoj8yj::::res://Scenes/Boss/boss_orc_minion.tres<>res://Scenes/Boss/minion_orc.gd
-orc_boss_center.tscn::PackedScene::7370260652760295317::1734166660::0::1::::<><>::res://orc_boss_center.gd<>uid://bp7nynyuupnmv::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n2.png<>uid://j7ub6ovptd5f::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n3.png<>uid://ceopk86xnb4f2::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n1.png
-slime_boss_spawner.gd::GDScript::-1::1733679092::0::1::::<>Node2D<>::
-slime_boss_spawner.tscn::PackedScene::5317609222315285768::1734166660::0::1::::<><>::res://Scenes/Boss/slime_boss_spawner.gd<>uid://bp7nynyuupnmv::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n2.png<>uid://j7ub6ovptd5f::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n3.png<>uid://ceopk86xnb4f2::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n1.png
+minion_orc.tscn::PackedScene::4864234598670725897::1734349358::0::1::::<><>::uid://1kc21pcoj8yj::::res://Scenes/Boss/boss_orc_minion.tres<>res://Scenes/Boss/minion_orc.gd<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
+orc_boss_center.tscn::PackedScene::7370260652760295317::1734346744::0::1::::<><>::res://Scenes/Mobs/orc_boss_center.gd<>uid://bp7nynyuupnmv::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n2.png<>uid://j7ub6ovptd5f::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n3.png<>uid://ceopk86xnb4f2::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n1.png
+slime_boss_spawner.gd::GDScript::-1::1734197711::0::1::::<>Node2D<>::
+slime_boss_spawner.tscn::PackedScene::5317609222315285768::1734346744::0::1::::<><>::res://Scenes/Boss/slime_boss_spawner.gd<>uid://bp7nynyuupnmv::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n2.png<>uid://j7ub6ovptd5f::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n3.png<>uid://ceopk86xnb4f2::::res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n1.png
 spikes.tres::SpriteFrames::8633087990506327571::1733313897::0::1::::<><>::uid://cb83iv0k0feon::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/1 Spikes/1.png<>uid://b53j6a4cr7ns::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/1 Spikes/2.png<>uid://df1k7lm8h8vii::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/1 Spikes/3.png<>uid://dl74qwa4v8yda::::res://Resources/Boss-MobResources/craftpix-net-805745-free-magic-and-traps-top-down-pixel-art-asset/1 Spikes/4.png
-::res://Scenes/DungeonRooms/::1734166660
+::res://Scenes/DungeonRooms/::1734346744
 chest_loot.gd::GDScript::-1::1733393248::0::1::::<>Area2D<>::
 chest_loot.tscn::PackedScene::1941242654088888650::1731321871::0::1::::<><>::res://Scenes/DungeonRooms/chest_loot.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png
 dungeon_floor_1.gd::GDScript::-1::1734083209::0::1::::<>Node2D<>::
 dungeon_floor_boss.gd::GDScript::-1::1733684343::0::1::::<>Node2D<>::
-dungeon_floor_boss.tscn::PackedScene::2119281452699424650::1734166660::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_floor_boss.gd<>uid://eystfwy11g20::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://r6riaqhwot8g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Dirt_01-64x64.png<>uid://b2psobtub2c8v::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Glass 1 64x64.png<>uid://d1edh6m6euuyg::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Metal_04-64x64.png<>uid://ootfps8aa58s::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Stone_01-64x64.png<>uid://1kllpjq40al4::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Dirt 1 64x64.png<>uid://b1tndoehw572g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Glass 1 64x64.png<>uid://cc10tsvfxtsex::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Dirt_03-64x64.png<>uid://2wl8ohwj7iik::::res://Scenes/DungeonRooms/chest_loot.tscn<>uid://djf48ns3qvpkw::::res://Scenes/DungeonRooms/dungeon_stairs.tscn<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://bqplwti6h38vm::::res://Scenes/Player/game_camera.tscn<>uid://ch05inrjch6cq::::res://Scenes/Boss/slime_boss_spawner.tscn
+dungeon_floor_boss.tscn::PackedScene::2119281452699424650::1734346744::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_floor_boss.gd<>uid://eystfwy11g20::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://r6riaqhwot8g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Dirt_01-64x64.png<>uid://b2psobtub2c8v::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Glass 1 64x64.png<>uid://d1edh6m6euuyg::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Metal_04-64x64.png<>uid://ootfps8aa58s::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Stone_01-64x64.png<>uid://1kllpjq40al4::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Dirt 1 64x64.png<>uid://b1tndoehw572g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Glass 1 64x64.png<>uid://cc10tsvfxtsex::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Dirt_03-64x64.png<>uid://2wl8ohwj7iik::::res://Scenes/DungeonRooms/chest_loot.tscn<>uid://djf48ns3qvpkw::::res://Scenes/DungeonRooms/dungeon_stairs.tscn<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://bqplwti6h38vm::::res://Scenes/Player/game_camera.tscn<>uid://ch05inrjch6cq::::res://Scenes/Boss/slime_boss_spawner.tscn
 dungeon_floor_generator.tscn::PackedScene::5093052167120836969::1733819233::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_floor_1.gd<>uid://r6riaqhwot8g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Dirt_01-64x64.png<>uid://eystfwy11g20::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://1kllpjq40al4::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Dirt 1 64x64.png<>uid://b2psobtub2c8v::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Glass 1 64x64.png<>uid://d1edh6m6euuyg::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall-Metal_04-64x64.png<>uid://ootfps8aa58s::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Stone_01-64x64.png<>uid://b1tndoehw572g::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Glass 1 64x64.png<>uid://cc10tsvfxtsex::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor-Dirt_03-64x64.png
 dungeon_floor_titles_ui.gd::GDScript::-1::1733411397::0::1::::<>Control<>::
 dungeon_generator.gd::GDScript::-1::1731876791::0::1::::<>Node2D<>::
 dungeon_generator.tscn::PackedScene::4957418959471540529::1732875682::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_generator.gd<>uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png
 dungeon_stairs.gd::GDScript::-1::1733413285::0::1::::<>Area2D<>::
 dungeon_stairs.tscn::PackedScene::7803103968485430222::1732810270::0::1::::<><>::uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>res://Scenes/DungeonRooms/dungeon_stairs.gd
-healing_pad.tscn::PackedScene::4779978267362097787::1734166660::0::1::::<><>::res://healing_pad.gd<>uid://ducuml1u7bp0f::::res://Resources/PixelArt/healing_pad.png
+healing_pad.tscn::PackedScene::4779978267362097787::1734346744::0::1::::<><>::res://Scenes/Player/healing_pad.gd<>uid://ducuml1u7bp0f::::res://Resources/PixelArt/healing_pad.png
 signpost.gd::GDScript::-1::1732528335::0::1::::<>Area2D<>::
 signpost.tscn::PackedScene::2620165055340241504::1732875665::0::1::::<><>::res://Scenes/DungeonRooms/signpost.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png<>uid://b1s41qkbbcpow::::res://Themes/Fonts/Unformital-Bold.otf
 test_room.tscn::PackedScene::6723091000652743382::1732810269::0::1::::<><>::uid://cdr6xjk1erhxo::::res://Resources/32Rogues_environment_tiles/tiles.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://cfxpn7er11c7c::::res://Scenes/Mobs/melee_orc.tscn<>uid://bah2u0wuupo8h::::res://Scenes/Mobs/base_orc.tscn<>uid://4e078fq0l2yb::::res://Scenes/Mobs/ranged_orc.tscn<>uid://c3g5u01s6pmwh::::res://Scenes/Mobs/magic_orc.tscn
 tutorial_decoy.gd::GDScript::-1::1732530719::0::1::::<>CharacterBody2D<>::
 tutorial_dungeon.tscn::PackedScene::3664028540106734544::1733819233::0::1::::<><>::uid://eystfwy11g20::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Walls/Wall - Brick 3 64x64.png<>uid://b6i47foifo534::::res://Resources/sbs_-_top_down_dungeon_pack/Tiles/Floors/Floor - Stone 1 64x64.png<>uid://bfwtc3kxiwfxt::::res://Scenes/Player/player.tscn<>uid://bqplwti6h38vm::::res://Scenes/Player/game_camera.tscn<>uid://djf48ns3qvpkw::::res://Scenes/DungeonRooms/dungeon_stairs.tscn<>uid://2wl8ohwj7iik::::res://Scenes/DungeonRooms/chest_loot.tscn<>uid://bdlh0aoaktwvg::::res://Scenes/DungeonRooms/signpost.tscn<>res://Scenes/DungeonRooms/tutorial_decoy.gd<>uid://i762nw8ot8vs::::res://Resources/signposts & decoy/signpost-outsidestuff.png<>uid://03f45ospwqxm::::res://Scenes/Boss/boss_slimes.tscn
-::res://Scenes/Mobs/::1734166660
+::res://Scenes/Mobs/::1734357918
 Archer-Green.png::CompressedTexture2D::2082035045009445707::1731523714::1732816695::1::::<><>::
 arrow_projectile.gd::GDScript::-1::1733135420::0::1::::<>CharacterBody2D<>::
 arrow_projectile.tscn::PackedScene::7504498780313044801::1732810270::0::1::::<><>::res://Scenes/Mobs/arrow_projectile.gd<>uid://ci8socj4o8cqv::::res://Resources/Projectiles/ranged-thekingphoenix.png
 aura.tscn::PackedScene::5840936299778679531::1733819233::0::1::::<><>::uid://bknqhmrov4f6s::::res://Scenes/Mobs/Auras/black_aura.tres
 base_orc.gd::GDScript::-1::1733392945::0::1::::<>CharacterBody2D<>::
-base_orc.tscn::PackedScene::2402547750659804761::1733819233::0::1::::<><>::res://Scenes/Mobs/base_orc.gd<>uid://ddymho7xwtl68::::res://Resources/32Rogues_environment_tiles/Orc-Peon-Cyan.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn
-enemy_power_level.tscn::PackedScene::261939958069331438::1733819234::0::1::::<><>::res://enemy_power_level.gd
+base_orc.tscn::PackedScene::2402547750659804761::1734349358::0::1::::<><>::res://Scenes/Mobs/base_orc.gd<>uid://ddymho7xwtl68::::res://Resources/32Rogues_environment_tiles/Orc-Peon-Cyan.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
+enemy_power_level.gd::GDScript::-1::1733678764::0::1::::<>Node<>::
+enemy_power_level.tscn::PackedScene::261939958069331438::1734337483::0::1::::<><>::res://Scenes/Mobs/enemy_power_level.gd
 magic_orc.gd::GDScript::-1::1733392970::0::1::::<>CharacterBody2D<>::
-magic_orc.tscn::PackedScene::6752373835545096011::1733819233::0::1::::<><>::res://Scenes/Mobs/magic_orc.gd<>uid://dknarimec66ao::::res://Resources/32Rogues_environment_tiles/Orc-Soldier-Cyan.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn
+magic_orc.tscn::PackedScene::6752373835545096011::1734349358::0::1::::<><>::res://Scenes/Mobs/magic_orc.gd<>uid://dknarimec66ao::::res://Resources/32Rogues_environment_tiles/Orc-Soldier-Cyan.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
 magic_projectile.gd::GDScript::-1::1733135420::0::1::::<>CharacterBody2D<>::
 magic_projectile.tscn::PackedScene::3007216974515806633::1732810270::0::1::::<><>::res://Scenes/Mobs/magic_projectile.gd<>uid://bdcti1sfr61eb::::res://Resources/Magic/Pixelart Spells/PNG Files/Fireball.png
-melee_orc.gd::GDScript::-1::1733392970::0::1::::<>CharacterBody2D<>::
-melee_orc.tscn::PackedScene::5172201931866594010::1734166659::0::1::::<><>::res://Scenes/Mobs/melee_orc.gd<>uid://yxip2dmbfcoi::::res://Resources/32Rogues_environment_tiles/Orc-Soldier-Red.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn
+melee_orc.gd::GDScript::-1::1734349349::0::1::::<>CharacterBody2D<>::
+melee_orc.tscn::PackedScene::5172201931866594010::1734349358::0::1::::<><>::res://Scenes/Mobs/melee_orc.gd<>uid://yxip2dmbfcoi::::res://Resources/32Rogues_environment_tiles/Orc-Soldier-Red.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
 monster_spawner.gd::GDScript::-1::1733393018::0::1::::<>StaticBody2D<>::
-monster_spawner.tscn::PackedScene::1477515937573178734::1734166660::0::1::::<><>::res://Scenes/Mobs/monster_spawner.gd<>uid://d3rodwqif3jpm::::res://Resources/Portal/Dimensional_Portal.png<>uid://c4jlwwml4bhl::::res://Resources/free_crystal_dark_frakassets/crystal_dark_32x32_24f_20d_normal.png
+monster_spawner.tscn::PackedScene::1477515937573178734::1734346744::0::1::::<><>::res://Scenes/Mobs/monster_spawner.gd<>uid://d3rodwqif3jpm::::res://Resources/Portal/Dimensional_Portal.png<>uid://c4jlwwml4bhl::::res://Resources/free_crystal_dark_frakassets/crystal_dark_32x32_24f_20d_normal.png
+orc_boss_center.gd::GDScript::-1::1734014804::0::1::::<>Node2D<>::
 ranged_orc.gd::GDScript::-1::1733392970::0::1::::<>CharacterBody2D<>::
-ranged_orc.tscn::PackedScene::2045310788498712901::1733819233::0::1::::<><>::res://Scenes/Mobs/ranged_orc.gd<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://ddymho7xwtl68::::res://Resources/32Rogues_environment_tiles/Orc-Peon-Cyan.png<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn
+ranged_orc.tscn::PackedScene::2045310788498712901::1734349358::0::1::::<><>::res://Scenes/Mobs/ranged_orc.gd<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://ddymho7xwtl68::::res://Resources/32Rogues_environment_tiles/Orc-Peon-Cyan.png<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn<>uid://d4mv8gtuvklsr::::res://Scenes/Mobs/orc_audio_manager.tscn
+orc_audio_manager.tscn::PackedScene::9220845383106479617::1734357918::0::1::::<><>::res://Scenes/Music/audio_manager.gd<>uid://b1qlx70acn2b4::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/25_orc_walk_stone_1.wav<>uid://khxy6fk6hxx8::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/17_orc_atk_sword_1.wav<>uid://d2u0cgewksbxi::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_1.wav<>uid://dbgqrgbi0gtok::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/21_orc_damage_1.wav<>uid://dpyc2vc7wconi::::res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/69_Enemy_death_01.wav<>uid://co62ga3b3yjej::::res://Resources/TFG SFX/RPG_Essentials_Free/8_Atk_Magic_SFX/04_Fire_explosion_04_medium.wav
 slime.gd::GDScript::-1::1733684343::0::1::::<>CharacterBody2D<>::
 slime.tscn::PackedScene::5225433733212819750::1733819233::0::1::::<><>::res://Scenes/Mobs/slime.gd<>uid://b7pdxujhvf5pp::::res://Resources/32Rogues_environment_tiles/Slime.png<>uid://dy5d3pbqkjp3::::res://Scenes/Mobs/enemy_power_level.tscn<>uid://cphnmq2wu3tlj::::res://Scenes/Mobs/aura.tscn
 ::res://Scenes/Mobs/Auras/::1733130465
@@ -2355,22 +2627,27 @@ black_aura.tres::Gradient::3116130660524982140::1733130465::0::1::::<><>::
 blue_aura.tres::Gradient::8227835994839646954::1733130279::0::1::::<><>::
 green_aura.tres::Gradient::838134067045700845::1733063101::0::1::::<><>::
 red_aura.tres::Gradient::5810012807188300080::1733130379::0::1::::<><>::
-::res://Scenes/Player/::1734166660
+::res://Scenes/Music/::1734349358
+audio_manager.tscn::PackedScene::9090025448789952309::1734349358::0::1::::<><>::res://Scenes/Music/audio_manager.gd<>uid://dov1bf8ob7djo::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/16_human_walk_stone_1.wav<>uid://fw7m0svtinv2::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/07_human_atk_sword_1.wav<>uid://d2u0cgewksbxi::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_1.wav<>uid://bkfqlutqc8fud::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/11_human_damage_1.wav
+audio_manager.gd::GDScript::-1::1734340915::0::1::::<>Node2D<>::
+::res://Scenes/Player/::1734349358
 archer.gd::GDScript::-1::1731596605::0::1::::<>CharacterBody2D<>::
 archer.tscn::PackedScene::4088218984496027468::1732810270::0::1::::<><>::res://Scenes/Player/archer.gd<>uid://pn0a64jd6jjb::::res://Resources/Player/Human-Soldier-Cyan.png
 archer_arrow_projectile.gd::GDScript::-1::1731596123::0::1::::<>CharacterBody2D<>::
-archer_arrow_projectile.tscn::PackedScene::6670344696722961265::1734166660::0::1::::<><>::res://Scenes/Player/archer_arrow_projectile.gd<>uid://ci8socj4o8cqv::::res://Resources/Projectiles/ranged-thekingphoenix.png
+archer_arrow_projectile.tscn::PackedScene::6670344696722961265::1734346744::0::1::::<><>::res://Scenes/Player/archer_arrow_projectile.gd<>uid://ci8socj4o8cqv::::res://Resources/Projectiles/ranged-thekingphoenix.png
+decoy.gd::GDScript::-1::1734104440::0::1::::<>StaticBody2D<>::
 game_camera.tscn::PackedScene::3541116034319934602::1733819233::0::1::::<><>::res://game_camera.gd
-player.gd::GDScript::-1::1734078806::0::1::::<>CharacterBody2D<>::
+healing_pad.gd::GDScript::-1::1734104464::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1734348638::0::1::::<>CharacterBody2D<>::
 player.gdshader::Shader::-1::1732815666::0::1::::<><>::
-player.tscn::PackedScene::2783939894081375557::1734166659::0::1::::<><>::res://Scenes/Player/player.gd<>uid://76qgw45c8h47::::res://Resources/Player/Human-Soldier-Red.png<>uid://cikxvfsl0xgx1::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_13.png<>uid://dadhjpgdg3r5j::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_14.png<>uid://cgcaimm7moxgr::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_15.png<>uid://25vho387dt48::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_16.png<>uid://dcuj0jduvo2w5::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_17.png<>uid://c1gkj5lc8onil::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_18.png<>uid://bn0ld5nwfanju::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_20.png<>uid://bjx2rwl2t7knl::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_21.png<>uid://c8vp3chkfrgy2::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_22.png
-::res://Scenes/UI/::1734178492
+player.tscn::PackedScene::2783939894081375557::1734349358::0::1::::<><>::res://Scenes/Player/player.gd<>uid://76qgw45c8h47::::res://Resources/Player/Human-Soldier-Red.png<>uid://cikxvfsl0xgx1::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_13.png<>uid://dadhjpgdg3r5j::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_14.png<>uid://cgcaimm7moxgr::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_15.png<>uid://25vho387dt48::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_16.png<>uid://dcuj0jduvo2w5::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_17.png<>uid://c1gkj5lc8onil::::res://Resources/Weapon effects/Alternative 2/3/Alternative_2_18.png<>uid://bn0ld5nwfanju::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_20.png<>uid://bjx2rwl2t7knl::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_21.png<>uid://c8vp3chkfrgy2::::res://Resources/Weapon effects/Alternative 2/4/Alternative_2_22.png<>res://Scenes/Music/audio_manager.gd<>uid://dov1bf8ob7djo::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/16_human_walk_stone_1.wav<>uid://fw7m0svtinv2::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/07_human_atk_sword_1.wav<>uid://d2u0cgewksbxi::::res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_1.wav
+::res://Scenes/UI/::1734346744
 BackButton.tscn::PackedScene::4904288064134660484::1731321871::0::1::::<><>::res://Scenes/UI/back_button.gd<>uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres
 back_button.gd::GDScript::-1::1728834339::0::1::::<>Button<>::
 dungeon_floor_titles_ui.tscn::PackedScene::3317092421634770638::1732875676::0::1::::<><>::res://Scenes/DungeonRooms/dungeon_floor_titles_ui.gd
 GameUIResources.tscn::PackedScene::1401023263102698888::1733819233::0::1::::<><>::uid://dbp2nevsfbien::::res://Resources/CutTileset/tile275.png<>uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>res://Scenes/UI/game_ui_resources.gd<>uid://b761dp6ds521a::::res://Resources/CutTileset/tile206.png
-game_hud.gd::GDScript::-1::1734178492::0::1::::<>Control<>::
-game_hud.tscn::PackedScene::6911804962724917788::1734178492::0::1::::<><>::uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn<>res://Scenes/UI/game_hud.gd
+game_hud.gd::GDScript::-1::1734188205::0::1::::<>Control<>::
+game_hud.tscn::PackedScene::6911804962724917788::1734346744::0::1::::<><>::uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn<>res://Scenes/UI/game_hud.gd
 game_ui_resources.gd::GDScript::-1::1732878872::0::1::::<>MarginContainer<>::
 initial_menu.gd::GDScript::-1::1728838412::0::1::::<>Control<>::
 initial_menu.tscn::PackedScene::3814401928692872883::1731321871::0::1::::<><>::uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>res://Scenes/UI/initial_menu.gd
@@ -2379,13 +2656,13 @@ main_menu.tscn::PackedScene::2441568653710357475::1733819233::0::1::::<><>::res:
 smith_menu.gd::GDScript::-1::1733413878::0::1::::<>Control<>::
 smith_menu.tscn::PackedScene::5868821575740702973::1733819233::0::1::::<><>::uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>uid://cb4w54r0hpvku::::res://Scenes/UI/BackButton.tscn<>res://Scenes/UI/smith_menu.gd<>uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn<>uid://fwk2q16s8clq::::res://Resources/CutTileset/tile117.png<>uid://duu2swcdw4rpw::::res://Resources/CutTileset/tile085.png<>uid://cv8p040t5okk1::::res://Resources/CutTileset/tile131.png
 structures_menu.gd::GDScript::-1::1734104385::0::1::::<>Control<>::
-structures_menu.tscn::PackedScene::5796170045547154990::1734166659::0::1::::<><>::uid://5jnyvp34t0cb::::res://Resources/CutTileset/tile273.png<>uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>uid://cch08s23vk5eo::::res://Resources/CutTileset/tile152.png<>res://Scenes/UI/structures_menu.gd<>uid://c2x7r6hpvl8nh::::res://Resources/CutTileset/tile062.png<>uid://dbp2nevsfbien::::res://Resources/CutTileset/tile275.png<>uid://b761dp6ds521a::::res://Resources/CutTileset/tile206.png<>uid://0jrocr7ko26x::::res://Resources/CutTileset/tile052.png<>uid://cb4w54r0hpvku::::res://Scenes/UI/BackButton.tscn<>uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn
+structures_menu.tscn::PackedScene::5796170045547154990::1734346744::0::1::::<><>::uid://5jnyvp34t0cb::::res://Resources/CutTileset/tile273.png<>uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>uid://cch08s23vk5eo::::res://Resources/CutTileset/tile152.png<>res://Scenes/UI/structures_menu.gd<>uid://c2x7r6hpvl8nh::::res://Resources/CutTileset/tile062.png<>uid://dbp2nevsfbien::::res://Resources/CutTileset/tile275.png<>uid://b761dp6ds521a::::res://Resources/CutTileset/tile206.png<>uid://0jrocr7ko26x::::res://Resources/CutTileset/tile052.png<>uid://cb4w54r0hpvku::::res://Scenes/UI/BackButton.tscn<>uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn
 training_menu.gd::GDScript::-1::1732880530::0::1::::<>Control<>::
 training_menu.tscn::PackedScene::4571064743871591448::1733819233::0::1::::<><>::uid://cq6o71oo66iu6::::res://Themes/menu_theme.tres<>uid://co35i88mxrlal::::res://Resources/CutTileset/tile053.png<>uid://ciyhb6gvrogdr::::res://Resources/Player/Human-Soldier-Red-export.png<>res://Scenes/UI/training_menu.gd<>uid://tb8txgygr5wp::::res://Resources/CutTileset/tile049.png<>uid://4v3mt41qj8pn::::res://Resources/CutTileset/tile061.png<>uid://cb4w54r0hpvku::::res://Scenes/UI/BackButton.tscn<>uid://t7wwbuy0cv17::::res://Scenes/UI/GameUIResources.tscn
-ui.tscn::PackedScene::4824251858445185071::1734166660::0::1::::<><>::res://Scenes/UI/UIManager.gd<>uid://bulyv3x21gwsh::::res://Scenes/UI/initial_menu.tscn<>uid://ba1yjqsfyvf1t::::res://Scenes/UI/main_menu.tscn<>uid://b6ei1em0yoxi3::::res://Scenes/UI/training_menu.tscn<>uid://cpu5vs2cuff86::::res://Scenes/UI/smith_menu.tscn<>uid://cotycrlnfanri::::res://Scenes/UI/structures_menu.tscn<>uid://c5qeohdqqvnpc::::res://Scenes/UI/game_hud.tscn<>uid://bni3a634p7bby::::res://Scenes/UI/dungeon_floor_titles_ui.tscn
+ui.tscn::PackedScene::4824251858445185071::1734346744::0::1::::<><>::res://Scenes/UI/UIManager.gd<>uid://bulyv3x21gwsh::::res://Scenes/UI/initial_menu.tscn<>uid://ba1yjqsfyvf1t::::res://Scenes/UI/main_menu.tscn<>uid://b6ei1em0yoxi3::::res://Scenes/UI/training_menu.tscn<>uid://cpu5vs2cuff86::::res://Scenes/UI/smith_menu.tscn<>uid://cotycrlnfanri::::res://Scenes/UI/structures_menu.tscn<>uid://c5qeohdqqvnpc::::res://Scenes/UI/game_hud.tscn<>uid://bni3a634p7bby::::res://Scenes/UI/dungeon_floor_titles_ui.tscn
 UIManager.gd::GDScript::-1::1733411397::0::1::::<>CanvasLayer<>::
-::res://Themes/::1734166659
-menu_theme.tres::Theme::5960767147187376783::1734166659::0::1::::<><>::uid://dpvcw508he2u::::res://Themes/Fonts/Unformital.ttf
+::res://Themes/::1734337465
+menu_theme.tres::Theme::5960767147187376783::1734337465::0::1::::<><>::uid://dpvcw508he2u::::res://Themes/Fonts/Unformital.ttf
 ::res://Themes/Fonts/::1732816694
 ARCADECLASSIC.TTF::FontFile::5455705433821643747::1730827963::1732816694::1::::<><>::
 manaspc.ttf::FontFile::3210893107833248554::1730827876::1732816694::1::::<><>::

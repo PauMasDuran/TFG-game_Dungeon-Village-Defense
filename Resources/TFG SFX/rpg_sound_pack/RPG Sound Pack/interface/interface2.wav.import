@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmtt8vfblq3ut"
+path="res://.godot/imported/interface2.wav-2f8f5ac0f0db26e57b9b0b5c9a2bdf01.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/interface/interface2.wav"
+dest_files=["res://.godot/imported/interface2.wav-2f8f5ac0f0db26e57b9b0b5c9a2bdf01.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

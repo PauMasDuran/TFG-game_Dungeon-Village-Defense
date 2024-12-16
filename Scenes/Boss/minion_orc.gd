@@ -28,6 +28,7 @@ var special_attacking:bool = false
 
 var idling: bool = false
 var hurting: bool = false
+var walking: bool = false
 
 var dead: bool = false
 
@@ -38,6 +39,8 @@ var aggro_to_player: bool = false
 var king: CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
+
+@onready var audio_manager = $OrcAudioManager
 
 @onready var main = get_tree().get_root().get_node("Main")
 
@@ -160,6 +163,10 @@ func distance_to_decoy():
 	return self.global_position.distance_to(decoy.global_position)
 
 func animate_walk(slimeActualDirection):
+	if not walking:
+		$WalkingTimer.start()
+		walking = true
+		audio_manager.play_walking_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("walk_right")
@@ -182,6 +189,7 @@ func animate_run(slimeActualDirection):
 		animated_sprite.play("run_up")
 
 func animate_attack(slimeActualDirection):
+	audio_manager.play_attacking_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("attack_right")
@@ -197,6 +205,7 @@ func animate_attack(slimeActualDirection):
 		enemy_box_collision_attack_index = "collision_top"
 
 func animate_hurt(slimeActualDirection):
+	audio_manager.play_hurt_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("hurt_right")
@@ -208,6 +217,7 @@ func animate_hurt(slimeActualDirection):
 		animated_sprite.play("hurt_up")
 
 func animate_death(slimeActualDirection):
+	audio_manager.play_dying_sound()
 	var angle = slimeActualDirection.angle()
 	if angle > -PI/3 and angle <= PI/3:
 		animated_sprite.play("death_right")
@@ -286,3 +296,6 @@ func _on_attack_casting_timer_timeout():
 
 func _on_aggro_timer_timeout():
 	aggro_to_player = false
+	
+func _on_walking_timer_timeout():
+	walking = false

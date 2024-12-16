@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dr4m3wok7jspk"
+path="res://.godot/imported/shade4.wav-1b555774f9fab49d1e130a4cc6aaad3c.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/shade/shade4.wav"
+dest_files=["res://.godot/imported/shade4.wav-1b555774f9fab49d1e130a4cc6aaad3c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

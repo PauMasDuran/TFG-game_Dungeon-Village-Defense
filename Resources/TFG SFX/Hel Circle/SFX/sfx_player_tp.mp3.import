@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjjpjwfsw1g0c"
+path="res://.godot/imported/sfx_player_tp.mp3-d4d852f34576ec7d69f57408f8680b24.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/SFX/sfx_player_tp.mp3"
+dest_files=["res://.godot/imported/sfx_player_tp.mp3-d4d852f34576ec7d69f57408f8680b24.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

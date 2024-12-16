@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2rjnkcx5wow8"]
+
+[ext_resource type="Script" path="res://Scenes/Music/audio_manager.gd" id="1_fujpa"]
+[ext_resource type="AudioStream" uid="uid://dov1bf8ob7djo" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/16_human_walk_stone_1.wav" id="2_ablw4"]
+[ext_resource type="AudioStream" uid="uid://fw7m0svtinv2" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/07_human_atk_sword_1.wav" id="3_egree"]
+[ext_resource type="AudioStream" uid="uid://d2u0cgewksbxi" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_1.wav" id="4_81jlm"]
+[ext_resource type="AudioStream" uid="uid://bkfqlutqc8fud" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/11_human_damage_1.wav" id="5_80buv"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_fujpa")
+
+[node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ablw4")
+bus = &"SFX"
+
+[node name="AttackingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_egree")
+bus = &"SFX"
+
+[node name="DashingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_81jlm")
+bus = &"SFX"
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_80buv")
+bus = &"SFX"
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="DyingSound" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="MagicSound" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ParrySound" type="AudioStreamPlayer2D" parent="."]

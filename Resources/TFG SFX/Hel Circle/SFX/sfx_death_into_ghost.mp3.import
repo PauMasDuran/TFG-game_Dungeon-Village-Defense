@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5b4d2fk1jhxy"
+path="res://.godot/imported/sfx_death_into_ghost.mp3-066ac9cebd8890aecbffc15a719b1af5.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/SFX/sfx_death_into_ghost.mp3"
+dest_files=["res://.godot/imported/sfx_death_into_ghost.mp3-066ac9cebd8890aecbffc15a719b1af5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

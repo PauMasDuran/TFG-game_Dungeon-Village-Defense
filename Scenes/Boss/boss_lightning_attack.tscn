@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://di3sisybtygln"]
 
-[ext_resource type="Script" path="res://boss_lightning_attack.gd" id="1_kla3u"]
+[ext_resource type="Script" path="res://Scenes/Boss/boss_lightning_attack.gd" id="1_kla3u"]
 [ext_resource type="SpriteFrames" uid="uid://c1cddkpte0wlr" path="res://Scenes/Boss/lightning.tres" id="2_yx8yo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bknfy"]

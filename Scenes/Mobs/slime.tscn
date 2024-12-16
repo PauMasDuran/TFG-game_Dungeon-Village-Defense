@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgpieopbs8r4a"]
+[gd_scene load_steps=16 format=3 uid="uid://cgpieopbs8r4a"]
 
 [ext_resource type="Script" path="res://Scenes/Mobs/slime.gd" id="1_mpw10"]
 [ext_resource type="Texture2D" uid="uid://b7pdxujhvf5pp" path="res://Resources/32Rogues_environment_tiles/Slime.png" id="1_ppb70"]
 [ext_resource type="PackedScene" uid="uid://dy5d3pbqkjp3" path="res://Scenes/Mobs/enemy_power_level.tscn" id="2_6po50"]
 [ext_resource type="PackedScene" uid="uid://cphnmq2wu3tlj" path="res://Scenes/Mobs/aura.tscn" id="3_gv7bb"]
+[ext_resource type="PackedScene" uid="uid://c4oca2woso60s" path="res://Scenes/Mobs/slime_audio_manager.tscn" id="5_hnx4s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws7fj"]
 bg_color = Color(0, 0, 0, 0.313726)
@@ -151,6 +152,13 @@ one_shot = true
 wait_time = 1.5
 autostart = true
 
+[node name="WalkingTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="SlimeAudioManager" parent="." instance=ExtResource("5_hnx4s")]
+scale = Vector2(1, 1)
+
 [node name="EnemyHitBox" type="Area2D" parent="."]
 scale = Vector2(0.879999, 0.68)
 collision_layer = 8
@@ -165,3 +173,4 @@ shape = SubResource("CircleShape2D_m4bl0")
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_damaged_timer_timeout"]
 [connection signal="timeout" from="IdleMovementTimer" to="." method="_on_idle_movement_timer_timeout"]
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]

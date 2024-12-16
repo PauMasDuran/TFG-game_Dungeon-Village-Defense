@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b14rqr7cx6l74"
+path="res://.godot/imported/cave_tuto.mp3-bdd3561c213f125c303b24938d51e977.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/Music/cave_tuto.mp3"
+dest_files=["res://.godot/imported/cave_tuto.mp3-bdd3561c213f125c303b24938d51e977.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bstqegiludb14"
+path="res://.godot/imported/jardins.mp3-297ccab95c502fa863dbcb27017423f7.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/Music/jardins.mp3"
+dest_files=["res://.godot/imported/jardins.mp3-297ccab95c502fa863dbcb27017423f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bf6g5cgtvp6ij"
+path="res://.godot/imported/42_Cling_climb_03.wav-9a155e3e2037875c1c7403bc6f6322df.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/RPG_Essentials_Free/12_Player_Movement_SFX/42_Cling_climb_03.wav"
+dest_files=["res://.godot/imported/42_Cling_climb_03.wav-9a155e3e2037875c1c7403bc6f6322df.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

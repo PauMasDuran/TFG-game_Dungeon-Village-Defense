@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjxa17bn2c0t1"
+path="res://.godot/imported/bow-and-arrow-shoot-sound-effect-2-239699.mp3-7f9f7ec3a545310ee75192d8254adc9b.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/bow-and-arrow-shoot-sound-effect-2-239699.mp3"
+dest_files=["res://.godot/imported/bow-and-arrow-shoot-sound-effect-2-239699.mp3-7f9f7ec3a545310ee75192d8254adc9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

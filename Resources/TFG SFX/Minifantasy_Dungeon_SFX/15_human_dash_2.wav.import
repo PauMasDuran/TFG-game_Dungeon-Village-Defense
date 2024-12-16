@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://68c47cq7ntq6"
+path="res://.godot/imported/15_human_dash_2.wav-bb482d928d17cb0359e8c1b05fe42a68.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_2.wav"
+dest_files=["res://.godot/imported/15_human_dash_2.wav-bb482d928d17cb0359e8c1b05fe42a68.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

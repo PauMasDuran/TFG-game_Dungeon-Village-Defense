@@ -1,9 +1,10 @@
-[gd_scene load_steps=70 format=3 uid="uid://c3g5u01s6pmwh"]
+[gd_scene load_steps=71 format=3 uid="uid://c3g5u01s6pmwh"]
 
 [ext_resource type="Script" path="res://Scenes/Mobs/magic_orc.gd" id="1_4qfth"]
 [ext_resource type="Texture2D" uid="uid://dknarimec66ao" path="res://Resources/32Rogues_environment_tiles/Orc-Soldier-Cyan.png" id="2_c8xjn"]
 [ext_resource type="PackedScene" uid="uid://dy5d3pbqkjp3" path="res://Scenes/Mobs/enemy_power_level.tscn" id="2_wuw41"]
 [ext_resource type="PackedScene" uid="uid://cphnmq2wu3tlj" path="res://Scenes/Mobs/aura.tscn" id="3_pqegu"]
+[ext_resource type="PackedScene" uid="uid://d4mv8gtuvklsr" path="res://Scenes/Mobs/orc_audio_manager.tscn" id="5_qmc3x"]
 
 [sub_resource type="Animation" id="Animation_7mhan"]
 resource_name = "Atk_down"
@@ -1114,6 +1115,12 @@ one_shot = true
 wait_time = 0.4
 one_shot = true
 
+[node name="WalkingTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="OrcAudioManager" parent="." instance=ExtResource("5_qmc3x")]
+
 [connection signal="area_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_area_entered"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_entered" from="MeleeAreaDetection" to="." method="_on_melee_area_detection_area_entered"]
@@ -1125,3 +1132,4 @@ one_shot = true
 [connection signal="timeout" from="RangedAttackTimer" to="." method="_on_ranged_attack_timer_timeout"]
 [connection signal="timeout" from="AttackCastingTimer" to="." method="_on_attack_casting_timer_timeout"]
 [connection signal="timeout" from="RangedAttackCastingTimer" to="." method="_on_ranged_attack_casting_timer_timeout"]
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]

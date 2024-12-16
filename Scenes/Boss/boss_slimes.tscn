@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://03f45ospwqxm"]
+[gd_scene load_steps=11 format=3 uid="uid://03f45ospwqxm"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/boss_slimes.gd" id="1_1hmcu"]
 [ext_resource type="PackedScene" uid="uid://cphnmq2wu3tlj" path="res://Scenes/Mobs/aura.tscn" id="2_fhub5"]
 [ext_resource type="PackedScene" uid="uid://dy5d3pbqkjp3" path="res://Scenes/Mobs/enemy_power_level.tscn" id="2_l4ifm"]
 [ext_resource type="SpriteFrames" uid="uid://cd4j2v2uv4j1l" path="res://Scenes/Boss/boss_slime_red.tres" id="3_c3qqc"]
+[ext_resource type="PackedScene" uid="uid://c4oca2woso60s" path="res://Scenes/Mobs/slime_audio_manager.tscn" id="5_j6o06"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31ij8"]
 bg_color = Color(0, 0, 0, 0.313726)
@@ -43,7 +44,7 @@ show_percentage = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("3_c3qqc")
-animation = &"idle_up"
+animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -69,7 +70,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="DeathTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
 
 [node name="SpecialAttackTimer" type="Timer" parent="."]
@@ -80,6 +81,10 @@ one_shot = true
 wait_time = 5.0
 autostart = true
 
+[node name="WalkingTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
 [node name="HurtBox" type="Area2D" parent="."]
 scale = Vector2(1, 0.922989)
 collision_layer = 8
@@ -88,6 +93,8 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CircleShape2D_qw6ob")
 
+[node name="SlimeAudioManager" parent="." instance=ExtResource("5_j6o06")]
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="NormalAttackCastingTimer" to="." method="_on_normal_attack_casting_timer_timeout"]
 [connection signal="timeout" from="NormalAttackTimer" to="." method="_on_normal_attack_timer_timeout"]
@@ -95,4 +102,5 @@ shape = SubResource("CircleShape2D_qw6ob")
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="SpecialAttackTimer" to="." method="_on_special_attack_timer_timeout"]
 [connection signal="timeout" from="ModeTimer" to="." method="_on_mode_timer_timeout"]
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

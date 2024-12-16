@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dac0q777kfyfm"]
+[gd_scene load_steps=12 format=3 uid="uid://dac0q777kfyfm"]
 
-[ext_resource type="Script" path="res://king_orc.gd" id="1_tb50m"]
+[ext_resource type="Script" path="res://Scenes/Boss/king_orc.gd" id="1_tb50m"]
 [ext_resource type="SpriteFrames" uid="uid://s35nl2naxvfw" path="res://Scenes/Boss/boss_orc_king.tres" id="2_lo856"]
+[ext_resource type="PackedScene" uid="uid://d4mv8gtuvklsr" path="res://Scenes/Mobs/orc_audio_manager.tscn" id="3_lhkcb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2g8bt"]
 radius = 3.0
@@ -127,6 +128,12 @@ rounded = true
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
+[node name="WalkingTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="OrcAudioManager" parent="." instance=ExtResource("3_lhkcb")]
+
 [connection signal="area_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_area_entered"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
@@ -136,3 +143,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="timeout" from="AggroTimer" to="." method="_on_aggro_timer_timeout"]
 [connection signal="timeout" from="SpawningTimer" to="." method="_on_spawning_timer_timeout"]
 [connection signal="timeout" from="LightningTimer" to="." method="_on_lightning_timer_timeout"]
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]

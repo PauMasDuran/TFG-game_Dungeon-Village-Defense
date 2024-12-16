@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgwvlsl36js1q"
+path="res://.godot/imported/13_human_jump_land_2.wav-503bff5ee49ad56efb54bd0e59529d88.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/13_human_jump_land_2.wav"
+dest_files=["res://.godot/imported/13_human_jump_land_2.wav-503bff5ee49ad56efb54bd0e59529d88.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

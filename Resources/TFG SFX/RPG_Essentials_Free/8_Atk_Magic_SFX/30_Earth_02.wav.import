@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://w5egxairqoic"
+path="res://.godot/imported/30_Earth_02.wav-d878094d913ffc39b7f2ea4d273b53c9.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/RPG_Essentials_Free/8_Atk_Magic_SFX/30_Earth_02.wav"
+dest_files=["res://.godot/imported/30_Earth_02.wav-d878094d913ffc39b7f2ea4d273b53c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

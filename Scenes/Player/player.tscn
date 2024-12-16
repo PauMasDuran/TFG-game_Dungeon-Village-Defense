@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://bfwtc3kxiwfxt"]
+[gd_scene load_steps=66 format=3 uid="uid://bfwtc3kxiwfxt"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_15kyh"]
 [ext_resource type="Texture2D" uid="uid://76qgw45c8h47" path="res://Resources/Player/Human-Soldier-Red.png" id="1_av740"]
@@ -11,6 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://bn0ld5nwfanju" path="res://Resources/Weapon effects/Alternative 2/4/Alternative_2_20.png" id="10_8x8wo"]
 [ext_resource type="Texture2D" uid="uid://bjx2rwl2t7knl" path="res://Resources/Weapon effects/Alternative 2/4/Alternative_2_21.png" id="11_sfl56"]
 [ext_resource type="Texture2D" uid="uid://c8vp3chkfrgy2" path="res://Resources/Weapon effects/Alternative 2/4/Alternative_2_22.png" id="12_c05mo"]
+[ext_resource type="Script" path="res://Scenes/Music/audio_manager.gd" id="12_w8kst"]
+[ext_resource type="AudioStream" uid="uid://dov1bf8ob7djo" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/16_human_walk_stone_1.wav" id="13_yenl3"]
+[ext_resource type="AudioStream" uid="uid://fw7m0svtinv2" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/07_human_atk_sword_1.wav" id="14_b0125"]
+[ext_resource type="AudioStream" uid="uid://d2u0cgewksbxi" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/15_human_dash_1.wav" id="15_0dlf8"]
+[ext_resource type="AudioStream" uid="uid://bkfqlutqc8fud" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/11_human_damage_1.wav" id="16_2mq44"]
 
 [sub_resource type="Animation" id="Animation_ol16l"]
 resource_name = "Atk_down"
@@ -913,6 +918,10 @@ one_shot = true
 wait_time = 3.0
 autostart = true
 
+[node name="WalkingTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [node name="HitBox" type="Area2D" parent="."]
 position = Vector2(0, -3)
 collision_layer = 8
@@ -955,6 +964,38 @@ rotation = -0.785606
 scale = Vector2(1, 1.08486)
 shape = SubResource("RectangleShape2D_28mj3")
 
+[node name="AudioManager" type="Node2D" parent="."]
+script = ExtResource("12_w8kst")
+
+[node name="WalkingSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+stream = ExtResource("13_yenl3")
+bus = &"SFX"
+
+[node name="AttackingSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+stream = ExtResource("14_b0125")
+bus = &"SFX"
+
+[node name="DashingSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+stream = ExtResource("15_0dlf8")
+bus = &"SFX"
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+stream = ExtResource("16_2mq44")
+bus = &"SFX"
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+bus = &"SFX"
+
+[node name="DyingSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+bus = &"SFX"
+
+[node name="ShootingSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+bus = &"SFX"
+
+[node name="MagicSound" type="AudioStreamPlayer2D" parent="AudioManager"]
+
+[node name="ParrySound" type="AudioStreamPlayer2D" parent="AudioManager"]
+
 [node name="PlayerHurtBox" type="Area2D" parent="."]
 position = Vector2(0, -2.5)
 scale = Vector2(0.82, 0.879999)
@@ -971,5 +1012,6 @@ shape = SubResource("CapsuleShape2D_na2rr")
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_damaged_timer_timeout"]
 [connection signal="timeout" from="SPRegen" to="." method="_on_sp_regen_timeout"]
+[connection signal="timeout" from="WalkingTimer" to="." method="_on_walking_timer_timeout"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_hurt_box_area_entered"]

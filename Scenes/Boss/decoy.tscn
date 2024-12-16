@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dkw2y7ianja6n"]
 
-[ext_resource type="Script" path="res://decoy.gd" id="1_kqb62"]
+[ext_resource type="Script" path="res://Scenes/Player/decoy.gd" id="1_kqb62"]
 [ext_resource type="Texture2D" uid="uid://i762nw8ot8vs" path="res://Resources/signposts & decoy/signpost-outsidestuff.png" id="2_5whpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ipcex"]

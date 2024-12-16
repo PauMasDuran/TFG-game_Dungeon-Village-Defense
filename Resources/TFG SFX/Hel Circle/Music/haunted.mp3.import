@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://negrbwmgfush"
+path="res://.godot/imported/haunted.mp3-60586334840f6be9b59615f7cb527697.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/Music/haunted.mp3"
+dest_files=["res://.godot/imported/haunted.mp3-60586334840f6be9b59615f7cb527697.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cadpsqrty8kfb"]
 
-[ext_resource type="Script" path="res://healing_pad.gd" id="1_tim51"]
+[ext_resource type="Script" path="res://Scenes/Player/healing_pad.gd" id="1_tim51"]
 [ext_resource type="Texture2D" uid="uid://ducuml1u7bp0f" path="res://Resources/PixelArt/healing_pad.png" id="2_i8p3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66y0"]

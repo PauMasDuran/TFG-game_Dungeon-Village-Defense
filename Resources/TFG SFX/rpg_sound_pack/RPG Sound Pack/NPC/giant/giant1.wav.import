@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bi6ygdw3yy1yj"
+path="res://.godot/imported/giant1.wav-2138150439cf6963681b4d81685cc44f.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/giant/giant1.wav"
+dest_files=["res://.godot/imported/giant1.wav-2138150439cf6963681b4d81685cc44f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

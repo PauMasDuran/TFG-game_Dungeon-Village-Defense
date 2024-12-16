@@ -19,12 +19,15 @@ var player: CharacterBody2D = null
 var monster_spawner: StaticBody2D = null
 
 var hurting: bool = false
+var walking: bool = false
 
 var dead: bool = false
 
 @onready var main = get_tree().get_root().get_node("Main")
 
 @onready var playerStats = get_tree().get_root().get_node("Main").playerStats
+
+@onready var audio_manager = $SlimeAudioManager
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -61,11 +64,19 @@ func move_towards_player(delta):
 	var direction = (player.global_position - global_position).normalized()
 	move_and_collide(direction * speed * delta)
 	$Sprite2D/AnimationPlayer.play("walkAnimation")
+	if not walking:
+		$WalkingTimer.start()
+		walking = true
+		audio_manager.play_walking_sound()
 
 func idle_movement(delta):
 	if idle_moving == true:
 		move_and_collide(idle_movement_direction * speed * delta)
 		$Sprite2D/AnimationPlayer.play("walkAnimation")
+		if not walking:
+			$WalkingTimer.start()
+			walking = true
+			audio_manager.play_walking_sound()
 	else:
 		$Sprite2D/AnimationPlayer.play("RESET")
 
@@ -85,6 +96,7 @@ func _on_hurt_box_area_entered(area):
 		player.gotHitByPlayer()
 		if health_points >= 1:
 			hurting = true
+			audio_manager.play_hurt_sound()
 			$Sprite2D/AnimationPlayer.play("TakeDmg")
 			health_points -= playerStats.Atk
 			$DamagedTimer.start()
@@ -129,3 +141,7 @@ func drop_loot():
 	var auraTypes = ["","none","green","blue","red","black"]
 	var lootQuantity = randi_range(15,30) 
 	main.addGold(round(lootQuantity * $EnemyPowerLevel.get_floor_boost(main.actual_dungeon_floor) * auraTypes.find(auraType)))
+
+
+func _on_walking_timer_timeout():
+	walking = false

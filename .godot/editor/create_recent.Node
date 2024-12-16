@@ -1,4 +1,6 @@
+AudioStreamPlayer2D
 Timer
+AudioListener2D
 Label
 CollisionShape2D
 Sprite2D
@@ -10,5 +12,3 @@ AnimatedSprite2D
 StaticBody2D
 Node2D
 Camera2D
-AnimationPlayer
-CPUParticles2D

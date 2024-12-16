@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b8v7duf50uvjg"
+path="res://.godot/imported/39_Block_03.wav-a1aa5490d2a0ff93e8e3153e7064f74d.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/39_Block_03.wav"
+dest_files=["res://.godot/imported/39_Block_03.wav-a1aa5490d2a0ff93e8e3153e7064f74d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

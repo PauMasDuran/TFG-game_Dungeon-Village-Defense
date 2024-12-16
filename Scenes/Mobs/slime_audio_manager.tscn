@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4oca2woso60s"]
+
+[ext_resource type="Script" path="res://Scenes/Mobs/slime_audio_manager.gd" id="1_api40"]
+[ext_resource type="AudioStream" uid="uid://duntktmuagtgc" path="res://Resources/TFG SFX/RPG_Essentials_Free/8_Atk_Magic_SFX/22_Water_02.wav" id="1_inumr"]
+[ext_resource type="AudioStream" uid="uid://c1nnpk5xvlfkg" path="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/slime/slime10.wav" id="2_mwwsl"]
+[ext_resource type="AudioStream" uid="uid://oincylx7ymy" path="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/slime/slime1.wav" id="3_4ex06"]
+[ext_resource type="AudioStream" uid="uid://bywb8npn8ite7" path="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/NPC/slime/slime9.wav" id="4_bw6ot"]
+[ext_resource type="AudioStream" uid="uid://dpyc2vc7wconi" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_Battle_SFX/69_Enemy_death_01.wav" id="6_62dug"]
+
+[node name="SlimeAudioManager" type="Node2D"]
+script = ExtResource("1_api40")
+
+[node name="AttackingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_inumr")
+
+[node name="RunningSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_mwwsl")
+
+[node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4ex06")
+max_distance = 500.0
+attenuation = 4.0
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_bw6ot")
+
+[node name="DyingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_62dug")

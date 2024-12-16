@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://s1xgtccme8c6"
+path="res://.godot/imported/swing3.wav-fd8ea95bd5b5c2baecb41876fecf67be.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/rpg_sound_pack/RPG Sound Pack/battle/swing3.wav"
+dest_files=["res://.godot/imported/swing3.wav-fd8ea95bd5b5c2baecb41876fecf67be.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

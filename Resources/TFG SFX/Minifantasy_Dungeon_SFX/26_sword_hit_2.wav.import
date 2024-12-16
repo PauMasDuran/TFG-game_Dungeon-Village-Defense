@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd11in3nemptd"
+path="res://.godot/imported/26_sword_hit_2.wav-bd13cf8c5accfd3960a3d8525f6e3146.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/26_sword_hit_2.wav"
+dest_files=["res://.godot/imported/26_sword_hit_2.wav-bd13cf8c5accfd3960a3d8525f6e3146.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

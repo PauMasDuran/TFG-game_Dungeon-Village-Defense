@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ddahd7i4jnir2"]
 
-[ext_resource type="Script" path="res://orc_boss_center.gd" id="1_u1mol"]
+[ext_resource type="Script" path="res://Scenes/Mobs/orc_boss_center.gd" id="1_u1mol"]
 [ext_resource type="Texture2D" uid="uid://bp7nynyuupnmv" path="res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n2.png" id="2_g6upy"]
 [ext_resource type="Texture2D" uid="uid://j7ub6ovptd5f" path="res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n3.png" id="3_nlv6j"]
 [ext_resource type="Texture2D" uid="uid://ceopk86xnb4f2" path="res://Resources/free_asset_pixel_teleporter_basic_byArijkx_v1.1.2/teleporterbasic/TP n1.png" id="4_i7exd"]

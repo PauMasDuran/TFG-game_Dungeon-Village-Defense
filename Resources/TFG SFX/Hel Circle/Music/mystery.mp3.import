@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnib8i4awkr12"
+path="res://.godot/imported/mystery.mp3-9a9311fdc94ee4f3093a4b6adeaf323b.mp3str"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/Hel Circle/Music/mystery.mp3"
+dest_files=["res://.godot/imported/mystery.mp3-9a9311fdc94ee4f3093a4b6adeaf323b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

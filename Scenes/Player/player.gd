@@ -12,6 +12,7 @@ var sp_drain: int
 var actionCapable = true
 var attacking = false
 var dashAvailable = true
+var walking = false
 
 var knockback_vector: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
@@ -29,7 +30,12 @@ var lastVelocity = Vector2.ZERO
 
 @onready var camera_limits = Vector2i(0,0)
 
+@onready var audio_manager = $AudioManager
+
 var camera_limits_set: bool = false
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	disable_all_hit_boxes()
@@ -65,17 +71,24 @@ func movement_and_inputs(delta):
 			attacking = true
 			$AttackTimer.start()
 			animateAttack(lastVelocity)
+			
+			audio_manager.play_attacking_sound()
 		if Input.is_action_pressed("dash") and dashAvailable and stamina_points >= 2:
 			speed = dash_speed
 			stamina_points -= 1
 			gameHud.loseSP(1)
 			$DashTimer.start()
+			audio_manager.play_dashing_sound()
 			dashAvailable = false
 
 	if velocity.length() > 0 and not attacking and actionCapable:
 		velocity = velocity.normalized() * speed * delta
 		lastVelocity = velocity.normalized()
 		animateWalk(lastVelocity)
+		if not walking:
+			audio_manager.play_walking_sound()
+			$WalkingTimer.start()
+			walking = true
 		move_and_collide(velocity)
 		#position.x = round(position.x)
 		#position.y = round(position.y)
@@ -221,6 +234,7 @@ func _on_hurt_box_area_entered(area):
 			gameHud.loseHP(area.owner.atk)
 			actionCapable = false
 			receive_knockback_from_attack(area)
+			audio_manager.play_hurt_sound()
 			$DamagedTimer.start()
 			
 		else: 
@@ -295,3 +309,7 @@ func upgradePlayerStats():
 
 func _on_invulnerative_timer_timeout():
 	$PlayerHurtBox.monitoring = true
+
+
+func _on_walking_timer_timeout():
+	walking = false
