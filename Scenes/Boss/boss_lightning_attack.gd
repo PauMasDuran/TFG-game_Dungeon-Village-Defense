@@ -10,6 +10,8 @@ func _ready():
 
 func _on_casting_timer_timeout():
 	$EnemyHitBox/CollisionShape2D.disabled = false
+	$ThunderSound.pitch_scale = randf_range(0.80,1.5)
+	$ThunderSound.play()
 
 
 

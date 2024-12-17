@@ -17,11 +17,13 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		player = body
 		heal = true
+		$HealSound.play()
 
 
 func _on_body_exited(body):
 	if body.name == "Player":
 		heal = false
+		$HealSound.stop()
 
 
 func _on_interval_between_healings_timer_timeout():

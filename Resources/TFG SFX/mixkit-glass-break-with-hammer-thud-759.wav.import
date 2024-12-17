@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cu64h84yuwqal"
+path="res://.godot/imported/mixkit-glass-break-with-hammer-thud-759.wav-8aeb8b5cabf87efd58187f6c00353538.sample"
+
+[deps]
+
+source_file="res://Resources/TFG SFX/mixkit-glass-break-with-hammer-thud-759.wav"
+dest_files=["res://.godot/imported/mixkit-glass-break-with-hammer-thud-759.wav-8aeb8b5cabf87efd58187f6c00353538.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

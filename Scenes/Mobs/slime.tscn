@@ -157,7 +157,6 @@ wait_time = 0.6
 one_shot = true
 
 [node name="SlimeAudioManager" parent="." instance=ExtResource("5_hnx4s")]
-scale = Vector2(1, 1)
 
 [node name="EnemyHitBox" type="Area2D" parent="."]
 scale = Vector2(0.879999, 0.68)

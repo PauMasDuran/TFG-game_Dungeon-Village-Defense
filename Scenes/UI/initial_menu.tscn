@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bulyv3x21gwsh"]
+[gd_scene load_steps=4 format=3 uid="uid://bulyv3x21gwsh"]
 
 [ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_a1p8t"]
 [ext_resource type="Script" path="res://Scenes/UI/initial_menu.gd" id="1_mmxci"]
+[ext_resource type="Script" path="res://Scenes/UI/button.gd" id="3_wbhoh"]
 
 [node name="InitialMenu" type="Control"]
 layout_mode = 3
@@ -58,6 +59,7 @@ focus_neighbor_bottom = NodePath("../OptionsButton")
 focus_next = NodePath("../OptionsButton")
 focus_previous = NodePath("../ExitGameButton")
 text = " Play "
+script = ExtResource("3_wbhoh")
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
 layout_mode = 2
@@ -68,6 +70,7 @@ focus_neighbor_bottom = NodePath("../ExitGameButton")
 focus_next = NodePath("../ExitGameButton")
 focus_previous = NodePath("../StartGameButton")
 text = " Options "
+script = ExtResource("3_wbhoh")
 
 [node name="ExitGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
 layout_mode = 2
@@ -78,7 +81,14 @@ focus_neighbor_bottom = NodePath("../StartGameButton")
 focus_next = NodePath("../StartGameButton")
 focus_previous = NodePath("../OptionsButton")
 text = " Exit "
+script = ExtResource("3_wbhoh")
 
+[connection signal="button_up" from="MarginContainer/VBoxContainer/ButtonsVBox/StartGameButton" to="MarginContainer/VBoxContainer/ButtonsVBox/StartGameButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ButtonsVBox/StartGameButton" to="MarginContainer/VBoxContainer/ButtonsVBox/StartGameButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/ButtonsVBox/OptionsButton" to="MarginContainer/VBoxContainer/ButtonsVBox/OptionsButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ButtonsVBox/OptionsButton" to="MarginContainer/VBoxContainer/ButtonsVBox/OptionsButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/ButtonsVBox/ExitGameButton" to="MarginContainer/VBoxContainer/ButtonsVBox/ExitGameButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ButtonsVBox/ExitGameButton" to="MarginContainer/VBoxContainer/ButtonsVBox/ExitGameButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/ExitGameButton" to="." method="_on_exit_game_button_pressed"]

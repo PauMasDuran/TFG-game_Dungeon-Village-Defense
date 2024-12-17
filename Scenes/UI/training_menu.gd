@@ -74,6 +74,7 @@ func upgradeStats():
 	
 func _on_train_hp_pressed():
 	if playerStatsLevel.HPLevel <= 5 and playerResources.Gold >= upgradeCostGold[playerStatsLevel.HPLevel] and playerResources.Crystals >= upgradeCostCrystal[playerStatsLevel.HPLevel] and playerResources.HoursRemaining >= playerStatsLevel.HPLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Train.able = true
 		main.loseGold(upgradeCostGold[playerStatsLevel.HPLevel])
 		main.loseCrystals(upgradeCostCrystal[playerStatsLevel.HPLevel])
 		main.loseHours(playerStatsLevel.HPLevel)
@@ -81,11 +82,14 @@ func _on_train_hp_pressed():
 		upgradePrices()
 		if playerStatsLevel.HPLevel > 5:
 			playerStatsLevel.HPLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Train.able = false
 	upgradeStats()
 
 
 func _on_train_atk_pressed():
 	if playerStatsLevel.ATKLevel <= 5 and playerResources.Gold >= upgradeCostGold[playerStatsLevel.ATKLevel] and playerResources.Crystals >= upgradeCostCrystal[playerStatsLevel.ATKLevel] and playerResources.HoursRemaining >= playerStatsLevel.ATKLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Train.able = true
 		main.loseGold(upgradeCostGold[playerStatsLevel.ATKLevel])
 		main.loseCrystals(upgradeCostCrystal[playerStatsLevel.ATKLevel])
 		main.loseHours(playerStatsLevel.ATKLevel)
@@ -93,11 +97,14 @@ func _on_train_atk_pressed():
 		upgradePrices()
 		if playerStatsLevel.ATKLevel > 5:
 			playerStatsLevel.ATKLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Train.able = false
 	upgradeStats()
 
 
 func _on_train_spd_pressed():
 	if playerStatsLevel.SPDLevel <= 5 and playerResources.Gold >= upgradeCostGold[playerStatsLevel.SPDLevel] and playerResources.Crystals >= upgradeCostCrystal[playerStatsLevel.SPDLevel] and playerResources.HoursRemaining >= playerStatsLevel.SPDLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Train.able = true
 		main.loseGold(upgradeCostGold[playerStatsLevel.SPDLevel])
 		main.loseCrystals(upgradeCostCrystal[playerStatsLevel.SPDLevel])
 		main.loseHours(playerStatsLevel.SPDLevel)
@@ -105,4 +112,6 @@ func _on_train_spd_pressed():
 		upgradePrices()
 		if playerStatsLevel.SPDLevel > 5:
 			playerStatsLevel.SPDLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Train.able = false
 	upgradeStats()

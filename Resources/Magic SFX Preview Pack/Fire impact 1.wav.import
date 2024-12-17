@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://61ltl1car4v4"
+path="res://.godot/imported/Fire impact 1.wav-2515c023caed0a5bef2903a9d8a00f48.sample"
+
+[deps]
+
+source_file="res://Resources/Magic SFX Preview Pack/Fire impact 1.wav"
+dest_files=["res://.godot/imported/Fire impact 1.wav-2515c023caed0a5bef2903a9d8a00f48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

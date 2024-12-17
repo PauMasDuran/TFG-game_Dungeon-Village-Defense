@@ -152,6 +152,8 @@ func spawn_portal_animation(posX,posY):
 	var portal_instance = portal.instantiate()
 	portal_instance.global_position = Vector2(posX,posY)
 	get_parent().get_parent().get_node("Orcs").add_child(portal_instance)
+	$PortalSound.pitch_scale = randf_range(0.80,1.5)
+	$PortalSound.play()
 	
 
 func spawn_lightning(posX,posY):

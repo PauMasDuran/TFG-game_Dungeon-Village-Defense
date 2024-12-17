@@ -18,6 +18,7 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		$Sprite2D/AnimationPlayer.play("chest_opened")
 		if opened == false:
+			$ChestSound.play()
 			drop_loot()
 			opened = true
 

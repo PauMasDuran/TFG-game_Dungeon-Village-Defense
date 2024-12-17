@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://vbyqbgygxomg"]
+[gd_scene load_steps=16 format=3 uid="uid://vbyqbgygxomg"]
 
 [ext_resource type="Script" path="res://Scenes/Mobs/monster_spawner.gd" id="1_3olqa"]
 [ext_resource type="Texture2D" uid="uid://d3rodwqif3jpm" path="res://Resources/Portal/Dimensional_Portal.png" id="2_fmfvv"]
 [ext_resource type="Texture2D" uid="uid://c4jlwwml4bhl" path="res://Resources/free_crystal_dark_frakassets/crystal_dark_32x32_24f_20d_normal.png" id="2_myjw1"]
+[ext_resource type="AudioStream" uid="uid://cu64h84yuwqal" path="res://Resources/TFG SFX/mixkit-glass-break-with-hammer-thud-759.wav" id="4_f8oqy"]
+[ext_resource type="AudioStream" uid="uid://cgqp7hcmycoft" path="res://Resources/TFG SFX/RPG_Essentials_Free/12_Player_Movement_SFX/88_Teleport_02.wav" id="5_gfry0"]
 
 [sub_resource type="Animation" id="Animation_cysou"]
 length = 0.001
@@ -177,6 +179,16 @@ autostart = true
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="CrystalBreakingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f8oqy")
+bus = &"SFX"
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_gfry0")
+max_distance = 500.0
+attenuation = 3.99999
+bus = &"SFX"
 
 [connection signal="animation_finished" from="Sprite2D/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

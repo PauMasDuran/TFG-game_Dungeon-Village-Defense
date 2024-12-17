@@ -69,6 +69,8 @@ func _on_hurt_box_area_entered(area):
 		$Sprite2D2.visible = false
 		destroyed = true
 		drop_loot()
+		$CrystalBreakingSound.pitch_scale = randf_range(0.80,1.5)
+		$CrystalBreakingSound.play()
 		for mon in self.get_children():
 			if mon.is_in_group("Monsters"):
 				print(mon)
@@ -81,6 +83,8 @@ func _on_monster_respawn_timeout():
 			lastMonster = true
 		$Sprite2D.visible = true
 		$Sprite2D/AnimationPlayer.play("scaling_up")
+		$PortalSound.pitch_scale = randf_range(0.80,1.5)
+		$PortalSound.play()
 
 
 func _on_death_timer_timeout():

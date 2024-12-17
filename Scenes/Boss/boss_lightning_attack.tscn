@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://di3sisybtygln"]
+[gd_scene load_steps=5 format=3 uid="uid://di3sisybtygln"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/boss_lightning_attack.gd" id="1_kla3u"]
 [ext_resource type="SpriteFrames" uid="uid://c1cddkpte0wlr" path="res://Scenes/Boss/lightning.tres" id="2_yx8yo"]
+[ext_resource type="AudioStream" uid="uid://61ltl1car4v4" path="res://Resources/Magic SFX Preview Pack/Fire impact 1.wav" id="3_y6jvu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bknfy"]
 radius = 28.0
@@ -26,6 +27,10 @@ shape = SubResource("CircleShape2D_bknfy")
 wait_time = 0.3
 one_shot = true
 autostart = true
+
+[node name="ThunderSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_y6jvu")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="CastingTimer" to="." method="_on_casting_timer_timeout"]

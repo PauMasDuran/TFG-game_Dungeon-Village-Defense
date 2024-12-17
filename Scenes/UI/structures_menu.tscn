@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cotycrlnfanri"]
+[gd_scene load_steps=12 format=3 uid="uid://cotycrlnfanri"]
 
 [ext_resource type="Texture2D" uid="uid://5jnyvp34t0cb" path="res://Resources/CutTileset/tile273.png" id="1_rffu4"]
 [ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_weadn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b761dp6ds521a" path="res://Resources/CutTileset/tile206.png" id="4_fek24"]
 [ext_resource type="Texture2D" uid="uid://0jrocr7ko26x" path="res://Resources/CutTileset/tile052.png" id="4_vd20k"]
 [ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="5_ddqxa"]
+[ext_resource type="Script" path="res://Scenes/UI/button.gd" id="6_4p7gu"]
 [ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="6_qc8iu"]
 
 [node name="StructuresMenu" type="Control"]
@@ -187,6 +188,8 @@ focus_neighbor_bottom = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPa
 focus_next = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPadUpgradeButton")
 focus_previous = NodePath("../../../../../../../../GoBackButton")
 text = "Upgrade"
+script = ExtResource("6_4p7gu")
+buttonType = true
 
 [node name="PanelHealing" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
 layout_mode = 2
@@ -280,6 +283,8 @@ focus_neighbor_bottom = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeB
 focus_next = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeButton")
 focus_previous = NodePath("../../../PanelWall/WallsUpgrade/WallUpgradeButton")
 text = "Upgrade"
+script = ExtResource("6_4p7gu")
+buttonType = true
 
 [node name="PanelDecoy" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
 layout_mode = 2
@@ -373,6 +378,8 @@ focus_neighbor_bottom = NodePath("../../../PanelTurret/TurretUpgrade/TurretsUpgr
 focus_next = NodePath("../../../PanelTurret/TurretUpgrade/TurretsUpgradeButton")
 focus_previous = NodePath("../../../PanelHealing/HealingPadUpgrade/HealPadUpgradeButton")
 text = "Upgrade"
+script = ExtResource("6_4p7gu")
+buttonType = true
 
 [node name="PanelTurret" type="Panel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions"]
 layout_mode = 2
@@ -466,6 +473,8 @@ focus_neighbor_bottom = NodePath("../../../../../../../../GoBackButton")
 focus_next = NodePath("../../../../../../../../GoBackButton")
 focus_previous = NodePath("../../../PanelDecoy/DecoyUpgrade/DecoyUpgradeButton")
 text = "Upgrade"
+script = ExtResource("6_4p7gu")
+buttonType = true
 
 [node name="GoBackButton" parent="." instance=ExtResource("5_ddqxa")]
 layout_mode = 0
@@ -488,7 +497,15 @@ grow_horizontal = 0
 grow_vertical = 1
 is_player_resources = true
 
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton" to="." method="_on_wall_upgrade_button_pressed"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton" to="." method="_on_heal_pad_upgrade_button_pressed"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton" to="." method="_on_decoy_upgrade_button_pressed"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton" to="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton" to="." method="_on_turrets_upgrade_button_pressed"]

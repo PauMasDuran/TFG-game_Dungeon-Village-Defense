@@ -14,10 +14,8 @@ func _process(delta):
 func _on_teleporter_center_body_entered(body):
 	if body.name == "KingOrc":
 		body.is_in_teleporter = true
-		print("is_in_teleporter = true")
 
 
 func _on_teleporter_center_body_exited(body):
 	if body.name == "KingOrc":
 		body.is_in_teleporter = false
-		print("is_in_teleporter = false")

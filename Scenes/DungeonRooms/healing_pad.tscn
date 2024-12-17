@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cadpsqrty8kfb"]
+[gd_scene load_steps=5 format=3 uid="uid://cadpsqrty8kfb"]
 
 [ext_resource type="Script" path="res://Scenes/Player/healing_pad.gd" id="1_tim51"]
 [ext_resource type="Texture2D" uid="uid://ducuml1u7bp0f" path="res://Resources/PixelArt/healing_pad.png" id="2_i8p3j"]
+[ext_resource type="AudioStream" uid="uid://csuralwofxaac" path="res://Resources/Magic SFX Preview Pack/Healing Full.wav" id="3_n22h6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i66y0"]
 size = Vector2(64, 64)
@@ -21,6 +22,12 @@ shape = SubResource("RectangleShape2D_i66y0")
 [node name="IntervalBetweenHealingsTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="HealSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_n22h6")
+max_distance = 500.0
+attenuation = 4.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

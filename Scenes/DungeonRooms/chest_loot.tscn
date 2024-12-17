@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://2wl8ohwj7iik"]
+[gd_scene load_steps=9 format=3 uid="uid://2wl8ohwj7iik"]
 
 [ext_resource type="Script" path="res://Scenes/DungeonRooms/chest_loot.gd" id="1_g5l6x"]
 [ext_resource type="Texture2D" uid="uid://cdr6xjk1erhxo" path="res://Resources/32Rogues_environment_tiles/tiles.png" id="2_u2qt4"]
+[ext_resource type="AudioStream" uid="uid://d2daurl0gp2mo" path="res://Resources/TFG SFX/Minifantasy_Dungeon_SFX/01_chest_open_1.wav" id="3_x8ee4"]
 
 [sub_resource type="Animation" id="Animation_bwfq0"]
 length = 0.001
@@ -78,5 +79,9 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_425ph")
+
+[node name="ChestSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x8ee4")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -80,6 +80,7 @@ func upgradePrices():
 
 func _on_wall_upgrade_button_pressed():
 	if structures.WallLevel <= 5 and playerResources.Gold >= upgradeCostGold[structures.WallLevel] and playerResources.Crystals >= upgradeCostCrystal[structures.WallLevel] and playerResources.HoursRemaining >= structures.WallLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[structures.WallLevel])
 		main.loseCrystals(upgradeCostCrystal[structures.WallLevel])
 		main.loseHours(structures.WallLevel)
@@ -87,10 +88,13 @@ func _on_wall_upgrade_button_pressed():
 		upgradePrices()
 		if structures.WallLevel > 5:
 			structures.WallLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton.able = false
 
 
 func _on_heal_pad_upgrade_button_pressed():
 	if structures.HealLevel <= 5 and playerResources.Gold >= upgradeCostGold[structures.HealLevel] and playerResources.Crystals >= upgradeCostCrystal[structures.HealLevel] and playerResources.HoursRemaining >= structures.HealLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[structures.HealLevel])
 		main.loseCrystals(upgradeCostCrystal[structures.HealLevel])
 		main.loseHours(structures.HealLevel)
@@ -98,10 +102,13 @@ func _on_heal_pad_upgrade_button_pressed():
 		upgradePrices()
 		if structures.HealLevel > 5:
 			structures.HealLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton.able = false
 
 
 func _on_decoy_upgrade_button_pressed():
 	if structures.DecoyLevel <= 5 and playerResources.Gold >= upgradeCostGold[structures.DecoyLevel] and playerResources.Crystals >= upgradeCostCrystal[structures.DecoyLevel] and playerResources.HoursRemaining >= structures.DecoyLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[structures.DecoyLevel])
 		main.loseCrystals(upgradeCostCrystal[structures.DecoyLevel])
 		main.loseHours(structures.DecoyLevel)
@@ -109,10 +116,12 @@ func _on_decoy_upgrade_button_pressed():
 		upgradePrices()
 		if structures.DecoyLevel > 5:
 			structures.DecoyLevel -= 1
-
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton.able = false
 
 func _on_turrets_upgrade_button_pressed():
 	if structures.ArcherLevel <= 5 and playerResources.Gold >= upgradeCostGold[structures.ArcherLevel] and playerResources.Crystals >= upgradeCostCrystal[structures.ArcherLevel] and playerResources.HoursRemaining >= structures.ArcherLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[structures.ArcherLevel])
 		main.loseCrystals(upgradeCostCrystal[structures.ArcherLevel])
 		main.loseHours(structures.ArcherLevel)
@@ -120,3 +129,5 @@ func _on_turrets_upgrade_button_pressed():
 		upgradePrices()
 		if structures.ArcherLevel > 5:
 			structures.ArcherLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton.able = false

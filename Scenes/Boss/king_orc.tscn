@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dac0q777kfyfm"]
+[gd_scene load_steps=13 format=3 uid="uid://dac0q777kfyfm"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/king_orc.gd" id="1_tb50m"]
 [ext_resource type="SpriteFrames" uid="uid://s35nl2naxvfw" path="res://Scenes/Boss/boss_orc_king.tres" id="2_lo856"]
 [ext_resource type="PackedScene" uid="uid://d4mv8gtuvklsr" path="res://Scenes/Mobs/orc_audio_manager.tscn" id="3_lhkcb"]
+[ext_resource type="AudioStream" uid="uid://cgqp7hcmycoft" path="res://Resources/TFG SFX/RPG_Essentials_Free/12_Player_Movement_SFX/88_Teleport_02.wav" id="4_3r1e7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2g8bt"]
 radius = 3.0
@@ -133,6 +134,12 @@ wait_time = 0.3
 one_shot = true
 
 [node name="OrcAudioManager" parent="." instance=ExtResource("3_lhkcb")]
+
+[node name="PortalSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3r1e7")
+max_distance = 500.0
+attenuation = 3.99999
+bus = &"SFX"
 
 [connection signal="area_entered" from="EnemyHitBox" to="." method="_on_enemy_hit_box_area_entered"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

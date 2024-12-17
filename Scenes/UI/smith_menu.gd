@@ -69,6 +69,7 @@ func upgradeStats():
 
 func _on_sp_upgrade_button_pressed():
 	if smith.SPLevel <= 5 and playerResources.Gold >= upgradeCostGold[smith.SPLevel] and playerResources.Crystals >= upgradeCostCrystal[smith.SPLevel] and playerResources.HoursRemaining >= smith.SPLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/ArmorUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[smith.SPLevel])
 		main.loseCrystals(upgradeCostCrystal[smith.SPLevel])
 		main.loseHours(smith.SPLevel)
@@ -76,12 +77,15 @@ func _on_sp_upgrade_button_pressed():
 		upgradePrices()
 		if smith.SPLevel > 5:
 			smith.SPLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/ArmorUpgradeButton.able = false
 	upgradeStats()
 
 
 
 func _on_drain_sp_upgrade_button_pressed():
 	if smith.SPDrainLevel <= 5 and playerResources.Gold >= upgradeCostGold[smith.SPDrainLevel] and playerResources.Crystals >= upgradeCostCrystal[smith.SPDrainLevel] and playerResources.HoursRemaining >= smith.SPDrainLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[smith.SPDrainLevel])
 		main.loseCrystals(upgradeCostCrystal[smith.SPDrainLevel])
 		main.loseHours(smith.SPDrainLevel)
@@ -89,11 +93,14 @@ func _on_drain_sp_upgrade_button_pressed():
 		upgradePrices()
 		if smith.SPDrainLevel > 5:
 			smith.SPDrainLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton.able = false
 	upgradeStats()
 
 
 func _on_sprint_speed_upgrade_button_pressed():
 	if smith.SprintLevel <= 5 and playerResources.Gold >= upgradeCostGold[smith.SprintLevel] and playerResources.Crystals >= upgradeCostCrystal[smith.SprintLevel] and playerResources.HoursRemaining >= smith.SprintLevel:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton.able = true
 		main.loseGold(upgradeCostGold[smith.SprintLevel])
 		main.loseCrystals(upgradeCostCrystal[smith.SprintLevel])
 		main.loseHours(smith.SprintLevel)
@@ -101,4 +108,6 @@ func _on_sprint_speed_upgrade_button_pressed():
 		upgradePrices()
 		if smith.SprintLevel > 5:
 			smith.SprintLevel -= 1
+	else:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton.able = false
 	upgradeStats()

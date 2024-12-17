@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cay5yudwr3udj"]
+[gd_scene load_steps=13 format=3 uid="uid://cay5yudwr3udj"]
 
 [ext_resource type="Script" path="res://Scenes/UI/UIManager.gd" id="1_42ht3"]
 [ext_resource type="PackedScene" uid="uid://bulyv3x21gwsh" path="res://Scenes/UI/initial_menu.tscn" id="1_n4dul"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cotycrlnfanri" path="res://Scenes/UI/structures_menu.tscn" id="5_orqyw"]
 [ext_resource type="PackedScene" uid="uid://c5qeohdqqvnpc" path="res://Scenes/UI/game_hud.tscn" id="7_3cyo1"]
 [ext_resource type="PackedScene" uid="uid://bni3a634p7bby" path="res://Scenes/UI/dungeon_floor_titles_ui.tscn" id="8_eui7i"]
+[ext_resource type="AudioStream" uid="uid://d120j4tnuaj61" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/013_Confirm_03.wav" id="9_v6p5l"]
+[ext_resource type="AudioStream" uid="uid://daewh3n5vioct" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/079_Buy_sell_01.wav" id="10_augss"]
+[ext_resource type="AudioStream" uid="uid://c6dod03g88tc0" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/033_Denied_03.wav" id="11_y0fxh"]
+[ext_resource type="AudioStream" uid="uid://dgim6nnmd4a7v" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/001_Hover_01.wav" id="12_cp705"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_42ht3")
@@ -33,3 +37,19 @@ visible = false
 
 [node name="DungeonFloorTitlesUI" parent="." instance=ExtResource("8_eui7i")]
 visible = false
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_v6p5l")
+bus = &"SFX"
+
+[node name="BuySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_augss")
+bus = &"SFX"
+
+[node name="DeniedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_y0fxh")
+bus = &"SFX"
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_cp705")
+bus = &"SFX"

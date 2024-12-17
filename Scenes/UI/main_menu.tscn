@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba1yjqsfyvf1t"]
+[gd_scene load_steps=6 format=3 uid="uid://ba1yjqsfyvf1t"]
 
 [ext_resource type="Script" path="res://Scenes/UI/main_menu.gd" id="1_ced1t"]
 [ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_oxrt5"]
 [ext_resource type="PackedScene" uid="uid://t7wwbuy0cv17" path="res://Scenes/UI/GameUIResources.tscn" id="1_sb2yf"]
 [ext_resource type="PackedScene" uid="uid://cb4w54r0hpvku" path="res://Scenes/UI/BackButton.tscn" id="2_d7m6x"]
+[ext_resource type="Script" path="res://Scenes/UI/button.gd" id="3_6y1ou"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -74,6 +75,7 @@ focus_neighbor_bottom = NodePath("../TrainingButton")
 focus_next = NodePath("../TrainingButton")
 focus_previous = NodePath("../Structures")
 text = "Enter Dungeon"
+script = ExtResource("3_6y1ou")
 
 [node name="TrainingButton" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
@@ -82,18 +84,22 @@ focus_neighbor_bottom = NodePath("../Smith")
 focus_next = NodePath("../Smith")
 focus_previous = NodePath("../DungeonButton")
 text = "Train Stats"
+script = ExtResource("3_6y1ou")
 
 [node name="Smith" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 text = "Smith"
+script = ExtResource("3_6y1ou")
 
 [node name="Structures" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 text = "Structures"
+script = ExtResource("3_6y1ou")
 
 [node name="Boss" type="Button" parent="ButtonsContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 text = "Boss"
+script = ExtResource("3_6y1ou")
 
 [node name="GameUIResources" parent="." instance=ExtResource("1_sb2yf")]
 layout_mode = 1
@@ -119,8 +125,18 @@ offset_right = 99.0
 offset_bottom = -331.0
 grow_vertical = 0
 
+[connection signal="button_up" from="ButtonsContainer/VBoxContainer2/VBoxContainer/DungeonButton" to="ButtonsContainer/VBoxContainer2/VBoxContainer/DungeonButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonsContainer/VBoxContainer2/VBoxContainer/DungeonButton" to="ButtonsContainer/VBoxContainer2/VBoxContainer/DungeonButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/DungeonButton" to="." method="_on_dungeon_button_pressed"]
+[connection signal="button_up" from="ButtonsContainer/VBoxContainer2/VBoxContainer/TrainingButton" to="ButtonsContainer/VBoxContainer2/VBoxContainer/TrainingButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonsContainer/VBoxContainer2/VBoxContainer/TrainingButton" to="ButtonsContainer/VBoxContainer2/VBoxContainer/TrainingButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/TrainingButton" to="." method="_on_training_button_pressed"]
+[connection signal="button_up" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Smith" to="ButtonsContainer/VBoxContainer2/VBoxContainer/Smith" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Smith" to="ButtonsContainer/VBoxContainer2/VBoxContainer/Smith" method="_on_mouse_entered"]
 [connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Smith" to="." method="_on_smith_pressed"]
+[connection signal="button_up" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Structures" to="ButtonsContainer/VBoxContainer2/VBoxContainer/Structures" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Structures" to="ButtonsContainer/VBoxContainer2/VBoxContainer/Structures" method="_on_mouse_entered"]
 [connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Structures" to="." method="_on_structures_pressed"]
+[connection signal="button_up" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Boss" to="ButtonsContainer/VBoxContainer2/VBoxContainer/Boss" method="_on_button_up"]
+[connection signal="mouse_entered" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Boss" to="ButtonsContainer/VBoxContainer2/VBoxContainer/Boss" method="_on_mouse_entered"]
 [connection signal="pressed" from="ButtonsContainer/VBoxContainer2/VBoxContainer/Boss" to="." method="_on_boss_pressed"]
