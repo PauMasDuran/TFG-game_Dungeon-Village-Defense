@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://55l7kp0uypaq"
+path="res://.godot/imported/08.2b We Fight For Glory (less energy) [Loop].wav-6801b7721fd88e9de769750764282108.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/08.2b We Fight For Glory (less energy) [Loop].wav"
+dest_files=["res://.godot/imported/08.2b We Fight For Glory (less energy) [Loop].wav-6801b7721fd88e9de769750764282108.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

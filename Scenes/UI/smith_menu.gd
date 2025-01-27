@@ -24,6 +24,11 @@ func actualizeHoursAndDays():
 func upgradePrices():
 	#SPCapacity
 	if smith.SPLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/ArmorUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/ArmorUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/Label.text = "Armor Upgrade\n(Max SP)"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[smith.SPLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[smith.SPLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelArmor/ArmorUpgrade/Label2.text = "Time: " +str(smith.SPLevel)+"h" 
@@ -36,6 +41,11 @@ func upgradePrices():
 	
 	#SPDrain
 	if smith.SPDrainLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/SwordUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/Label.text = "Sword Upgrade\n(SP Drain)"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[smith.SPDrainLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[smith.SPDrainLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/Label2.text = "Time: " +str(smith.SPDrainLevel)+"h" 
@@ -49,6 +59,11 @@ func upgradePrices():
 	$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelSword/SwordUpgrade/GameUIResources
 	#SprintBoots
 	if smith.SprintLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/BootsUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/Label.text = "Boots Upgrade\n(Sprint Speed)"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[smith.SprintLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[smith.SprintLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeSmithOptions/PanelBoots/BootsUpgrade/Label2.text = "Time: " +str(smith.SprintLevel)+"h" 

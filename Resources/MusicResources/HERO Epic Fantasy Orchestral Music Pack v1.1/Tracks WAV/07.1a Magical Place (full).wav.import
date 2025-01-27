@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://txf5i3ht03r0"
+path="res://.godot/imported/07.1a Magical Place (full).wav-ed52c626b9ddf748b1c4a28eab43be17.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/07.1a Magical Place (full).wav"
+dest_files=["res://.godot/imported/07.1a Magical Place (full).wav-ed52c626b9ddf748b1c4a28eab43be17.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

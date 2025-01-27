@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7ft4ndk47k24"
+path="res://.godot/imported/06b The Stakes Are High [Loop].wav-e0f57869ff573cc7342fcb563f959865.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/06b The Stakes Are High [Loop].wav"
+dest_files=["res://.godot/imported/06b The Stakes Are High [Loop].wav-e0f57869ff573cc7342fcb563f959865.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

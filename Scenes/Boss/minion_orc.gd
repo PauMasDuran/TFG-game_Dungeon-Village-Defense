@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var health_points: int = 50
 @export var speed: float = 60.0
-@export var atk: int = 2
+@export var atk: int = 20
 @export var run_detection_radius: float = 120.0
 @export var attack_detection_radius: float = 30.0
 @export var knockback_strength: float = 10.0

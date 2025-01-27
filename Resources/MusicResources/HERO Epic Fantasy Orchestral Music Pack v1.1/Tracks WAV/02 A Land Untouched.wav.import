@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmrfn1prj85w3"
+path="res://.godot/imported/02 A Land Untouched.wav-402821cf6a2f0858f3a124fcb3e67c21.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/02 A Land Untouched.wav"
+dest_files=["res://.godot/imported/02 A Land Untouched.wav-402821cf6a2f0858f3a124fcb3e67c21.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

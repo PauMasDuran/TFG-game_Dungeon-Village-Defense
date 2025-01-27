@@ -8,6 +8,7 @@ var sp_drain: int
 @export var speed: int
 @export var knockback_strength: float = 10.0  # Adjust the force of knockback
 @export var knockback_duration: float = 0.05 
+@export var screen: String
 
 var actionCapable = true
 var attacking = false
@@ -17,6 +18,8 @@ var walking = false
 var knockback_vector: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 var lastVelocity = Vector2.ZERO
+
+@onready var main = get_tree().get_root().get_node("Main")
 
 @onready var playerStats = get_tree().get_root().get_node("Main").playerStats
 
@@ -75,8 +78,8 @@ func movement_and_inputs(delta):
 			audio_manager.play_attacking_sound()
 		if Input.is_action_pressed("dash") and dashAvailable and stamina_points >= 2:
 			speed = dash_speed
-			stamina_points -= 1
-			gameHud.loseSP(1)
+			stamina_points -= 5
+			gameHud.loseSP(5)
 			$DashTimer.start()
 			audio_manager.play_dashing_sound()
 			dashAvailable = false
@@ -236,10 +239,19 @@ func _on_hurt_box_area_entered(area):
 			receive_knockback_from_attack(area)
 			audio_manager.play_hurt_sound()
 			$DamagedTimer.start()
-			
+			if health_points <= 0:
+				$Sprite2D/AnimationPlayer.play("Die_down")
+				death()
 		else: 
+			death()
 			$Sprite2D/AnimationPlayer.play("Die_down")
 
+func death():
+	if screen == "Dungeon":
+		main.exit_dungeon()
+	
+	if screen == "Boss Arena":
+		main.game_over()
 
 func _on_damaged_timer_timeout():
 	actionCapable = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bigcxsci3hji4"
+path="res://.godot/imported/05.2 Bad Omen (less energy)  [Loop].ogg-bb642a85a31d5f7076e613b4bed04b1b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/05.2 Bad Omen (less energy)  [Loop].ogg"
+dest_files=["res://.godot/imported/05.2 Bad Omen (less energy)  [Loop].ogg-bb642a85a31d5f7076e613b4bed04b1b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

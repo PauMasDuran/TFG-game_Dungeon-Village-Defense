@@ -411,7 +411,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_stretch_ratio = 3.0
-text = "Turret Upgrade"
+text = "Archers Upgrade"
 
 [node name="GameUIResources" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade"]
 layout_mode = 2

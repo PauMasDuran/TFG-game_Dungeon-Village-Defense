@@ -165,6 +165,7 @@ tile_set = SubResource("TileSet_jg8xy")
 
 [node name="Player" parent="." instance=ExtResource("2_jlchk")]
 position = Vector2(229, 357)
+screen = "Boss Arena"
 
 [node name="GameCamera" parent="." instance=ExtResource("4_5dwb4")]
 is_boss_battle = true

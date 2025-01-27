@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ek53le0pk773"
+path="res://.godot/imported/07.2a Magical Place (less energy).wav-615c1bb0003f397cbe8320756c36e877.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/07.2a Magical Place (less energy).wav"
+dest_files=["res://.godot/imported/07.2a Magical Place (less energy).wav-615c1bb0003f397cbe8320756c36e877.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

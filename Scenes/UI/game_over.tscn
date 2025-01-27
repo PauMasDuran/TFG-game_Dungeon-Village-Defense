@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh1ibirsh16ew"]
+
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_0u2lt"]
+[ext_resource type="Script" path="res://Scenes/UI/game_over.gd" id="2_orvrh"]
+[ext_resource type="Script" path="res://Scenes/UI/button.gd" id="3_smsii"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0u2lt")
+script = ExtResource("2_orvrh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.305882, 0.521569, 1)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -249.0
+offset_right = 251.0
+offset_bottom = 212.0
+grow_horizontal = 2
+theme = ExtResource("1_0u2lt")
+theme_override_font_sizes/font_size = 29
+text = "Game Over
+
+You died and the village was destroyed!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = 23.0
+offset_right = 14.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -111.0
+offset_right = 121.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 65
+
+[node name="PlayAgainButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Play Again"
+script = ExtResource("3_smsii")
+
+[node name="ExitButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Exit Game"
+script = ExtResource("3_smsii")
+
+[connection signal="button_up" from="HBoxContainer/PlayAgainButton" to="HBoxContainer/PlayAgainButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="HBoxContainer/PlayAgainButton" to="HBoxContainer/PlayAgainButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="button_up" from="HBoxContainer/ExitButton" to="HBoxContainer/ExitButton" method="_on_button_up"]
+[connection signal="mouse_entered" from="HBoxContainer/ExitButton" to="HBoxContainer/ExitButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

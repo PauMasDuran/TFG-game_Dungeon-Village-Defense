@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlvri4j8a213"
+path="res://.godot/imported/04.2a On The Battlefield (less energy).wav-41273090ccf5be0cd067c1a40b0d97c3.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/04.2a On The Battlefield (less energy).wav"
+dest_files=["res://.godot/imported/04.2a On The Battlefield (less energy).wav-41273090ccf5be0cd067c1a40b0d97c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

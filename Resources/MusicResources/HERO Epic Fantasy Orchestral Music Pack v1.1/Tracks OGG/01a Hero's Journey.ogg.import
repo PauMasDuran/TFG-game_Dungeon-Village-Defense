@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gq1wnulw5iup"
+path="res://.godot/imported/01a Hero's Journey.ogg-e68302aa2c0180884613aed6d053bd9b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/01a Hero's Journey.ogg"
+dest_files=["res://.godot/imported/01a Hero's Journey.ogg-e68302aa2c0180884613aed6d053bd9b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

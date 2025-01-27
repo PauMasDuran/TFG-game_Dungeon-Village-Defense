@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bdlh0aoaktwvg" path="res://Scenes/DungeonRooms/signpost.tscn" id="6_62hwb"]
 [ext_resource type="Script" path="res://Scenes/DungeonRooms/tutorial_decoy.gd" id="7_mhtl7"]
 [ext_resource type="Texture2D" uid="uid://i762nw8ot8vs" path="res://Resources/signposts & decoy/signpost-outsidestuff.png" id="7_q1iki"]
-[ext_resource type="PackedScene" uid="uid://03f45ospwqxm" path="res://Scenes/Boss/boss_slimes.tscn" id="10_rkwoa"]
+[ext_resource type="PackedScene" uid="uid://cgpieopbs8r4a" path="res://Scenes/Mobs/slime.tscn" id="10_hfu5u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_81fds"]
 texture = ExtResource("1_q0ggt")
@@ -186,6 +186,7 @@ tile_set = SubResource("TileSet_0upk2")
 
 [node name="Player" parent="." instance=ExtResource("3_d4mqt")]
 position = Vector2(788, 879)
+screen = "Dungeon"
 
 [node name="GameCamera" parent="." instance=ExtResource("4_i1p8u")]
 position = Vector2(470, 1672)
@@ -244,7 +245,7 @@ collision_mask = 8
 position = Vector2(0.5, 4.87546)
 shape = SubResource("RectangleShape2D_lhu3l")
 
-[node name="BossSlimes" parent="." instance=ExtResource("10_rkwoa")]
-position = Vector2(806, 644)
+[node name="slime" parent="." instance=ExtResource("10_hfu5u")]
+position = Vector2(777, 642)
 
 [connection signal="area_entered" from="TutorialDecoy/HurtBox" to="TutorialDecoy" method="_on_hurt_box_area_entered"]

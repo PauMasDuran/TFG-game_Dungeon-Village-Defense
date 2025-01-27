@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnwhlf3qsmf4y"
+path="res://.godot/imported/10 Final Chapter  [Loop].wav-a3c25fdbaf65d60ae78dded808a03a5b.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/10 Final Chapter  [Loop].wav"
+dest_files=["res://.godot/imported/10 Final Chapter  [Loop].wav-a3c25fdbaf65d60ae78dded808a03a5b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

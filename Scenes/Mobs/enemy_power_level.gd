@@ -14,7 +14,7 @@ var enemies_stats_dict = {
 	"MeleeOrc": {
 		"HP":20,
 		"ATK": 15,
-		"SPD": 60
+		"SPD": 66
 	},
 	"RangedOrc": {
 		"HP":10,

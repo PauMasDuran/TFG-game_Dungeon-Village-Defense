@@ -1,13 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://cay5yudwr3udj"]
+[gd_scene load_steps=16 format=3 uid="uid://cay5yudwr3udj"]
 
 [ext_resource type="Script" path="res://Scenes/UI/UIManager.gd" id="1_42ht3"]
 [ext_resource type="PackedScene" uid="uid://bulyv3x21gwsh" path="res://Scenes/UI/initial_menu.tscn" id="1_n4dul"]
 [ext_resource type="PackedScene" uid="uid://ba1yjqsfyvf1t" path="res://Scenes/UI/main_menu.tscn" id="2_1d0eb"]
 [ext_resource type="PackedScene" uid="uid://b6ei1em0yoxi3" path="res://Scenes/UI/training_menu.tscn" id="3_pfub6"]
 [ext_resource type="PackedScene" uid="uid://cpu5vs2cuff86" path="res://Scenes/UI/smith_menu.tscn" id="4_mq3iy"]
+[ext_resource type="PackedScene" uid="uid://4d1fxyglh3sr" path="res://story_scene.tscn" id="4_tvwmx"]
 [ext_resource type="PackedScene" uid="uid://cotycrlnfanri" path="res://Scenes/UI/structures_menu.tscn" id="5_orqyw"]
 [ext_resource type="PackedScene" uid="uid://c5qeohdqqvnpc" path="res://Scenes/UI/game_hud.tscn" id="7_3cyo1"]
 [ext_resource type="PackedScene" uid="uid://bni3a634p7bby" path="res://Scenes/UI/dungeon_floor_titles_ui.tscn" id="8_eui7i"]
+[ext_resource type="PackedScene" uid="uid://bh1ibirsh16ew" path="res://Scenes/UI/game_over.tscn" id="9_6h4jb"]
+[ext_resource type="PackedScene" uid="uid://mmxho3pxqy8s" path="res://Scenes/UI/options_menu.tscn" id="9_mlr8o"]
 [ext_resource type="AudioStream" uid="uid://d120j4tnuaj61" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/013_Confirm_03.wav" id="9_v6p5l"]
 [ext_resource type="AudioStream" uid="uid://daewh3n5vioct" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/079_Buy_sell_01.wav" id="10_augss"]
 [ext_resource type="AudioStream" uid="uid://c6dod03g88tc0" path="res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/033_Denied_03.wav" id="11_y0fxh"]
@@ -23,6 +26,9 @@ scale = Vector2(1.0028, 1)
 [node name="MainMenu" parent="." instance=ExtResource("2_1d0eb")]
 visible = false
 
+[node name="StoryScene" parent="." instance=ExtResource("4_tvwmx")]
+visible = false
+
 [node name="TrainingMenu" parent="." instance=ExtResource("3_pfub6")]
 visible = false
 
@@ -36,6 +42,12 @@ visible = false
 visible = false
 
 [node name="DungeonFloorTitlesUI" parent="." instance=ExtResource("8_eui7i")]
+visible = false
+
+[node name="OptionsMenu" parent="." instance=ExtResource("9_mlr8o")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("9_6h4jb")]
 visible = false
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="."]

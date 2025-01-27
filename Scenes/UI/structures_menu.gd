@@ -25,6 +25,11 @@ func actualizeHoursAndDays():
 func upgradePrices():
 	#Walls
 	if structures.WallLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/WallUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/Label.text = "Wall Upgrade"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[structures.WallLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[structures.WallLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelWall/WallsUpgrade/Label2.text = "Time: " +str(structures.WallLevel)+"h" 
@@ -37,6 +42,11 @@ func upgradePrices():
 	
 	#HealPad
 	if structures.HealLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/HealPadUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/Label.text = "HealPad Upgrade"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[structures.HealLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[structures.HealLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelHealing/HealingPadUpgrade/Label2.text = "Time: " +str(structures.HealLevel)+"h" 
@@ -50,6 +60,11 @@ func upgradePrices():
 	
 	#Decoy
 	if structures.DecoyLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/DecoyUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/Label.text = "Decoy Upgrade"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[structures.DecoyLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[structures.DecoyLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelDecoy/DecoyUpgrade/Label2.text = "Time: " +str(structures.DecoyLevel)+"h" 
@@ -63,12 +78,15 @@ func upgradePrices():
 	
 	#Turret
 	if structures.ArcherLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton.text = "Upgrade"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/TurretsUpgradeButton.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/Label.text = "Archers Upgrade"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[structures.ArcherLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[structures.ArcherLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/Label2.text = "Time: " +str(structures.ArcherLevel)+"h" 
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradestructuresOptions/PanelBoots/BootsUpgrade/GameUIResources/VBoxContainer/GoldContainer/GoldLabel
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradestructuresOptions/PanelBoots/BootsUpgrade/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel
-		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradestructuresOptions/PanelBoots/BootsUpgrade/Label2
+
 	else:
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/GameUIResources.visible = false
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/UpgradeStructuresOptions/PanelTurret/TurretUpgrade/Label2.visible = false

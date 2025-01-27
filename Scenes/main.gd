@@ -18,11 +18,11 @@ var playerResources = {
 
 var trainStats = {
 	"HPLevel": 0,
-	"HPTraining": [25, 50, 100, 175, 300, 500],
+	"HPTraining": [35, 70, 100, 175, 300, 500],
 	"ATKLevel": 0,
-	"ATKTraining": [5, 15, 30, 60, 90, 120],
-	"SPDLevel": 5,
-	"SPDTraining": [80, 100, 150, 200, 250, 300]
+	"ATKTraining": [10, 20, 30, 40, 50, 60],
+	"SPDLevel": 0,
+	"SPDTraining": [120, 140, 160, 190, 220, 280]
 }
 
 var smith = {
@@ -71,6 +71,7 @@ var dungeon_boss_room: bool = false
 func _ready():
 	resetDay()
 	dungeon_boss_room = false
+	$Music.play_menu_music()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -97,11 +98,13 @@ func start_dungeon_scene():
 	add_child(dungeon_instance)
 	gamehud.get_node("DungeonTimer").wait_time = playerResources.HoursRemaining * 60
 	gamehud.get_node("DungeonTimer").start()
+	$Music.play_dungeon_music()
 		#change to strech viewport
 	
-	dungeon_node = $DungeonFloorGenerator
+	dungeon_node = dungeon_instance
 
 func start_boss_scene():
+	$Music.play_final_boss_music()
 	get_tree().root.content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
 	get_tree().root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
 	var bossArena_instance = bossScene.instantiate()
@@ -114,12 +117,14 @@ func exit_dungeon():
 	dungeon_node.queue_free()
 	$UI.return_from_dungeon()
 	resetDay()
+	$Music.play_menu_music()
 	#change to stretch canvas items
 
 func exit_boss_arena():
 	get_tree().root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	boss_arena_node.queue_free()
 	$UI.return_from_dungeon()
+	$UI.go_story_screen()
 
 func go_to_next_dungeon_floor():
 	if $TutorialDungeon != null:
@@ -148,14 +153,21 @@ func _on_timer_between_dungeon_scenes_timeout():
 	if dungeon_boss_room:
 		dungeon_instance = dungeonBossFloor.instantiate()
 		dungeon_boss_room = false
+		$Music.play_dungeon_boss_music()
 	else:
 		dungeon_instance = dungeonFloor1.instantiate()
 		dungeon_boss_room = true
+		$Music.play_dungeon_music()
 	add_child(dungeon_instance)
 	dungeon_node = dungeon_instance
 	$UI.arrive_to_next_dungeon_floor()
 	gamehud.get_node("DungeonTimer").paused = false
 
+func game_over():
+	get_tree().root.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
+	boss_arena_node.queue_free()
+	$UI.return_from_dungeon()
+	$UI.go_to_game_over()
 
 func addGold(Quantity):
 	playerResources.Gold += Quantity
@@ -183,3 +195,28 @@ func resetDay():
 	playerResources.DaysRemaining -= 1
 	actualizeResourcesSignal.emit()
 	dungeon_boss_room = false
+
+func resetGame():
+	trainStats.HPLevel = 0
+	trainStats.ATKLevel = 0
+	trainStats.SPDLevel = 0
+	$UI/TrainingMenu.upgradeStats()
+	$UI/TrainingMenu.upgradePrices()
+	smith.SPLevel = 0
+	smith.SPDrainLevel = 0
+	smith.SprintLevel = 0
+	$UI/SmithMenu.upgradeStats()
+	$UI/SmithMenu.upgradePrices()
+	structures.WallLevel = 0
+	structures.DecoyLevel = 0
+	structures.HealLevel = 0
+	structures.ArcherLevel = 0
+	$UI/StructuresMenu.upgradePrices()
+	playerResources.Gold = 1000
+	playerResources.Crystals = 1000
+	playerResources.DaysRemaining = 6
+	resetDay()
+	dungeon_boss_room = false
+	$Music.play_menu_music()
+	$UI.storyShown = false
+	$UI/StoryScene.reset()

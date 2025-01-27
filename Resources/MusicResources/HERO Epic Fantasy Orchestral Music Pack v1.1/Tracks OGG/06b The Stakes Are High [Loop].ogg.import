@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbaguemg4s613"
+path="res://.godot/imported/06b The Stakes Are High [Loop].ogg-5ec9333fcc6c581ade44f0d9bf104d72.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/06b The Stakes Are High [Loop].ogg"
+dest_files=["res://.godot/imported/06b The Stakes Are High [Loop].ogg-5ec9333fcc6c581ade44f0d9bf104d72.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

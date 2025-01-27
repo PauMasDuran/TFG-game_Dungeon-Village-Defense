@@ -748,6 +748,7 @@ func instantiate_player():
 	)
 	print(spawn_room_position)
 	player_instance.position = spawn_room_position
+	player_instance.screen = "Dungeon"
 	add_child(player_instance)
 	add_child(camera_instance)
 	

@@ -1,0 +1,121 @@
+[gd_scene load_steps=3 format=3 uid="uid://4d1fxyglh3sr"]
+
+[ext_resource type="Theme" uid="uid://cq6o71oo66iu6" path="res://Themes/menu_theme.tres" id="1_xg1bu"]
+[ext_resource type="Script" path="res://story_scene.gd" id="2_xjtis"]
+
+[node name="StoryScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xg1bu")
+script = ExtResource("2_xjtis")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.305882, 0.521569, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 85
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+vertical_scroll_mode = 2
+
+[node name="Label1" type="Label" parent="MarginContainer/Panel/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+Letter From the King
+
+To Sir Garrik Ironhart,
+Defender of the Realm
+
+I, Alaric the Just, sovereign of this kingdom, write to commend your courage and unwavering service. Your valor has proven you worthy of a great reward.
+
+By royal decree, I grant you lordship over the village of the spire, along with the ancient dungeon beneath it. Your duties are clear:
+
+    Defend the village from the monstrous hordes that threaten our lands.
+    Extract the dungeon’s resources to strengthen your holdings and the kingdom.
+
+This honor is both a gift and a sacred duty, and I have full faith in your ability to lead and protect.
+
+May your blade remain strong and your heart ever noble.
+
+By my hand,
+King Alaric the Just
+
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/Panel/MarginContainer/ScrollContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+Letter From the King
+
+To Sir Garrik Ironhart,
+Guardian of the village of the spire and Defender of the Realm,
+
+Word of your deeds has reached my ears, and I am filled with pride. Under your vigilant protection, the village of the spire has stood strong against the monstrous hordes that once threatened it. The people speak highly of your courage and wisdom, and the resources from the dungeon have greatly bolstered the kingdom’s strength.
+
+In recognition of your extraordinary service, I am pleased to elevate you to the noble rank of Baron. From this day forward, you shall be known as Baron Garrik Ironhart of the village of the spire, with all the rights and responsibilities such a title entails. This honor reflects not only your valor but also the trust the crown places in your leadership.
+
+Continue to serve the kingdom with the same dedication and fortitude that have brought you this far. May your lands prosper under your care, and may your name be remembered as one who rose to greatness through honor and service.
+
+By my hand,
+King Alaric the Just"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_top = -71.0
+offset_right = 53.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Next"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://045p8mneg018"
+path="res://.godot/imported/09.2 Dark Prophecy (less energy).ogg-bf7102bbbf0dbca0dfb93fbaf019b0bf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/09.2 Dark Prophecy (less energy).ogg"
+dest_files=["res://.godot/imported/09.2 Dark Prophecy (less energy).ogg-bf7102bbbf0dbca0dfb93fbaf019b0bf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

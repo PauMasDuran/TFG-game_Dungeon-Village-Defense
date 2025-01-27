@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://eu3mgeinpcju"
+path="res://.godot/imported/02 A Land Untouched.ogg-9c7fbab25986d525ca92c1a0b3ada3aa.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/02 A Land Untouched.ogg"
+dest_files=["res://.godot/imported/02 A Land Untouched.ogg-9c7fbab25986d525ca92c1a0b3ada3aa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

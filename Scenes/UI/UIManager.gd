@@ -9,19 +9,26 @@ extends CanvasLayer
 
 @onready var main = get_tree().get_root().get_node("Main")
 
+var storyShown: bool = false
+
 func _ready():
 	initial_menu.play_pressed.connect(initial_menu_play_pressed)
+	initial_menu.options_pressed.connect(initial_menu_options_pressed)
 	main_menu.dungeon_pressed.connect(main_menu_enter_dungeon_pressed)
 	main_menu.smith_pressed.connect(main_menu_smith_pressed)
 	main_menu.training_pressed.connect(main_menu_train_stats_pressed)
 	main_menu.structures_pressed.connect(main_menu_structures_pressed)
 	main_menu.boss_pressed.connect(main_menu_boss_pressed)
+	
 
 func initial_menu_play_pressed():
 	main_menu.visible = true
+	if !storyShown:
+		$StoryScene.visible = true
+		storyShown = true
 	
 func initial_menu_options_pressed():
-	pass
+	$OptionsMenu.visible = true
 	
 func main_menu_enter_dungeon_pressed():
 	game_hud.visible = true
@@ -61,3 +68,14 @@ func go_to_next_dungeon_floor():
 func arrive_to_next_dungeon_floor():
 	$DungeonFloorTitlesUI.visible = false
 	game_hud.visible = true
+
+func go_to_game_over(): #Used when player dies in final arena
+	game_hud.visible = false
+	$GameOver.visible = true
+
+func go_to_game_reset():
+	$GameOver.visible = false
+	$MainMenu.visible = false
+
+func go_story_screen():
+	$StoryScene.visible = true

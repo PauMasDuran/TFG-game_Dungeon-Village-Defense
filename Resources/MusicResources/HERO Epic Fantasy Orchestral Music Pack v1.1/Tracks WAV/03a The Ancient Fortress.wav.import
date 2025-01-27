@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlj0kqkeiunu4"
+path="res://.godot/imported/03a The Ancient Fortress.wav-7f9424c05c76deecb3966d641dd65bed.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/03a The Ancient Fortress.wav"
+dest_files=["res://.godot/imported/03a The Ancient Fortress.wav-7f9424c05c76deecb3966d641dd65bed.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

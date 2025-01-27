@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7e1wt66kqqq3"
+path="res://.godot/imported/08.1b We Fight For Glory (full) [Loop].ogg-8531241034f1a22912e84619a6728fcb.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/08.1b We Fight For Glory (full) [Loop].ogg"
+dest_files=["res://.godot/imported/08.1b We Fight For Glory (full) [Loop].ogg-8531241034f1a22912e84619a6728fcb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

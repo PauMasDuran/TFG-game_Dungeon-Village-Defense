@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ivfounwa3rn3"
+path="res://.godot/imported/04.2a On The Battlefield (less energy).ogg-169c80efdaaf3be7badf5ea76c5b4fd2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/04.2a On The Battlefield (less energy).ogg"
+dest_files=["res://.godot/imported/04.2a On The Battlefield (less energy).ogg-169c80efdaaf3be7badf5ea76c5b4fd2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

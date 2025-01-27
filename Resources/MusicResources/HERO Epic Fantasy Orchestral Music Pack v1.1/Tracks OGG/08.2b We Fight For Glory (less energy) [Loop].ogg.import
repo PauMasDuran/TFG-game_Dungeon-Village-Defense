@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqn128xjv8kuu"
+path="res://.godot/imported/08.2b We Fight For Glory (less energy) [Loop].ogg-3bafb12ba56fae68acfb846b26bd0716.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/08.2b We Fight For Glory (less energy) [Loop].ogg"
+dest_files=["res://.godot/imported/08.2b We Fight For Glory (less energy) [Loop].ogg-3bafb12ba56fae68acfb846b26bd0716.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

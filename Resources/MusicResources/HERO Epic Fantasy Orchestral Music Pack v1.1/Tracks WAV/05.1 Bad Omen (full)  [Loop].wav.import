@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvrl8d5k0erb4"
+path="res://.godot/imported/05.1 Bad Omen (full)  [Loop].wav-1167241dcf444b5dd894c9584117fa74.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/05.1 Bad Omen (full)  [Loop].wav"
+dest_files=["res://.godot/imported/05.1 Bad Omen (full)  [Loop].wav-1167241dcf444b5dd894c9584117fa74.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

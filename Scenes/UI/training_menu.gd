@@ -26,6 +26,11 @@ func actualizeHoursAndDays():
 func upgradePrices():
 	#hpTraining
 	if playerStatsLevel.HPLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Train.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Label.text = "Hp Training"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Train.text = "Train"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[playerStatsLevel.HPLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[playerStatsLevel.HPLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelHP/HPTraining/Label2.text = "Time: " +str(playerStatsLevel.HPLevel)+"h" 
@@ -38,6 +43,11 @@ func upgradePrices():
 	
 	#AtkTraining
 	if playerStatsLevel.ATKLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Train.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Label.text = "ATK Training"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Train.text = "Train"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[playerStatsLevel.ATKLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[playerStatsLevel.ATKLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelATK/ATKTraining/Label2.text = "Time: " +str(playerStatsLevel.ATKLevel)+"h" 
@@ -51,6 +61,11 @@ func upgradePrices():
 	
 	#SPDTraining
 	if playerStatsLevel.SPDLevel < 5:
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/GameUIResources.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Label2.visible = true
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Train.disabled = false
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Label.text = "SPD Training"
+		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Train.text = "Train"
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(upgradeCostGold[playerStatsLevel.SPDLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/GameUIResources/VBoxContainer/CrystalContainer/CrystalLabel.text = "= " + str(upgradeCostCrystal[playerStatsLevel.SPDLevel])
 		$MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/PanelTrainingOptions/MarginContainer/TrainingOptions/PanelSPD/SpeedTraining/Label2.text = "Time: " +str(playerStatsLevel.SPDLevel)+"h" 

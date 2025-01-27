@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crd4suy8n6dij"
+path="res://.godot/imported/04.1a On The Battlefield (full).wav-df4144263b65f652155e3b94d48f02f6.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/04.1a On The Battlefield (full).wav"
+dest_files=["res://.godot/imported/04.1a On The Battlefield (full).wav-df4144263b65f652155e3b94d48f02f6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

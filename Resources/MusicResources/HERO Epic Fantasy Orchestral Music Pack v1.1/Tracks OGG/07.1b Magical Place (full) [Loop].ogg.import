@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://00syg8kl2ojk"
+path="res://.godot/imported/07.1b Magical Place (full) [Loop].ogg-25de1bf2e6b7e3ecb8bc32b356c554ea.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/07.1b Magical Place (full) [Loop].ogg"
+dest_files=["res://.godot/imported/07.1b Magical Place (full) [Loop].ogg-25de1bf2e6b7e3ecb8bc32b356c554ea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

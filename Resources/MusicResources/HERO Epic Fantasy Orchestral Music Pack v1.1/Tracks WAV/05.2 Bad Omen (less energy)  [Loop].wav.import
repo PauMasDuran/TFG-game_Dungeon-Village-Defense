@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bp4ojy8giopr"
+path="res://.godot/imported/05.2 Bad Omen (less energy)  [Loop].wav-788890caa3192043f3a4a361142db0d7.sample"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks WAV/05.2 Bad Omen (less energy)  [Loop].wav"
+dest_files=["res://.godot/imported/05.2 Bad Omen (less energy)  [Loop].wav-788890caa3192043f3a4a361142db0d7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

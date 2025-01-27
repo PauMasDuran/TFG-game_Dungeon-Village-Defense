@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://8w666i2q1m52"
+path="res://.godot/imported/04.1b On The Battlefield (full) [Loop].ogg-7b04d2a5a9c3af98bb2ca186d2349a86.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/MusicResources/HERO Epic Fantasy Orchestral Music Pack v1.1/Tracks OGG/04.1b On The Battlefield (full) [Loop].ogg"
+dest_files=["res://.godot/imported/04.1b On The Battlefield (full) [Loop].ogg-7b04d2a5a9c3af98bb2ca186d2349a86.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
