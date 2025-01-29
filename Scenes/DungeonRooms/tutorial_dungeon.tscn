@@ -185,7 +185,7 @@ tile_map_data = PackedByteArray("AAABAAUAAAAAAAMAAAAIAAUAAAABAAMAAAAIAAIAAAABAAI
 tile_set = SubResource("TileSet_0upk2")
 
 [node name="Player" parent="." instance=ExtResource("3_d4mqt")]
-position = Vector2(788, 879)
+position = Vector2(788, 1935)
 screen = "Dungeon"
 
 [node name="GameCamera" parent="." instance=ExtResource("4_i1p8u")]

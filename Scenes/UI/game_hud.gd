@@ -2,6 +2,8 @@ extends Control
 
 @onready var playerStats = get_tree().get_root().get_node("Main").playerStats
 @onready var playerResources = get_tree().get_root().get_node("Main").playerResources
+@onready var playerStatsLevel = get_tree().get_root().get_node("Main").trainStats
+@onready var smith = get_tree().get_root().get_node("Main").smith
 @onready var wallsHP = get_tree().get_root().get_node("Main").BossArenaWallsHP
 @onready var main = get_tree().get_root().get_node("Main")
 # 0 = dungeon, 1 = bossArena
@@ -14,11 +16,12 @@ func _ready():
 	$SPBar.max_value = playerStats.MaxSp
 	$BossHPBar.max_value = wallsHP
 	actualizeResources()
-	
-	
+
+
 
 func _process(delta):
 	$DungeonTimerLabel.text = "%02d:%02d" % time_left_to_dungeon()
+	
 
 func time_left_to_dungeon():
 	var time_left = $DungeonTimer.time_left
@@ -52,6 +55,10 @@ func isDungeonMode():
 
 func isBossMode():
 	$WallsHPBar.visible = true
+
+func actualizeMaxValues():
+	$HPBar.max_value = playerStatsLevel.HPTraining[playerStatsLevel.HPLevel]
+	$SPBar.max_value = smith.SPCapacity[smith.SPLevel]
 
 func actualizeResources():
 	$GameUIResources/VBoxContainer/GoldContainer/GoldLabel.text = "= " + str(playerResources.Gold)

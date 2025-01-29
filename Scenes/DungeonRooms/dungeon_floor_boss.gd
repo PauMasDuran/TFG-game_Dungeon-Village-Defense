@@ -37,6 +37,7 @@ func boss_battle_mode():
 	
 	$SlimeBossSpawner.spawn_slime_boss()
 	$GameCamera.is_dungeon_boss_battle = true
+	main.get_node("Music").play_dungeon_boss_music()
 
 func normal_mode():
 	var x_cells_positions = [3,4,5,6]
@@ -54,6 +55,7 @@ func normal_mode():
 			count += 1
 	
 	$GameCamera.is_dungeon_boss_battle = false
+	main.get_node("Music").stop()
 
 
 

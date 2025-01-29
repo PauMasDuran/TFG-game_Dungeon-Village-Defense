@@ -30,7 +30,7 @@ var smith = {
 	"SPCapacity": [25, 50, 100, 175, 300, 500],
 	"SPDrainLevel": 0,
 	"SPDrain": [5, 10, 20, 35, 60, 90],
-	"SprintLevel": 5,
+	"SprintLevel": 0,
 	"SprintBoots": [300, 350, 400, 450, 500, 600]
 }
 
@@ -90,6 +90,7 @@ func start_test_scene():
 
 
 func start_dungeon_scene():
+	actualizeResourcesSignal.emit()
 	get_tree().root.content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
 	get_tree().root.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
 	actual_dungeon_floor = -1
@@ -153,7 +154,7 @@ func _on_timer_between_dungeon_scenes_timeout():
 	if dungeon_boss_room:
 		dungeon_instance = dungeonBossFloor.instantiate()
 		dungeon_boss_room = false
-		$Music.play_dungeon_boss_music()
+		$Music.stop()
 	else:
 		dungeon_instance = dungeonFloor1.instantiate()
 		dungeon_boss_room = true
@@ -168,6 +169,7 @@ func game_over():
 	boss_arena_node.queue_free()
 	$UI.return_from_dungeon()
 	$UI.go_to_game_over()
+	$Music.stop()
 
 func addGold(Quantity):
 	playerResources.Gold += Quantity

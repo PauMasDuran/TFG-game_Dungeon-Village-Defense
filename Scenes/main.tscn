@@ -19,3 +19,4 @@ bus = &"Music"
 script = ExtResource("3_khqal")
 
 [connection signal="timeout" from="TimerBetweenDungeonScenes" to="." method="_on_timer_between_dungeon_scenes_timeout"]
+[connection signal="finished" from="Music" to="Music" method="_on_finished"]

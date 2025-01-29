@@ -317,6 +317,7 @@ func upgradePlayerStats():
 	stamina_points = playerStats.MaxSp
 	sp_drain = playerStats.SPDrain
 	dash_speed = playerStats.SprintSpd
+	gameHud.actualizeMaxValues()
 
 
 func _on_invulnerative_timer_timeout():

@@ -13,6 +13,8 @@ var auraTypes = ["none","green","blue","red","black"]
 var no_aura: int = 4
 var auraColor: int
 
+var is_slime_dead: bool = false 
+
 @onready var main = get_tree().get_root().get_node("Main")
 
 # Called when the node enters the scene tree for the first time.
@@ -43,9 +45,9 @@ func call_random_saturation_lightning_strikes(slimeAtk,slime):
 	for strike in range(number_of_lightning):
 		var posX = randi_range(336,816)
 		var posY = randi_range(592,816)
-		if slime.dead == false:
+		if is_slime_dead == false:
 			spawn_lightning_strike(posX,posY,slimeAtk,slime)
-	if slime.dead == false:
+	if is_slime_dead == false:
 		await get_tree().create_timer(0.5).timeout
 		slime.special_attacking = false
 
@@ -60,16 +62,15 @@ func call_guided_lightning_strikes(slimeAtk, player,slime):
 	for strike in range(number_of_lightning):
 		var posX = randi_range(-50,50)
 		var posY = randi_range(-50,50)
-		if slime.dead == false:
+		if is_slime_dead == false:
 			spawn_guided_lightning_strike(posX,posY,slimeAtk,player,slime)
 		await get_tree().create_timer(0.5).timeout
-	if slime.dead == false:
+	if is_slime_dead == false:
 		await get_tree().create_timer(0.5).timeout
 		slime.special_attacking = false
 
 func _on_teleporter_center_body_entered(body):
 	body.boss_is_in_teleporter = true
-
 
 func _on_teleporter_center_body_exited(body):
 	body.boss_is_in_teleporter = false
@@ -80,3 +81,4 @@ func _on_teleporter_center_body_exited(body):
 
 func boss_was_defeated():
 	get_parent().normal_mode()
+	is_slime_dead = true

@@ -24,3 +24,7 @@ func play_final_boss_music():
 	if stream != final_boss_music:
 		stream = final_boss_music
 		play()
+
+
+func _on_finished():
+	play()

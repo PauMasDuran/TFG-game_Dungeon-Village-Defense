@@ -8,19 +8,18 @@ var health_points: int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	health_points = structures.WallUpgrade[structures.WallLevel]
+	gameHud.get_node("WallsHPBar").max_value = structures.WallUpgrade[structures.WallLevel]
 	gameHud.get_node("WallsHPBar").value = health_points
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if health_points <= 0:
+		main.game_over()
 
 
 func _on_area_entered(area):
 	if area.name == "EnemyHitBox":
-		health_points -= 1
+		health_points -= area.owner.atk
 		print("Walls HP: ", health_points)
-	if area.name == "HitBox":
-		health_points -= 1
-		print("Walls HP: ", health_points)
-	gameHud.loseWallHP(1)
+		gameHud.loseWallHP(area.owner.atk)

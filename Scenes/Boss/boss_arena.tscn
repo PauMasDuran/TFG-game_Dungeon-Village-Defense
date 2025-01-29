@@ -223,7 +223,9 @@ position = Vector2(412, 291)
 [node name="OrcBossCenter" parent="." instance=ExtResource("9_117dg")]
 position = Vector2(263, 23)
 
-[node name="Orcs" type="Node" parent="."]
+[node name="Orcs" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
 
 [node name="KingOrc" parent="Orcs" instance=ExtResource("10_f8mtm")]
 position = Vector2(328, 75)
