@@ -23,3 +23,18 @@ It was built using the Godot Game Engine and GDScript and includes core machanic
 ![Structure Menu](TFGImages/Structures.png)
 ![Dungeon Normal](TFGImages/dungeon.png)
 ![Dungeon Aereal](TFGImages/Dungeon_generation.png)
+
+*How To play*
+To be done
+
+*Contributions*
+To be done
+
+*Contact Information*
+To be done
+
+*License*
+To be done
+
+*Acknowledgements*
+To be done
