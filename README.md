@@ -19,4 +19,7 @@ It was built using the Godot Game Engine and GDScript and includes core machanic
 *Screenshots*
 
 ![Training Menu](TFGImages/TrainStats.png)
-
+![Smith Menu](TFGImages/Dash.png)
+![Structure Menu](TFGImages/Structures.png)
+![Dungeon Normal](TFGImages/dungeon.png)
+![Dungeon Aereal](TFGImages/Dungeon_generation.png)
