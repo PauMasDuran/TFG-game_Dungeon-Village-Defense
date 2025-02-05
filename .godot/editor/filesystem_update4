@@ -50,3 +50,4 @@ res://Scenes/Boss/orc_boss_center.tscn
 res://Scenes/UI/game_over.tscn
 res://Scenes/UI/options_menu.tscn
 res://story_scene.tscn
+res://Scenes/UI/GameUIResources.tscn

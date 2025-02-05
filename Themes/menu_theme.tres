@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://cq6o71oo66iu6"]
 
-[ext_resource type="FontFile" uid="uid://dpvcw508he2u" path="res://Themes/Fonts/Unformital.ttf" id="1_33hb4"]
+[ext_resource type="FontFile" uid="uid://bl0m68ciq06v3" path="res://Themes/Fonts/manaspc.ttf" id="1_k1n6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1gmk"]
 content_margin_left = 5.0
@@ -67,8 +67,8 @@ border_width_bottom = 5
 border_color = Color(0.313726, 0.184314, 0.0470588, 1)
 
 [resource]
-default_font = ExtResource("1_33hb4")
-default_font_size = 23
+default_font = ExtResource("1_k1n6t")
+default_font_size = 19
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 Button/styles/focus = SubResource("StyleBoxFlat_b1gmk")
 Button/styles/hover = SubResource("StyleBoxFlat_r24g4")
