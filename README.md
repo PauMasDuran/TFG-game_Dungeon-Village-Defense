@@ -25,16 +25,44 @@ It was built using the Godot Game Engine and GDScript and includes core machanic
 ![Dungeon Aereal](TFGImages/Dungeon_generation.png)
 
 *How To play*
-To be done
+You can play to this demo in the itch.io lick when I figure out how to do that
 
-*Contributions*
-To be done
 
 *Contact Information*
-To be done
+
+For questions, feedback, or suggestions, please reach out:
+- Email: [pmasduran@gmail.com](mailto:pmasduran@gmail.com)
+- GitHub: [@PauMasDuran](https://github.com/PauMasDuran)
+- Discord: pmasd#8815
 
 *License*
-To be done
+The source code of this demo is released under the **MIT 
+Licence**. For more information about your rights and obligations, please 
+review the full licence text in the [LICENSE.md](LICENSE.md) file.
+
+You are free to:
+- Use, modify, and distribute this software for any purpose.
+- Include this software as part of a larger distribution.
+
+Under the following conditions:
+- You must include a copy of the MIT Licence with your redistribution.
+- You cannot use my name or the names of contributors to endorse or 
+promote products derived from this software without written permission.
+
 
 *Acknowledgements*
-To be done
+
+A big thanks to:
+
+- My supervisor/mentor: Jose Díaz Irrebiri
+- The open-source community for providing invaluable libraries and tools.
+- The Godot Comunity
+- Chris Kohler (Music)
+- Leohpaz (SFX)
+- Seth (Tileset)
+- Screaming Brain Studios (Tileset)
+- AntumDeluge (Sprites)
+- Cethiel (Sprites)
+- Arijkx (Sprites)
+- Shade (Sprites)
+- Inspiration from the games like Wizard of Legend, Hades, and others.
