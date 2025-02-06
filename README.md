@@ -1,12 +1,12 @@
-### Roguelike Demo: Dungeon Village Defence
+# Roguelike Demo: Dungeon Village Defence
 
-*Introduction*
+## Introduction
 
 This is a demo version of my roguelike game developed as part of my final thesis project for my degree in Multimedia Engineering at the UVIC-UCC (University of Vic - Central University of Catalonia). 
 The game features of procedurally generated dungeons, dynamic comabat, and a variety of enemies that will become stronger the deeper you get into the dungeon. 
 It was built using the Godot Game Engine and GDScript and includes core machanics such as procedural generation of dungeon laberinths, exploration, resource management, difficulty progression and skill progression.
 
-*Features*
+## Features
 
 - Proceduran dungeon generation
 - Dynamic Combat system
@@ -16,7 +16,7 @@ It was built using the Godot Game Engine and GDScript and includes core machanic
 - Boss encounters
 - Final Boss encounter
 
-*Screenshots*
+## Screenshots
 
 ![Training Menu](TFGImages/TrainStats.png)
 ![Smith Menu](TFGImages/Dash.png)
@@ -24,18 +24,19 @@ It was built using the Godot Game Engine and GDScript and includes core machanic
 ![Dungeon Normal](TFGImages/dungeon.png)
 ![Dungeon Aereal](TFGImages/Dungeon_generation.png)
 
-*How To play*
+## How To play
 You can play to this demo in the itch.io lick when I figure out how to do that
 
 
-*Contact Information*
+## Contact Information
 
 For questions, feedback, or suggestions, please reach out:
 - Email: [pmasduran@gmail.com](mailto:pmasduran@gmail.com)
 - GitHub: [@PauMasDuran](https://github.com/PauMasDuran)
 - Discord: pmasd#8815
 
-*License*
+## License
+
 The source code of this demo is released under the **MIT 
 Licence**. For more information about your rights and obligations, please 
 review the full licence text in the [LICENSE.md](LICENSE.md) file.
@@ -50,7 +51,7 @@ Under the following conditions:
 promote products derived from this software without written permission.
 
 
-*Acknowledgements*
+## Acknowledgements
 
 A big thanks to:
 
