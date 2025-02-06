@@ -1,4 +1,4 @@
-###Roguelike Demo: Dungeon Village Defence###
+###Roguelike Demo: Dungeon Village Defence
 
 *Introduction*
 
