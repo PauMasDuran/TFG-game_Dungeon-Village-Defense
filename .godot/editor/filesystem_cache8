@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738750284
+::res://::1739185597
 default_bus_layout.tres::AudioBusLayout::1007159148313413528::1734337147::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1738182463::0::1::::<><>::
 game_camera.gd::GDScript::-1::1733818490::0::1::::<>Camera2D<>::
@@ -2735,7 +2735,7 @@ training_menu.tscn::PackedScene::4571064743871591448::1738750116::0::1::::<><>::
 ui.tscn::PackedScene::4824251858445185071::1738750116::0::1::::<><>::res://Scenes/UI/UIManager.gd<>uid://bulyv3x21gwsh::::res://Scenes/UI/initial_menu.tscn<>uid://ba1yjqsfyvf1t::::res://Scenes/UI/main_menu.tscn<>uid://b6ei1em0yoxi3::::res://Scenes/UI/training_menu.tscn<>uid://cpu5vs2cuff86::::res://Scenes/UI/smith_menu.tscn<>uid://4d1fxyglh3sr::::res://story_scene.tscn<>uid://cotycrlnfanri::::res://Scenes/UI/structures_menu.tscn<>uid://c5qeohdqqvnpc::::res://Scenes/UI/game_hud.tscn<>uid://bni3a634p7bby::::res://Scenes/UI/dungeon_floor_titles_ui.tscn<>uid://bh1ibirsh16ew::::res://Scenes/UI/game_over.tscn<>uid://mmxho3pxqy8s::::res://Scenes/UI/options_menu.tscn<>uid://d120j4tnuaj61::::res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/013_Confirm_03.wav<>uid://daewh3n5vioct::::res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/079_Buy_sell_01.wav<>uid://c6dod03g88tc0::::res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/033_Denied_03.wav<>uid://dgim6nnmd4a7v::::res://Resources/TFG SFX/RPG_Essentials_Free/10_UI_Menu_SFX/001_Hover_01.wav
 UIManager.gd::GDScript::-1::1737102970::0::1::::<>CanvasLayer<>::
 volume_slider.gd::GDScript::-1::1736785353::0::1::::<>HSlider<>::
-::res://TFGImages/::1738750267
+::res://TFGImages/::1738750285
 Dash.png::CompressedTexture2D::1331503728100927351::1738750267::1738750284::1::::<><>::
 dungeon.png::CompressedTexture2D::1270748623150589516::1738750267::1738750285::1::::<><>::
 Dungeon_generation.png::CompressedTexture2D::135812196900365506::1738750267::1738750284::1::::<><>::

@@ -21,7 +21,6 @@ metadata/_edit_group_ = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 0
 
 [node name="GoldContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -36,7 +35,7 @@ stretch_mode = 5
 
 [node name="GoldLabel" type="Label" parent="VBoxContainer/GoldContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "= 100"
 
 [node name="CrystalContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -53,5 +52,5 @@ stretch_mode = 5
 
 [node name="CrystalLabel" type="Label" parent="VBoxContainer/CrystalContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 15
 text = "= 100"
