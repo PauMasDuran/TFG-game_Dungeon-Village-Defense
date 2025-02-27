@@ -25,7 +25,7 @@ It was built using the Godot Game Engine and GDScript and includes core machanic
 ![Dungeon Aereal](TFGImages/Dungeon_generation.png)
 
 ## How To play
-You can play to this demo in the itch.io lick when I figure out how to do that
+You can play in the following link: [Dungeon Village Defense](https://paumasduran.itch.io/dungeon-village-denfense)
 
 
 ## Contact Information
